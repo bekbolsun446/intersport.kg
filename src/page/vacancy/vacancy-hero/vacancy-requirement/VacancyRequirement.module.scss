@@ -1,0 +1,27 @@
+$font: Inter, san-serif;
+
+.vacancy_requirement {
+  margin-top: 40px;
+
+  .vacancy_requirementTitle {
+    font-weight: 600;
+    font-size: 24px;
+    font-family: $font;
+    line-height: 29px;
+    color: #1A1458;
+  }
+
+  ul {
+    margin-top: 20px;
+    padding-left: 43px;
+
+    li {
+      font-weight: normal;
+      font-family: $font;
+      list-style: circle;
+      font-size: 16px;
+      line-height: 28px;
+      color: #1D1D1D;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.vacancy_content {
+  width: 64%;
+  background: #FFFFFF;
+  padding: 40px;
+}
+@media screen and (max-width: 991px) {
+  .vacancy_content {
+    width: 100%;
+  }
+}
+.vacancy_content .vacancy_content_hero {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.vacancy_content .vacancy_content_hero .vacancy_img {
+  width: 50%;
+  height: 300px;
+  overflow: hidden;
+}
+.vacancy_content .vacancy_content_hero .vacancy_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.vacancy_content .vacancy_content_hero .vacancy_about {
+  width: 50%;
+  padding: 0 16px;
+}
+.vacancy_content .vacancy_content_hero .vacancy_about .vacancyLocation {
+  font-size: 13px;
+  font-weight: normal;
+  font-family: Inter, san-serif;
+  line-height: 2;
+  margin-bottom: 23px;
+  text-transform: uppercase;
+}
+.vacancy_content .vacancy_content_hero .vacancy_about .vacancyName {
+  font-weight: 600;
+  font-size: 24px;
+  font-family: Inter, san-serif;
+  line-height: 29px;
+  color: #1A1458;
+}
+.vacancy_content .vacancyNumbers {
+  margin: 32px 0 16px 0;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: Inter, san-serif;
+}
+
+/*# sourceMappingURL=VacancyHero.module.css.map */

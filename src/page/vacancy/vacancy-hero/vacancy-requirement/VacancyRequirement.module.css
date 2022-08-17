@@ -1,0 +1,24 @@
+.vacancy_requirement {
+  margin-top: 40px;
+}
+.vacancy_requirement .vacancy_requirementTitle {
+  font-weight: 600;
+  font-size: 24px;
+  font-family: Inter, san-serif;
+  line-height: 29px;
+  color: #1A1458;
+}
+.vacancy_requirement ul {
+  margin-top: 20px;
+  padding-left: 43px;
+}
+.vacancy_requirement ul li {
+  font-weight: normal;
+  font-family: Inter, san-serif;
+  list-style: circle;
+  font-size: 16px;
+  line-height: 28px;
+  color: #1D1D1D;
+}
+
+/*# sourceMappingURL=VacancyRequirement.module.css.map */

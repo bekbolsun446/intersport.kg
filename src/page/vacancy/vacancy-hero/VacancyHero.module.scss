@@ -1,0 +1,57 @@
+$font: Inter, san-serif;
+
+.vacancy_content {
+  width: 64%;
+  background: #FFFFFF;
+  padding: 40px;
+  @media screen and (max-width: 991px) {
+    width: 100%;
+  }
+
+  .vacancy_content_hero {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .vacancy_img {
+      width: 50%;
+      height: 300px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .vacancy_about {
+      width: 50%;
+      padding: 0 16px;
+
+      .vacancyLocation {
+        font-size: 13px;
+        font-weight: normal;
+        font-family: $font;
+        line-height: 2;
+        margin-bottom: 23px;
+        text-transform: uppercase;
+      }
+
+      .vacancyName {
+        font-weight: 600;
+        font-size: 24px;
+        font-family: $font;
+        line-height: 29px;
+        color: #1A1458;
+      }
+    }
+
+  }
+  .vacancyNumbers{
+    margin: 32px 0 16px 0;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: $font;
+  }
+}
