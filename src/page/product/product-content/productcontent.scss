@@ -1,0 +1,21 @@
+
+.product_slide_content{
+  .slick-arrow{
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border: 1px solid black;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slick-prev{
+    left: 20px !important;
+    z-index: 10;
+  }
+  .slick-next{
+    right: 20px;
+  }
+}

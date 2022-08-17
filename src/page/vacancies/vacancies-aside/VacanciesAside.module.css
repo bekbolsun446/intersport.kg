@@ -1,0 +1,39 @@
+.vacancies_about {
+  width: 35%;
+  padding: 0 24px;
+}
+@media screen and (max-width: 991px) {
+  .vacancies_about {
+    width: 100%;
+    padding: 12px 0 0 0;
+  }
+}
+.vacancies_about .vacancies_about_p {
+  font-family: Inter, san-serif;
+  font-size: 18px;
+  line-height: 27px;
+  color: #000000;
+  margin-bottom: 84px;
+}
+@media screen and (max-width: 991px) {
+  .vacancies_about .vacancies_about_p {
+    font-size: 14px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+  }
+}
+.vacancies_about .vacancies_aboutTitle {
+  font-family: Inter, san-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  color: #1A1458;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 991px) {
+  .vacancies_about .vacancies_aboutTitle {
+    font-size: 24px;
+  }
+}
+
+/*# sourceMappingURL=VacanciesAside.module.css.map */

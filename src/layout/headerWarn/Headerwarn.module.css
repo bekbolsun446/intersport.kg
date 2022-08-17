@@ -1,0 +1,27 @@
+.header_warn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_warn .warn_menu {
+  column-gap: 24px;
+  display: flex;
+  align-items: center;
+}
+.header_warn .warn_menu .warn_menuItem {
+  font-family: Inter, san-serif;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  color: #262626;
+  padding: 10px 0;
+}
+.header_warn .warn_menu span.warn_menuItem {
+  cursor: pointer;
+}
+.header_warn .warn_menu span.warn_menuItem::selection {
+  background: none;
+  color: #262626;
+}
+
+/*# sourceMappingURL=Headerwarn.module.css.map */

@@ -1,0 +1,48 @@
+.footer_pay {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 576px) {
+  .footer_pay {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+.footer_pay .footer_payTitle {
+  font-weight: normal;
+  font-size: 16px;
+  font-family: Inter, san-serif;
+  margin-right: 16px;
+}
+@media screen and (max-width: 576px) {
+  .footer_pay .footer_payTitle {
+    margin-right: 0;
+  }
+}
+.footer_pay .footer_pay_content {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+}
+@media screen and (max-width: 576px) {
+  .footer_pay .footer_pay_content {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}
+.footer_pay .footer_pay_content .footer_payImg {
+  object-fit: cover;
+  width: 55px;
+  height: 30px;
+  border-radius: 4px;
+}
+@media screen and (max-width: 576px) {
+  .footer_pay .footer_pay_content .footer_payImg {
+    margin-top: 16px;
+  }
+}
+
+/*# sourceMappingURL=FooterPay.module.css.map */

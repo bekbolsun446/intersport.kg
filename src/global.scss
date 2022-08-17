@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "~bootstrap/scss/bootstrap";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition:  all .2s linear;
+}
+
+$font: Inter, san-serif;
+body {
+  background: #FAFAFA !important;
+  overflow-x: hidden;
+}
+
+h2 {
+  @media screen and (max-width: 576px) {
+    font-size: 24px !important;
+  }
+}

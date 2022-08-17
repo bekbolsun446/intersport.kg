@@ -1,0 +1,38 @@
+.main_hero_slider {
+  position: relative;
+}
+.main_hero_slider .slick-arrow {
+  position: absolute;
+  padding: 0;
+  border-radius: 50%;
+  background: none;
+  color: whitesmoke;
+  opacity: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.main_hero_slider .slick-prev {
+  left: 20px !important;
+  z-index: 10;
+}
+.main_hero_slider .slick-next {
+  right: 20px;
+}
+.main_hero_slider .slick-dots {
+  position: absolute;
+  bottom: 18px;
+}
+.main_hero_slider .slick-dots li {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0 12px;
+}
+.main_hero_slider .slick-dots li button::before {
+  content: "";
+}
+.main_hero_slider .slick-dots .slick-active {
+  background: white;
+}
+
+/*# sourceMappingURL=main.css.map */

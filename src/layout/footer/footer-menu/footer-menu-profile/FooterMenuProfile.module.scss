@@ -1,0 +1,21 @@
+$font: Inter, san-serif;
+
+.footerMenuProfile{
+  width: 100%;
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #c5bfbf;
+  @media screen and (min-width: 992px){
+    display: none;
+  }
+  a{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    font-family: $font;
+    color: white;
+    text-decoration: none;
+  }
+}

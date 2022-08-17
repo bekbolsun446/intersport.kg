@@ -1,0 +1,71 @@
+.loading {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading .lds_ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.loading .lds_ring {
+  position: relative;
+}
+.loading .lds_ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  margin: 8px;
+  border: 8px solid red;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: red transparent transparent transparent;
+}
+.loading .lds_ring div:nth-child(1) {
+  animation-delay: -0.3s;
+}
+.loading .lds_ring div:nth-child(2) {
+  animation-delay: -0.2s;
+}
+.loading .lds_ring div:nth-child(3) {
+  animation-delay: -0.1s;
+}
+.loading .lds_ring div:nth-child(4) {
+  animation-delay: -0.05s;
+}
+.loading .lds_ring div:nth-child(5) {
+  animation-delay: -0.025s;
+}
+.loading .lds_ring div:nth-child(6) {
+  animation-delay: -0.012s;
+}
+.loading .lds_ring div:nth-child(7) {
+  animation-delay: -0.005s;
+}
+.loading .lds_ring div:nth-child(8) {
+  animation-delay: -0.0025s;
+}
+.loading .lds_ring div:nth-child(9) {
+  animation-delay: -0.0012s;
+}
+.loading .lds_ring div:nth-child(10) {
+  animation-delay: -0.0006s;
+}
+.loading .lds_ring div:nth-child(11) {
+  animation-delay: -0.0003s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=Loading.module.css.map */

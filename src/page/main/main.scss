@@ -1,0 +1,39 @@
+ .main_hero_slider {
+    position: relative;
+   .slick-arrow{
+     position: absolute;
+     //box-shadow: 0 0 5px black;
+     padding: 0;
+     border-radius: 50%;
+     background: none;
+     color: whitesmoke;
+     opacity: 1;
+     -webkit-font-smoothing: antialiased;
+   }
+
+   .slick-prev{
+     left: 20px !important;
+     z-index: 10;
+   }
+   .slick-next{
+     right: 20px;
+   }
+
+   .slick-dots{
+     position: absolute;
+     bottom: 18px;
+     li{
+       width: 16px;
+       height: 16px;
+       border-radius: 50%;
+       background: rgba(255,255,255,.5);
+       margin: 0 12px;
+       button::before{
+         content: '';
+       }
+     }
+     .slick-active{
+       background: rgba(255,255,255,1);
+     }
+   }
+  }

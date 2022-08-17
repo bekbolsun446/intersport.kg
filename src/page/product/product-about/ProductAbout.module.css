@@ -1,0 +1,193 @@
+.product_about {
+  width: 35%;
+  background: white;
+  padding: 40px;
+  border-radius: 4px;
+  position: sticky;
+  top: 32px;
+  height: 130vh;
+}
+@media screen and (max-width: 991px) {
+  .product_about {
+    width: 100%;
+  }
+}
+.product_about .productBrand {
+  font-size: 16px;
+  font-weight: normal;
+  font-family: Inter, san-serif;
+  color: #767676;
+  margin-bottom: 15px;
+}
+.product_about .product_name {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Inter, san-serif;
+  margin-bottom: 15px;
+}
+.product_about .product_price_content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 34px;
+}
+.product_about .product_price_content p {
+  font-size: 16px;
+  font-weight: normal;
+  font-family: Inter, san-serif;
+  margin-right: 10px;
+}
+.product_about .product_price_content .productNewPrice {
+  color: red;
+}
+.product_about .product_price_content .productOldPrice {
+  text-decoration: line-through !important;
+}
+.product_about .color_title {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Inter, san-serif;
+  margin-bottom: 15px;
+}
+.product_about .color_title .productColorName {
+  color: #767676;
+  margin: 0 10px;
+}
+.product_about .product_color_content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 34px;
+}
+.product_about .product_color_content .productColor {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: red;
+  border: 0.5px solid #6b6868;
+  margin-right: 10px;
+}
+.product_about .product_sizeTitle {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Inter, san-serif;
+  margin-bottom: 15px;
+}
+.product_about .product_size_content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 22px;
+}
+.product_about .product_size_content span {
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  border: 1px solid black;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Inter, san-serif;
+  margin-bottom: 15px;
+}
+.product_about .product_countTitle {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Inter, san-serif;
+  margin-bottom: 15px;
+}
+.product_about .product_count_content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 22px;
+}
+.product_about .product_count_content span {
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  border: 1px solid black;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Inter, san-serif;
+  margin-bottom: 15px;
+}
+.product_about .product_like_content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.product_about .product_like_content .product_to_bag {
+  padding: 12px 30px;
+  background: #1A1458;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: Inter, san-serif;
+  text-transform: uppercase;
+  color: white;
+}
+.product_about .product_like_content .productLike {
+  padding: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+.product_about .product_article {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Inter, san-serif;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.product_about .product_article span {
+  color: #767676;
+  margin: 0 10px;
+}
+.product_about .product_location_content {
+  margin-top: 40px;
+  padding: 24px 16px 14px;
+  background: #E0EEFF;
+  border: 2px solid #E0EEFF;
+  border-radius: 16px;
+}
+.product_about .product_location_content .product_locationTitle {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #262626;
+  margin-bottom: 16px;
+}
+.product_about .product_location_content .product_location {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #262626;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.product_about .product_location_content .product_location span {
+  font-weight: 700;
+}
+
+.product_aboutIcon {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=ProductAbout.module.css.map */

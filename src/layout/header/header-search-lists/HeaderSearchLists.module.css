@@ -1,0 +1,25 @@
+.headerSearchContent {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  background: white;
+  padding: 16px 0;
+}
+.headerSearchContent ul {
+  list-style: none;
+  padding: 0;
+}
+.headerSearchContent ul li {
+  padding: 16px;
+  border-bottom: 0.5px solid #645f5f;
+  border-top: 0.5px solid #645f5f;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-family: Inter, san-serif;
+  font-weight: bold;
+}
+.headerSearchContent ul li a {
+  color: black;
+}
+
+/*# sourceMappingURL=HeaderSearchLists.module.css.map */

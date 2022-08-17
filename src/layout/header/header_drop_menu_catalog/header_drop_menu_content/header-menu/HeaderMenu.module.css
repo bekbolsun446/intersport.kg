@@ -1,0 +1,94 @@
+.header_menu_drop {
+  position: absolute;
+  background: white;
+  width: 100%;
+  z-index: 0;
+  padding: 40px;
+  display: flex;
+  overflow: hidden;
+}
+.header_menu_drop .header_drop_img {
+  width: 32%;
+  padding: 0 16px 36px 0;
+  border-right: 1px solid #444141;
+}
+.header_menu_drop .header_drop_img .header_drop_img_content {
+  position: relative;
+  height: 500px;
+}
+.header_menu_drop .header_drop_img .header_drop_img_content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.header_menu_drop .header_drop_img .header_drop_img_content .header_drop_imgLink {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+  font-family: Inter, san-serif;
+}
+.header_menu_drop .header_drop_img .header_drop_img_content .header_drop_imgLink .header_drop_imgIcon {
+  font-size: 50px;
+}
+.header_menu_drop .header_drop_content {
+  padding: 0 0 0 16px;
+  width: 65%;
+}
+.header_menu_drop .header_drop_content .header_drop_link_content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.header_menu_drop .header_drop_content .header_drop_link_content .header_drop_content_item {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  position: relative;
+  padding-bottom: 36px;
+  margin-bottom: 40px;
+}
+.header_menu_drop .header_drop_content .header_drop_link_content .header_drop_content_item .header_drop_link {
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: Inter, san-serif;
+  color: #004EB2;
+  text-transform: uppercase;
+}
+.header_menu_drop .header_drop_content .header_drop_link_content .header_drop_content_item .header_drop_itemTitle {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: Inter, san-serif;
+  color: #004EB2;
+}
+.header_menu_drop .header_drop_content .header_drop_link_content .header_drop_content_item .header_drop_typeLinks {
+  margin-bottom: 16px;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 19px;
+  font-family: Inter, san-serif;
+  color: black;
+}
+.header_menu_drop .header_drop_content .header_drop_link_content .header_drop_content_item .header_drop_lastLink {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 13px;
+  font-family: Inter, san-serif;
+  color: #004EB2;
+}
+
+/*# sourceMappingURL=HeaderMenu.module.css.map */

@@ -1,0 +1,39 @@
+.product_content_useful .product_content_usefulTitle {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  color: #1A1458;
+  padding: 0 0 15px 0;
+  margin: 0 0 15px 0;
+  border-bottom: 1px solid rgba(17, 13, 67, 0.3);
+}
+.product_content_useful .product_content_usefulBody {
+  font-size: 16px;
+  font-weight: normal;
+  font-family: Inter, san-serif;
+  overflow: hidden;
+  text-wrap: revert;
+  width: 80%;
+}
+.product_content_useful .product_content_usefulBody .product_content_usefulUnderlined {
+  text-decoration: underline !important;
+  display: block;
+  margin-bottom: 32px;
+}
+.product_content_useful .product_content_usefulLiTitle {
+  font-weight: bold;
+  font-size: 16px;
+  font-family: Inter, san-serif;
+  margin-bottom: 24px;
+}
+.product_content_useful ul {
+  padding: 0 54px;
+}
+.product_content_useful ul li {
+  font-weight: normal;
+  font-size: 16px;
+  font-family: Inter, san-serif;
+  margin-bottom: 5px;
+}
+
+/*# sourceMappingURL=ProductContenUseful.module.css.map */

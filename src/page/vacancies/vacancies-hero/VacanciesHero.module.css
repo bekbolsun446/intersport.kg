@@ -1,0 +1,33 @@
+.vacancies_content {
+  width: 65%;
+}
+@media screen and (max-width: 991px) {
+  .vacancies_content {
+    width: 100%;
+  }
+}
+.vacancies_content .vacancies_content_img {
+  height: 70vh;
+}
+@media screen and (max-width: 575px) {
+  .vacancies_content .vacancies_content_img {
+    height: 50vh;
+  }
+}
+.vacancies_content .vacancies_content_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.vacancies_content .vacancies_types {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+.vacancies_content .vacancies_types .vacancy_item_content {
+  margin: 16px 0 16px 0;
+  width: 48%;
+}
+
+/*# sourceMappingURL=VacanciesHero.module.css.map */

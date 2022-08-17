@@ -1,0 +1,27 @@
+.main_hero {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (max-width: 991px) {
+  .main_hero {
+    height: 50vh;
+  }
+}
+.main_hero img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main_hero button {
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+  width: auto;
+  padding: 16px 32px;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=MainHero.module.css.map */

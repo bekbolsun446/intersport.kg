@@ -1,0 +1,33 @@
+$font: Inter, san-serif;
+
+.footer_menu_content {
+  display: flex;
+  justify-content: space-between;
+  padding: 81px 0;
+  border-top: 1px solid #8f8e8e;
+
+  .footer_menu {
+    display: flex;
+    @media screen and (max-width: 991px) {
+      justify-content: space-between;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+
+  .footer_menuSocialMedia {
+    @media screen and (max-width: 991px) {
+      display: none;
+    }
+  }
+
+  .footer_menuSocial {
+    justify-content: space-around;
+    border:none;
+    margin-top: 16px;
+    a{
+      font-size: 15px;
+      font-weight: 400;
+    }
+  }
+}

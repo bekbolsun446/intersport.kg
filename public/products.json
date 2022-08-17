@@ -1,0 +1,215 @@
+[
+  {
+    "id": 1,
+    "img": "https://inter-sport.s3.amazonaws.com/products/GR4080/white_white/GR4080-1_resized_400X400.png",
+    "imgs": [
+      "https://inter-sport.s3.amazonaws.com/products/GR4080/white_white/GR4080-1_resized_400X400.png",
+      "https://inter-sport.s3.amazonaws.com/products/GR4080/white_white/GR4080-2_resized_400X400.png",
+      "https://inter-sport.s3.amazonaws.com/products/GR4080/white_white/GR4080-3_resized_400X400.png",
+      "https://inter-sport.s3.amazonaws.com/products/GR4080/white_white/GR4080-4_resized_400X400.png",
+      "https://www.undp.org/sites/g/files/zskgke326/files/migration/cn/UNDP-CH-Why-Humanity-Must-Save-Nature-To-Save-Itself.jpeg"
+    ],
+    "brand": "Adidas",
+    "name": "Штаны BASE Adidas W 3S FT C PT",
+    "newPrice": "3990",
+    "oldPrice": "5790",
+    "sale": "30",
+    "colors": [
+      {
+        "id": 1,
+        "colorName": "White",
+        "color": "white"
+      },
+      {
+        "id": 2,
+        "colorName": "Red",
+        "color": "red"
+      },
+      {
+        "id": 3,
+        "colorName": "Black",
+        "color": "black"
+      }
+    ],
+    "sizes": ["51", "52", "58"],
+    "link": "catalog",
+    "count": 8,
+    "article": "GR4080 - white",
+    "shop": [
+      {
+        "id": "1",
+        "name": "Adidas ТРЦ 'Dordoi Plaza'' ",
+        "shopCount": "2"
+      },
+      {
+        "id": "2",
+        "name": "ТЦ '1000 мелочей' ",
+        "shopCount": "1"
+      }
+    ],
+    "isNew": true,
+    "isStar": false,
+    "isPopular": true
+  },
+  {
+    "id": 2,
+    "img": "https://inter-sport.s3.amazonaws.com/products/533562/porcelain_61/533562-1_resized_400X400.png",
+    "imgs": [
+      "https://inter-sport.s3.amazonaws.com/products/533562/porcelain_61/533562-1_resized_400X400.png",
+      "https://inter-sport.s3.amazonaws.com/products/533562/porcelain_61/533562-2_resized_400X400.png",
+      "https://inter-sport.s3.amazonaws.com/products/533562/porcelain_61/533562-3_resized_400X400.png"
+    ],
+    "brand": "Толстовка   Puma",
+    "name": "Толстовка Puma SWxP Crew TR",
+    "newPrice": 4190,
+    "oldPrice": 6990,
+    "sale": 40,
+    "colors": [
+      {
+        "id": 1,
+        "colorName": "Blue",
+        "color": "#00FFFF"
+      }
+    ],
+    "sizes": ["XS", "S", "M","L"],
+    "link": "catalog",
+    "count": 2,
+    "article": "533562-61",
+    "shop": [
+      {
+        "id": "2",
+        "name": "ТЦ '1000 мелочей' ",
+        "shopCount": "1"
+      }
+    ],
+    "isNew": true,
+    "isStar": true,
+    "isPopular": true
+  },
+  {
+    "id": 3,
+    "img": "https://inter-sport.s3.amazonaws.com/products/DD5391/smoke%20grey_084/DD5391-1_resized_400X400.jpg",
+    "imgs": [
+      "https://inter-sport.s3.amazonaws.com/products/DD5391/smoke%20grey_084/DD5391-1_resized_400X400.jpg",
+      "https://inter-sport.s3.amazonaws.com/products/DD5391/smoke%20grey_084/DD5391-2_resized_400X400.jpg",
+      "https://inter-sport.s3.amazonaws.com/products/DD5391/smoke%20grey_084/DD5391-3_resized_400X400.jpg"
+    ],
+    "brand": "Ветровка   Nike",
+    "name": "Ветровка Nike M NK RPL WR WINDRNNER GX JKT",
+    "newPrice":10190 ,
+    "oldPrice": 16990,
+    "sale": 40,
+    "colors": [
+      {
+        "id": 1,
+        "colorName": "Серый",
+        "color": "gray"
+      }
+    ],
+    "sizes": ["S","M","XL","L"],
+    "link": "catalog",
+    "count": 3,
+    "article": "DD5391 - 084",
+    "shop": [
+      {
+        "id": 1,
+        "name": "Nike ТРЦ DordoiPlaza:",
+        "shopCount": 2
+      },
+      {
+        "id": 2,
+        "name": " ТЦ 1000 мелочей",
+        "shopCount": 4
+      }
+    ],
+    "isNew": true,
+    "isStar": true,
+    "isPopular": true
+  },
+  {
+    "id": 4,
+    "img": "https://inter-sport.s3.amazonaws.com/products/DC7797/pink%20foam_615/DC7797-1_resized_400X400.jpg",
+    "imgs": [
+      "https://inter-sport.s3.amazonaws.com/products/DC7797/pink%20foam_615/DC7797-1_resized_400X400.jpg",
+      "https://inter-sport.s3.amazonaws.com/products/DC7797/pink%20foam_615/DC7797-2_resized_400X400.jpg",
+      "https://inter-sport.s3.amazonaws.com/products/DC7797/pink%20foam_615/DC7797-3_resized_400X400.jpg"
+    ],
+    "brand": "Футболка   Nike",
+    "name": "Футболка Nike U NSW TEE SWOOSH",
+    "newPrice":1190 ,
+    "oldPrice":1990 ,
+    "sale":40 ,
+    "colors": [
+      {
+        "id": 1,
+        "colorName": "Черный",
+        "color": "black"
+      },
+      {
+        "id": 2,
+        "colorName": "Розовый",
+        "color": "pink"
+      }
+    ],
+    "sizes":["XS", "M", "L", "XL"],
+    "link": "catalog",
+    "count": 8,
+    "article": "DC7797-011",
+    "shop": [
+      {
+        "id": 1,
+        "name": "InterSport Ч. Айтматова",
+        "shopCount": 2
+      }
+    ],
+    "isNew": true,
+    "isStar": true,
+    "isPopular": true
+  },
+  {
+    "id": 5,
+    "img": "https://inter-sport.s3.amazonaws.com/products/H39842/orbit%20green_orbit%20g/H39842-1_resized_400X400.png",
+    "imgs": [
+      "https://inter-sport.s3.amazonaws.com/products/H39842/orbit%20green_orbit%20g/H39842-1_resized_400X400.png",
+      "https://inter-sport.s3.amazonaws.com/products/H39842/orbit%20green_orbit%20g/H39842-2_resized_400X400.png",
+      "https://inter-sport.s3.amazonaws.com/products/H39842/orbit%20green_orbit%20g/H39842-3_resized_400X400.png",
+      "https://inter-sport.s3.amazonaws.com/products/H39842/orbit%20green_orbit%20g/H39842-4_resized_400X400.png"
+    ],
+    "brand": "Толстовка   Adidas",
+    "name": "Толстовка Adidas M ZNE HOOD",
+    "newPrice":7190 ,
+    "oldPrice": 11990,
+    "sale":40 ,
+    "colors": [
+      {
+        "id": 1,
+        "colorName": "Оливковый",
+        "color": ""
+      },
+      {
+        "id": 2,
+        "colorName": "",
+        "color": "#808000"
+      }
+    ],
+    "sizes": [58 ,62],
+    "link": "catalog",
+    "count": 3,
+    "article": "H39842 - orbit g",
+    "shop": [
+      {
+        "id": 1,
+        "name": "ТЦ 1000 мелочей",
+        "shopCount": 1
+      },
+      {
+        "id": 2,
+        "name": " Adidas ТРЦ Dordoi Plaza",
+        "shopCount": 1
+      }
+    ],
+    "isNew": false,
+    "isStar": true,
+    "isPopular": true
+  }
+]

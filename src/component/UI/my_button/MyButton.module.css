@@ -1,0 +1,18 @@
+.myButton {
+  width: 100%;
+  padding: 17px 0;
+  background: #1A1458;
+  border: 1px solid #1A1458;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: Inter, san-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  color: #FFFFFF;
+  cursor: pointer;
+  max-width: 442px;
+  margin: 16px auto;
+}
+
+/*# sourceMappingURL=MyButton.module.css.map */

@@ -1,0 +1,13 @@
+
+.header_drop_menu_catalog{
+  width: 100%;
+  position: relative;
+}
+.header_drop_menu_contentItem {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: all .3s;
+}

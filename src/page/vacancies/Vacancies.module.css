@@ -1,0 +1,53 @@
+.vacancies_head_ {
+  font-size: 32px;
+  font-weight: bold;
+  font-family: Inter, san-serif;
+  padding: 20px 0 30px 0;
+  border-top: 1px solid #ccc2c2;
+  border-bottom: 1px solid #bdb0b0;
+  color: #1A1458;
+}
+@media screen and (max-width: 991px) {
+  .vacancies_head_ {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .vacancies_head_ {
+    font-size: 20px;
+  }
+}
+
+.vacanciesTitle {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: Inter, san-serif;
+  margin: 30px 0 42px 0;
+  color: #1A1458;
+}
+@media screen and (max-width: 991px) {
+  .vacanciesTitle {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .vacanciesTitle {
+    font-size: 24px;
+  }
+}
+
+.vacancies {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 991px) {
+  .vacancies {
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=Vacancies.module.css.map */

@@ -1,0 +1,71 @@
+$font: Inter, san-serif;
+
+.footer_about {
+  padding: 60px 0;
+  border-top: 1px solid #8f8e8e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (max-width: 767px){
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer_aboutTitle {
+    width: 40%;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: $font;
+    color: white;
+    @media screen and (max-width: 767px){
+      width: 100%;
+      margin-bottom: 32px;
+    }
+  }
+
+  .footer_form {
+    display: flex;
+    flex-direction: column;
+    @media screen  and (max-width: 767px){
+      width: 100%;
+    }
+    .footer_formTitle {
+      font-size: 16px;
+      font-weight: normal;
+      font-family: $font;
+      margin-bottom: 8px;
+    }
+
+    .footer_form_content {
+      .footer_aboutInput {
+        background: none;
+        color: #ffffff;
+        width: 70%;
+        padding: 16px 16px;
+        border: 1px solid white;
+        outline: none;
+        font-size: 14px;
+        font-weight: normal;
+        font-family: $font;
+
+        &::placeholder {
+          color: white;
+        }
+      }
+
+      .footer_aboutBtn {
+        background: none;
+        color: #ffffff;
+        width: 30%;
+        padding: 16px 0;
+        border: 1px solid white;
+        font-size: 14px;
+        font-weight: normal;
+        font-family: $font;
+        text-transform: uppercase;
+
+      }
+    }
+  }
+}

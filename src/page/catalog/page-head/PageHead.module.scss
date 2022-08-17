@@ -1,0 +1,35 @@
+.page_head {
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e5e5e5;
+  .page_headBackLink {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: #262626;
+    border-right: 2px solid black;
+    text-transform: uppercase;
+    padding: 0 8px;
+    .page_head_arrowIcon{
+      margin-right: 8px;
+    }
+  }
+
+  .page_headMainLink {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #262626;
+    padding: 0 8px;
+  }
+
+  .page_headCurrentLink {
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 17px;
+    color: #262626;
+  }
+}

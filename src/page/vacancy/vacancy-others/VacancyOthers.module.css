@@ -1,0 +1,14 @@
+.other_vacancy {
+  width: 36%;
+  padding: 0 36px;
+}
+.other_vacancy .other_vacancyTitle {
+  font-weight: 600;
+  font-size: 24px;
+  font-family: Inter, san-serif;
+  line-height: 29px;
+  color: #1A1458;
+  margin-bottom: 40px;
+}
+
+/*# sourceMappingURL=VacancyOthers.module.css.map */

@@ -1,0 +1,19 @@
+$font: Inter, san-serif;
+.main_head {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #8f8c8c;
+
+  .main_headTitle {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #1A1458;
+    font-family: $font;
+
+  }
+}

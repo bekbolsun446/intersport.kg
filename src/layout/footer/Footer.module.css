@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+.footer_bg {
+  background: #191919;
+  padding-top: 50px;
+  margin-top: 50px;
+  color: white;
+  z-index: 1;
+}
+
+/*# sourceMappingURL=Footer.module.css.map */

@@ -1,0 +1,129 @@
+$font: Inter, san-serif;
+.card {
+  width: 97%;
+  margin-top: 16px;
+  background: white;
+  position: relative;
+  @media screen and (max-width: 991px){
+    width: 98%;
+  }
+  &:hover{
+    box-shadow:0 0 19px -15px #000000;
+  }
+
+  .card_img_content {
+    position: relative;
+    height: 70%;
+    @media screen and (max-width: 767px){
+      height: 50%;
+    }
+
+    .cardImg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cardNew {
+      position: absolute;
+      color: black;
+      text-transform: uppercase;
+      font-weight: normal;
+      font-size: 12px;
+      font-family: $font;
+      background: white;
+      padding: 4px 16px;
+      top: 16px;
+      left: 16px;
+
+    }
+
+    .cardLike {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      z-index: 10 !important;
+    }
+  }
+
+  .card_body {
+    padding: 16px;
+    @media screen and (max-width: 575px){
+      padding: 8px;
+    }
+    .cardBrand {
+      font-weight: normal;
+      font-size: 13px;
+      font-family: $font;
+      line-height: 92%;
+      color: #767676;
+      margin-bottom: 12px;
+    }
+
+    .card_name {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 500;
+      font-size: 13px;
+      font-family: $font;
+      line-height: 138%;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      min-height: 40px;
+
+      svg {
+        margin-left: 16px;
+      }
+    }
+
+    .card_price {
+      display: flex;
+      align-items: center;
+      column-gap: 12px;
+      margin-bottom: 12px;
+
+      p {
+        font-size: 13px;
+        line-height: 154%;
+        font-weight: normal;
+        font-family: $font;
+      }
+
+      .card_newPrice {
+        color: red;
+      }
+
+      .card_oldPrice {
+        text-decoration: line-through !important;
+      }
+
+      .card_sale {
+
+      }
+    }
+
+    .card_color {
+      display: flex;
+      align-items: center;
+      column-gap: 12px;
+      margin-bottom: 12px;
+
+      span {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: .5px solid #868484;
+
+      }
+    }
+  }
+
+  .cardLink{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+  }
+}

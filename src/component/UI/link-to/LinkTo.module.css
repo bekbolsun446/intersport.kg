@@ -1,0 +1,23 @@
+.link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 32px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  text-transform: uppercase;
+  font-family: Inter, san-serif;
+  column-gap: 12px;
+  color: #ffffff;
+  background: #1A1458;
+  border-radius: 4px;
+}
+.link:hover {
+  color: white;
+}
+.link .link_toArrow {
+  font-size: 32px;
+}
+
+/*# sourceMappingURL=LinkTo.module.css.map */

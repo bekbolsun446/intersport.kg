@@ -1,0 +1,43 @@
+.catalog_filter_category {
+  position: relative;
+  display: inline-block;
+
+  .catalog_filter_category_title {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    background: none;
+    outline: none;
+    &:hover {
+      background: white;
+      box-shadow: 0 2px 5px #e0dada;
+    }
+    span {
+      margin-left: 8px;
+    }
+  }
+  .catalog_filter_category_title_show{
+    background: white;
+  }
+
+  .catalog_filter_category_content {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 300px;
+    background: white;
+    max-height: 400px;
+    padding: 16px;
+    z-index: 100 ;
+    min-height: 300px;
+    display: none;
+  }
+  .catalog_filter_category_content_show{
+    display: block;
+  }
+}
