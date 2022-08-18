@@ -2,7 +2,9 @@
   padding: 50px 0;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   border-bottom: 1px solid #e5e5e5;
+
   .page_headBackLink {
     display: flex;
     align-items: center;
@@ -13,7 +15,8 @@
     border-right: 2px solid black;
     text-transform: uppercase;
     padding: 0 8px;
-    .page_head_arrowIcon{
+
+    .page_head_arrowIcon {
       margin-right: 8px;
     }
   }
