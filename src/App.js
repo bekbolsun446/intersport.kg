@@ -10,6 +10,7 @@ import Vacancies from "./page/vacancies/Vacancies";
 import Vacancy from "./page/vacancies/vacancy/Vacancy";
 import {MyContext} from "./provider/Provider";
 import Loading from "./component/loading/Loading";
+import CatalogF from "./page/catalog-f/CatalogF";
 
 function App() {
     const context = useContext(MyContext)
@@ -29,7 +30,8 @@ function App() {
                     <Routes>
                         <Route path='/' element={<Content/>}>
                             <Route index element={<Main/>}/>
-                            <Route path='catalog/:id' element={<Catalog/>}/>
+                            <Route path='catalog' element={<Catalog/>}/>
+                            <Route path='catalog/:type' element={<CatalogF/>}/>
                             <Route path={`products/:name`} element={<Product/>}/>
                             <Route path='vacancies' element={<Vacancies/>}/>
                             <Route path={`vacancies/:name`} element={<Vacancy/>}/>

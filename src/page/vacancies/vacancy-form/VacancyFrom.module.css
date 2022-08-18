@@ -1,0 +1,63 @@
+.vacancy_form .vacancy_formTitle {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  text-transform: uppercase;
+  color: #1A1458;
+  width: 85%;
+  margin: 100px 0 40px 0;
+}
+.vacancy_form .vacancy_form_content {
+  background: white;
+  padding: 53px 40px 40px;
+}
+@media screen and (max-width: 575px) {
+  .vacancy_form .vacancy_form_content {
+    padding: 16px;
+  }
+}
+.vacancy_form .vacancy_form_content .vacancy_form_contentTitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #1D1D1D;
+  margin-bottom: 40px;
+}
+.vacancy_form .vacancy_form_content .vacancy_form_area {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.vacancy_form .vacancy_form_content .vacancy_form_area .vacancy_Input50 {
+  width: 48%;
+}
+@media screen and (max-width: 575px) {
+  .vacancy_form .vacancy_form_content .vacancy_form_area .vacancy_Input50 {
+    width: 100%;
+  }
+}
+.vacancy_form .vacancy_form_content .vacancy_form_area .vacancy_InputTextArea {
+  min-height: 120px;
+}
+.vacancy_form .vacancy_form_content .vacancy_form_area .vacancy_InputFileLabel {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #1A1458;
+  margin: 42px 0;
+  cursor: pointer;
+}
+.vacancy_form .vacancy_form_content .vacancy_form_area .vacancy_InputFileLabel .vacancy_fromIcon {
+  font-size: 18px;
+  margin-left: 16px;
+}
+.vacancy_form .vacancy_form_content .vacancy_form_area .vacancy_InputFileLabel .vacancy_InputFile {
+  padding: 0;
+  display: none;
+}
+
+/*# sourceMappingURL=VacancyFrom.module.css.map */

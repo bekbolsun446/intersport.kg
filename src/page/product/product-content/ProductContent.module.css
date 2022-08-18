@@ -8,13 +8,14 @@
 }
 .product_content .product_hero {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 75vh;
   overflow-y: hidden;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .product_content .product_hero {
     height: 50vh;
+    padding: 0;
   }
 }
 .product_content .product_hero .product_img_content {

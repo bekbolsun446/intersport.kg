@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition:  all .2s linear;
+  transition: all .2s linear;
 }
 
 $font: Inter, san-serif;
@@ -18,4 +18,8 @@ h2 {
   @media screen and (max-width: 576px) {
     font-size: 24px !important;
   }
+}
+
+*::-webkit-scrollbar {
+  display: none;
 }

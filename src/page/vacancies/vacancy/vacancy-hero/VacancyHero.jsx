@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from "./VacancyHero.module.scss";
 import VacancyRequirement from "./vacancy-requirement/VacancyRequirement";
+import VacancyForm from "../../vacancy-form/VacancyForm";
 
 const VacancyHero = (props) => {
     const {vacancy} = props;
@@ -28,6 +29,7 @@ const VacancyHero = (props) => {
                     </span>
                 )}
             </p>
+            <VacancyForm/>
         </div>
     );
 };

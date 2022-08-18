@@ -5,6 +5,7 @@
 @media screen and (max-width: 991px) {
   .other_vacancy {
     width: 100%;
+    margin-top: 32px;
   }
 }
 .other_vacancy .other_vacancyTitle {

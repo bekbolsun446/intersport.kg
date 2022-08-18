@@ -1,6 +1,6 @@
 $font: Inter, san-serif;
 .product_content_useful {
-
+  margin-top: 32px;
   .product_content_usefulTitle {
     font-weight: 600;
     font-size: 32px;
@@ -27,6 +27,7 @@ $font: Inter, san-serif;
 
   }
   .product_content_usefulLiTitle {
+    margin-top: 16px;
     font-weight: bold;
     font-size: 16px;
     font-family: $font;

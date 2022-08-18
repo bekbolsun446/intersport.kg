@@ -8,6 +8,7 @@ import {useParams} from "react-router-dom";
 import {MyContext} from "../../provider/Provider";
 import ProductAbout from "./product-about/ProductAbout";
 import ProductContent from "./product-content/ProductContent";
+import PageHead from "../../component/page-head/PageHead";
 
 const Product = (props) => {
     let {name} = useParams();
@@ -17,11 +18,23 @@ const Product = (props) => {
     const {error, setError} = context.error;
     const {isLoaded, setIsLoaded} = context.isLoaded
 
-
     const count = [];
     for (let i = 1; i < product.count + 1; i++) {
         count.push(i)
     }
+
+    const prevPages = [
+        {
+            id: 1,
+            link: '/',
+            name: 'Главная'
+        },
+        {
+            id: 2,
+            link: '',
+            name: 'Products'
+        }
+    ]
 
     if (error) {
         return (
@@ -32,14 +45,12 @@ const Product = (props) => {
     } else {
         return (
             <div className='product_'>
-                <MainHead title='Product' link='catalog' linkTitle='ПЕРЕЙТИ В КАТАЛОГ'/>
-                {/*{products.map(product =>*/}
+                <PageHead currentPage={product.name} prevPages={prevPages}/>
+                <MainHead link='catalog' linkTitle='ПЕРЕЙТИ В КАТАЛОГ'/>
                 <div key={product.id} className={classes.product}>
                     <ProductContent product={product}/>
                     <ProductAbout product={product} count={count && count}/>
                 </div>
-                {/*)*/}
-                {/*}*/}
             </div>
         );
     }
