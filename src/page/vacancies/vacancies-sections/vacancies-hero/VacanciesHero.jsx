@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import classes from "./VacanciesHero.module.scss";
 import {Link} from "react-router-dom";
 import VacancyItem from "../vacancy-item/VacancyItem";
-import {MyContext} from "../../../provider/Provider";
+import {MyContext} from "../../../../provider/Provider";
 
 const VacanciesHero = (props) => {
     const {} = props

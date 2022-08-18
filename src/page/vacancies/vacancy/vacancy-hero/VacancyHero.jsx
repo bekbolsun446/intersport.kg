@@ -22,7 +22,10 @@ const VacancyHero = (props) => {
             <p className={classes.vacancyNumbers}>
                 Контакты:
                 {vacancy.numbers.map((number, index) =>
-                    <span key={index}>{'  ' + number} {index != vacancy.numbers.length - 1 ? '  or  ' : ''}</span>
+                    <span key={index}>
+                        <span className={classes.vacancyNumbersItem} key={index}>{'  ' + number}</span>
+                        <span> {index != vacancy.numbers.length - 1 ? '  or  ' : ''}</span>
+                    </span>
                 )}
             </p>
         </div>

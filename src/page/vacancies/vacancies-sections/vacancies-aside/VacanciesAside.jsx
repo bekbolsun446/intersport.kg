@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from "./VacanciesAside.module.scss";
-import MyButton from "../../../component/UI/my_button/MyButton";
+import MyButton from "../../../../component/UI/my_button/MyButton";
 
 const VacanciesAside = () => {
     return (

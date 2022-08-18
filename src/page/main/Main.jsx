@@ -21,10 +21,10 @@ const Main = (props) => {
     return (
         <div className={classes.main}>
             <MainHero/>
-            <MainNew newProducts={newProducts} link='#' title={'новинки'} linkTitle={'Смотреть все'}/>
-            <MainNew newProducts={popularProducts} link='#' title={'ПОПУЛЯРНОЕ'} linkTitle={'Смотреть все'}/>
+            <MainNew newProducts={newProducts} link='catalog' title={'новинки'} linkTitle={'Смотреть все'}/>
+            <MainNew newProducts={popularProducts} link='catalog' title={'ПОПУЛЯРНОЕ'} linkTitle={'Смотреть все'}/>
             <MainCategorySlide/>
-            <MainNew newProducts={starProducts} link='#' title={'ЗВЕЗДЫ'} linkTitle={'Смотреть все'}/>
+            <MainNew newProducts={starProducts} link='catalog' title={'ЗВЕЗДЫ'} linkTitle={'Смотреть все'}/>
             <MainUseful/>
         </div>
     );

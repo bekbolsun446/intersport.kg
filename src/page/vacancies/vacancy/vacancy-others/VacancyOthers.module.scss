@@ -1,0 +1,30 @@
+$font: Inter, san-serif;
+.other_vacancy {
+  width: 36%;
+  padding: 0 36px;
+  @media screen and (max-width: 991px){
+    width: 100%;
+  }
+  .other_vacancyTitle {
+    font-weight: 600;
+    font-size: 24px;
+    font-family: $font;
+    line-height: 29px;
+    color: #1A1458;
+    margin-bottom: 40px;
+  }
+
+  .other_vacancy_content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .other_vacancyItem {
+      width: 100%;
+      margin-top: 16px;
+      @media screen and (max-width: 991px){
+        width: 48%;
+      }
+    }
+  }
+}

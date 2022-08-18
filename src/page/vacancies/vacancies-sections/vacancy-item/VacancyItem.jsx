@@ -16,7 +16,7 @@ const VacancyItem = (props) => {
                 {vacancy.name}
                 <BsArrowRight className={classes.vacancy_itemIcon}/>
             </h3>
-            <Link to={vacancy.link} className={classes.vacancy_itemLink}/>
+            <Link to={`/vacancies/${vacancy.name}`} className={classes.vacancy_itemLink}/>
         </div>
     );
 };

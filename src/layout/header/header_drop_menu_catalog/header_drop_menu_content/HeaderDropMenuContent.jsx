@@ -19,27 +19,28 @@ const HeaderDropMenuContent = (props) => {
             gsap.to('#womenCatalog', {height: 0, duration: .1})
             gsap.to('#childrenCatalog', {height: 0, duration: .1})
         })
-    })
-    // DROP DOWN MENU FOR MEN
-    $('#men ,#menCatalog').mouseover(() => {
-        gsap.to('#menCatalog', {height: '90vh', duration: .1,ease:'linear'})
-    })
-    $('#men,#menCatalog').mouseleave(() => {
-        gsap.to('#menCatalog', {height: 0, duration: .1})
-    })
-    // DROP DOWN MENU FOR WOMEN
-    $('#women ,#womenCatalog').mouseover(() => {
-        gsap.to('#womenCatalog', {height: '90vh', duration: .1})
-    })
-    $('#women,#womenCatalog').mouseleave(() => {
-        gsap.to('#womenCatalog', {height: 0, duration: .1})
-    })
-    // DROP DOWN MENU FOR CHILDREN
-    $('#children ,#childrenCatalog').mouseover(() => {
-        gsap.to('#childrenCatalog', {height: '90vh', duration: .1})
-    })
-    $('#children,#childrenCatalog').mouseleave(() => {
-        gsap.to('#childrenCatalog', {height: 0, duration: .1})
+
+        // DROP DOWN MENU FOR MEN
+        $('#men ,#menCatalog').mouseover(() => {
+            gsap.to('#menCatalog', {height: '90vh', duration: .1, ease: 'linear'})
+        })
+        $('#men,#menCatalog').mouseleave(() => {
+            gsap.to('#menCatalog', {height: 0, duration: .1})
+        })
+        // DROP DOWN MENU FOR WOMEN
+        $('#women ,#womenCatalog').mouseover(() => {
+            gsap.to('#womenCatalog', {height: '90vh', duration: .1})
+        })
+        $('#women,#womenCatalog').mouseleave(() => {
+            gsap.to('#womenCatalog', {height: 0, duration: .1})
+        })
+        // DROP DOWN MENU FOR CHILDREN
+        $('#children ,#childrenCatalog').mouseover(() => {
+            gsap.to('#childrenCatalog', {height: '90vh', duration: .1})
+        })
+        $('#children,#childrenCatalog').mouseleave(() => {
+            gsap.to('#childrenCatalog', {height: 0, duration: .1})
+        })
     })
 
 

@@ -42,7 +42,7 @@ const Card = (props) => {
                     )}
                 </div>
             </div>
-            <Link to={`/${product.name}`} className={classes.cardLink}></Link>
+            <Link to={`/products/${product.name}`} className={classes.cardLink}></Link>
         </div>
     );
 };

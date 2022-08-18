@@ -13,13 +13,13 @@ const Product = (props) => {
     let {name} = useParams();
 
     const context = useContext(MyContext)
-    const products = context.products.filter(product => product.name == name)
+    const product = context.products.filter(product => product.name == name)[0]
     const {error, setError} = context.error;
     const {isLoaded, setIsLoaded} = context.isLoaded
 
 
     const count = [];
-    for (let i = 1; i < products[products.length-1].count + 1; i++) {
+    for (let i = 1; i < product.count + 1; i++) {
         count.push(i)
     }
 
@@ -33,13 +33,13 @@ const Product = (props) => {
         return (
             <div className='product_'>
                 <MainHead title='Product' link='catalog' linkTitle='ПЕРЕЙТИ В КАТАЛОГ'/>
-                {products.map(product =>
-                    <div key={product.id} className={classes.product}>
-                       <ProductContent product={product}/>
-                       <ProductAbout product={product} count={count} />
-                    </div>
-                )
-                }
+                {/*{products.map(product =>*/}
+                <div key={product.id} className={classes.product}>
+                    <ProductContent product={product}/>
+                    <ProductAbout product={product} count={count && count}/>
+                </div>
+                {/*)*/}
+                {/*}*/}
             </div>
         );
     }

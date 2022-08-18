@@ -8,9 +8,10 @@ import CatalogContent from "./catalog-content/CatalogContent";
 import CatalogFilter from "./catalog-filter/CatalogFilter";
 import {MyContext} from '../../provider/Provider'
 
-const Catalog = (props) => {
-    const context = useContext(MyContext)
-    const products = context.products
+const Catalog = () => {
+    const [context, setContext] = useState(useContext(MyContext))
+    const products = context.products;
+
 
     return (
         <div className={classes.catalog}>

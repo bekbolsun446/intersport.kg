@@ -2,8 +2,8 @@ import React from 'react';
 import MyButton from "../../component/UI/my_button/MyButton";
 import classes from "./Vacancies.module.scss";
 import {Link} from "react-router-dom";
-import VacanciesHero from "./vacancies-hero/VacanciesHero";
-import VacanciesAside from "./vacancies-aside/VacanciesAside";
+import VacanciesHero from "./vacancies-sections/vacancies-hero/VacanciesHero";
+import VacanciesAside from "./vacancies-sections/vacancies-aside/VacanciesAside";
 
 const Vacancies = () => {
     return (
