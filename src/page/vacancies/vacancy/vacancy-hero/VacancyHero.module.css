@@ -77,5 +77,13 @@
 .vacancy_content .vacancyNumbers .vacancyNumbersItem {
   font-weight: 600;
 }
+.vacancy_content .vacancy_form_content {
+  margin-top: 100px;
+}
+@media screen and (max-width: 991px) {
+  .vacancy_content .vacancy_form_content {
+    margin-top: 32px;
+  }
+}
 
 /*# sourceMappingURL=VacancyHero.module.css.map */

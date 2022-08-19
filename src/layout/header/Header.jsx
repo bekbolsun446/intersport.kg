@@ -54,11 +54,9 @@ const Header = (props) => {
         })
         setHeaderSearch('')
     }
-
-
     return (
         <header className={classes.header}>
-            <div className={classes.header_bg}>
+            <div className={[classes.header_bg,'headerBg'].join(' ')}>
                 <div className="container">
                     <div className={classes.header_content}>
                         <HeaderDropMenuCatalog isShown={isShown}/>

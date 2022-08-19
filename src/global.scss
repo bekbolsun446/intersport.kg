@@ -5,13 +5,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: all .2s linear;
+  transform-style: inherit !important;
 }
 
 $font: Inter, san-serif;
 body {
   background: #FAFAFA !important;
-  overflow-x: hidden;
 }
 
 h2 {

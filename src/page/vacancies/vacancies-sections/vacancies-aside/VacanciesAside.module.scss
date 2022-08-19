@@ -2,17 +2,18 @@ $font: Inter, san-serif;
 .vacancies_about {
   width: 35%;
   padding: 0 24px;
-  @media screen and (max-width: 991px){
+  @media screen and (max-width: 991px) {
     width: 100%;
     padding: 12px 0 0 0;
   }
+
   .vacancies_about_p {
     font-family: $font;
     font-size: 18px;
     line-height: 27px;
     color: #000000;
     margin-bottom: 84px;
-    @media screen and (max-width: 991px){
+    @media screen and (max-width: 991px) {
       font-size: 14px;
       margin-bottom: 16px;
       margin-top: 16px;
@@ -26,9 +27,17 @@ $font: Inter, san-serif;
     line-height: 39px;
     color: #1A1458;
     margin-bottom: 20px;
-    @media screen and (max-width: 991px){
+    @media screen and (max-width: 991px) {
       font-size: 24px;
     }
   }
 
+  .vacancies_from {
+    width: 800px;
+    height: 80vh;
+    overflow-y: auto;
+    @media screen and (max-width: 991px) {
+      width: 100%;
+    }
+  }
 }

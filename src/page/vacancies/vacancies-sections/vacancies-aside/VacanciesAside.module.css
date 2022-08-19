@@ -35,5 +35,15 @@
     font-size: 24px;
   }
 }
+.vacancies_about .vacancies_from {
+  width: 800px;
+  height: 80vh;
+  overflow-y: auto;
+}
+@media screen and (max-width: 991px) {
+  .vacancies_about .vacancies_from {
+    width: 100%;
+  }
+}
 
 /*# sourceMappingURL=VacanciesAside.module.css.map */

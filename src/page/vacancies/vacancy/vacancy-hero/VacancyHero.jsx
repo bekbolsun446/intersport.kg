@@ -29,7 +29,9 @@ const VacancyHero = (props) => {
                     </span>
                 )}
             </p>
-            <VacancyForm/>
+            <div className={classes.vacancy_form_content}>
+                <VacancyForm/>
+            </div>
         </div>
     );
 };
