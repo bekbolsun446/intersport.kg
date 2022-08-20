@@ -9,7 +9,6 @@ const FooterMenuItem = (props) => {
     const {footerMenu, isShow} = props
     const [show, setShow] = useState(isShow[footerMenu.id])
 
-
     useEffect(() => {
         // DROP-DOWN ANIMATION ON CLICK
         if ($(window).width() < 992) {

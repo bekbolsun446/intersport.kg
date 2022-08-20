@@ -11,6 +11,7 @@ import Vacancy from "./page/vacancies/vacancy/Vacancy";
 import {MyContext} from "./provider/Provider";
 import Loading from "./component/loading/Loading";
 import CatalogF from "./page/catalog-f/CatalogF";
+import Basket from "./page/basket/Basket";
 
 function App() {
     const context = useContext(MyContext)
@@ -35,6 +36,7 @@ function App() {
                             <Route path={`products/:name`} element={<Product/>}/>
                             <Route path='vacancies' element={<Vacancies/>}/>
                             <Route path={`vacancies/:name`} element={<Vacancy/>}/>
+                            <Route path={'basket'} element={<Basket/>}/>
                         </Route>
                         <Route path='*' element={<NotFoundPage/>}/>
                     </Routes>

@@ -21,21 +21,26 @@ const HeaderMenu = (props) => {
                 <div className={classes.header_drop_link_content}>
                     <div className={classes.header_drop_content_item}>
                         {headermenu.bigLink.map(links =>
-                            <a href={links.link} key={links.id} className={classes.header_drop_link}>{links.name}</a>
+                            <Link
+                                to={links.link} key={links.id}
+                                className={classes.header_drop_link}>{links.name}
+                            </Link>
                         )
                         }
-                        <Link to="#" className={classes.header_drop_lastLink}>Все товары для мужчин</Link>
                     </div>
                     {headermenu.typeLink.map(headerMenu =>
                         <div className={classes.header_drop_content_item} key={headerMenu.id}>
                             <p className={classes.header_drop_itemTitle}>{headerMenu.title}</p>
-                            {
-                                headerMenu.links.map(headerLinks =>
-                                    <Link to={`/catalog/${headerLinks.name}`} key={headerLinks.id}
-                                          className={classes.header_drop_typeLinks}>{headerLinks.name}</Link>
-                                )
+                            {headerMenu.links.map(headerLinks =>
+                                <Link
+                                    to={`/catalog/${headerLinks.name}`} key={headerLinks.id}
+                                    className={classes.header_drop_typeLinks}>{headerLinks.name}
+                                </Link>
+                            )
                             }
-                            <Link to={'/catalog'} className={classes.header_drop_lastLink}>Смотреть все</Link>
+                            <Link
+                                to={`/catalog/${headerMenu.title}`}
+                                className={classes.header_drop_lastLink}>Смотреть все</Link>
                         </div>
                     )
                     }

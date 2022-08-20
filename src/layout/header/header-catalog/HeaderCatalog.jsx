@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import {CloseOutlined, HeartOutlined, SearchOutlined, ShoppingOutlined} from "@ant-design/icons";
 
 const HeaderCatalog = (props) => {
-    const {headerLinks,isShown,searchShow,headerSearch,handleSearch} =props
+    const {headerLinks, isShown, searchShow, headerSearch, handleSearch} = props
     return (
         <div className={classes.header_menu}>
             {headerLinks.map(headerLink =>
@@ -34,7 +34,7 @@ const HeaderCatalog = (props) => {
             <Link to="#" className={classes.header_menuLink}>
                 <HeartOutlined className={classes.headerIcons}/>
             </Link>
-            <Link to="#" className={classes.header_menuLink}>
+            <Link to="/basket" className={classes.header_menuLink}>
                 <ShoppingOutlined className={classes.headerIcons}/>
                 <sup>5</sup>
             </Link>

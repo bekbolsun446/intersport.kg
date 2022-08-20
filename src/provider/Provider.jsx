@@ -21,7 +21,6 @@ const Provider = () => {
         vacancies: vacancies
     }
 
-
     return (
         <MyContext.Provider value={contextValue}>
             <App/>

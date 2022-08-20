@@ -11,10 +11,17 @@ const Catalog = () => {
     const [context, setContext] = useState(useContext(MyContext))
     const [products, setProducts] = useState([])
     // const products = context.products;
+
     useEffect(() => {
+
+        if (type.toLocaleLowerCase() == 'new') {
+            let filteredProducts = context.products.filter(product => product.isNew == true)
+           return  setProducts(filteredProducts)
+        }
         let filteredProducts = context.products.filter(product => {
             return product.name.toLowerCase().includes(type.trim().toLowerCase())
         })
+
         setProducts(filteredProducts)
     }, [type])
 

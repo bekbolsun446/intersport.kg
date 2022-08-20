@@ -50,7 +50,7 @@
   flex-direction: column;
   overflow: hidden;
   height: auto;
-  z-index: 10 !important;
+  z-index: 3;
 }
 @media screen and (max-width: 991px) {
   .footer_menu_items .footer_menu_link_content {
@@ -58,6 +58,7 @@
     position: absolute;
     top: 100%;
     width: 100%;
+    background: #191919;
   }
 }
 @media screen and (max-width: 575px) {

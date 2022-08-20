@@ -31,8 +31,8 @@ const Product = (props) => {
         },
         {
             id: 2,
-            link: '',
-            name: 'Products'
+            link: '/catalog',
+            name: 'Каталог'
         }
     ]
 

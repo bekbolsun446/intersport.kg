@@ -54,9 +54,10 @@ const Header = (props) => {
         })
         setHeaderSearch('')
     }
+
     return (
         <header className={classes.header}>
-            <div className={[classes.header_bg,'headerBg'].join(' ')}>
+            <div className={[classes.header_bg, 'headerBg'].join(' ')}>
                 <div className="container">
                     <div className={classes.header_content}>
                         <HeaderDropMenuCatalog isShown={isShown}/>
@@ -64,12 +65,14 @@ const Header = (props) => {
                             <img src="https://intersport.kg/static/new_static/img/png/logo.png"
                                  className={classes.headerLogo} alt=""/>
                         </Link>
-                        <HeaderCatalog headerLinks={headerLinks} isShown={isShown} searchShow={searchShow} headerSearch={headerSearch} handleSearch={handleSearch}/>
-                        <Link to={''} className={classes.headerLikeLink}><HeartOutlined className={classes.headerIcons}/></Link>
+                        <HeaderCatalog headerLinks={headerLinks} isShown={isShown} searchShow={searchShow}
+                                       headerSearch={headerSearch} handleSearch={handleSearch}/>
+                        <Link to={''} className={classes.headerLikeLink}><HeartOutlined
+                            className={classes.headerIcons}/></Link>
                     </div>
                 </div>
-                {isShown.search &&
-                  <HeaderSearchLists searchList={searchList}/>
+                {isShown.search && headerSearch &&
+                    <HeaderSearchLists searchList={searchList}/>
                 }
             </div>
         </header>
