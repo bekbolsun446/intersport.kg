@@ -3,7 +3,9 @@
   top: 100%;
   width: 100%;
   background: white;
-  padding: 16px 0;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
 }
 .headerSearchContent ul {
   list-style: none;

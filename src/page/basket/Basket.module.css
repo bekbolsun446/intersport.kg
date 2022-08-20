@@ -1,3 +1,27 @@
-
+.basket .basketTitle {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  display: flex;
+  align-items: center;
+  color: #1A1458;
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+}
+.basket .basketTitle .basketTitleSum {
+  font-weight: normal;
+  margin-left: 16px;
+}
+.basket .basket_content {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 991px) {
+  .basket .basket_content {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
 
 /*# sourceMappingURL=Basket.module.css.map */

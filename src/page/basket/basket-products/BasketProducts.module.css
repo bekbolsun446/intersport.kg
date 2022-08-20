@@ -1,0 +1,10 @@
+.basket_products {
+  width: 61%;
+}
+@media screen and (max-width: 991px) {
+  .basket_products {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=BasketProducts.module.css.map */

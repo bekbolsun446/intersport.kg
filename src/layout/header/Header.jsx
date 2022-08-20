@@ -1,4 +1,4 @@
-import React, {useState, useRef, useContext} from 'react';
+import React, {useState, useRef, useContext, useEffect} from 'react';
 import classes from "./Header.module.scss";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link, NavLink} from "react-router-dom";
@@ -40,8 +40,10 @@ const Header = (props) => {
         search: false
     })
     const [headerSearch, setHeaderSearch] = useState('')
-    let searchList = products.filter(product => product.name.toLowerCase().includes(headerSearch.toLowerCase()))
-
+    let searchList = products.filter(product => product.name.toLowerCase().includes(headerSearch.toLowerCase()));
+    useEffect(() => {
+        searchList = products.filter(product => product.name.toLowerCase().includes(headerSearch.toLowerCase()))
+    })
 
     function handleSearch(e) {
         setHeaderSearch(e.target.value)
@@ -71,9 +73,7 @@ const Header = (props) => {
                             className={classes.headerIcons}/></Link>
                     </div>
                 </div>
-                {isShown.search && headerSearch &&
-                    <HeaderSearchLists searchList={searchList}/>
-                }
+                <HeaderSearchLists isShow={isShown} headerSearch={headerSearch} searchList={searchList}/>
             </div>
         </header>
     );
