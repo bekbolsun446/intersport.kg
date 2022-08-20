@@ -72,18 +72,6 @@
   display: flex;
   align-items: center;
 }
-.basket_product .product_content .basket_product_about .basket_product_about_foot p {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 171%;
-  color: #1D1D1D;
-  text-transform: capitalize;
-  letter-spacing: 0;
-  padding: 0;
-}
-.basket_product .product_content .basket_product_about .basket_product_about_foot .basket_product_count {
-  margin-left: 32px;
-}
 .basket_product .basket_products_price_content {
   display: flex;
   flex-direction: column;

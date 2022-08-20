@@ -28,14 +28,8 @@ const BasketProduct = (props) => {
                         </div>
                     </div>
                     <div className={classes.basket_product_about_foot}>
-                        <p className={classes.basket_product_size}>
-                            Размер:
-                            <span>XS</span>
-                        </p>
-                        <p className={classes.basket_product_count}>
-                            Количество:
-                            <span>4</span>
-                        </p>
+                        <BasketProduct/>
+                        <BasketProduct/>
                     </div>
                 </div>
             </div>
