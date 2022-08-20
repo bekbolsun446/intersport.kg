@@ -58,6 +58,7 @@
   margin-bottom: 34px;
 }
 .product_about .product_color_content .productColor {
+  cursor: pointer;
   width: 26px;
   height: 26px;
   border-radius: 50%;
@@ -77,6 +78,7 @@
   margin-bottom: 22px;
 }
 .product_about .product_size_content span {
+  cursor: pointer;
   width: 48px;
   height: 48px;
   border-radius: 4px;
@@ -99,9 +101,11 @@
 .product_about .product_count_content {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   margin-bottom: 22px;
 }
 .product_about .product_count_content span {
+  cursor: pointer;
   width: 48px;
   height: 48px;
   border-radius: 4px;

@@ -15,13 +15,10 @@ const Product = (props) => {
 
     const context = useContext(MyContext)
     const product = context.products.filter(product => product.name == name)[0]
+    const basket = context.basket
+
     const {error, setError} = context.error;
     const {isLoaded, setIsLoaded} = context.isLoaded
-
-    const count = [];
-    for (let i = 1; i < product.count + 1; i++) {
-        count.push(i)
-    }
 
     const prevPages = [
         {
@@ -49,7 +46,7 @@ const Product = (props) => {
                 <MainHead link='catalog' linkTitle='ПЕРЕЙТИ В КАТАЛОГ'/>
                 <div key={product.id} className={classes.product}>
                     <ProductContent product={product}/>
-                    <ProductAbout product={product} count={count && count}/>
+                    <ProductAbout product={product} contextBasket={basket}/>
                 </div>
             </div>
         );

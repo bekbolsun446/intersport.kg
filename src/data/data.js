@@ -339,7 +339,7 @@ export const data = {
                 },
                 {
                     id: 2,
-                    colorName: "",
+                    colorName: "Green",
                     color: "#808000"
                 }
             ],
@@ -496,7 +496,7 @@ export const data = {
             ],
             sizes: [28, 28.5, 31.5, 32.5, 33, 34.5],
             link: "catalog",
-            count: 1,
+            count: 6,
             article: "195563-03",
             shop: [
                 {

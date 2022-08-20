@@ -7,9 +7,10 @@ $font: Inter, san-serif;
   position: sticky;
   top: 32px;
   height: 130vh;
-  @media screen and (max-width: 991px){
+  @media screen and (max-width: 991px) {
     width: 100%;
   }
+
   .productBrand {
     font-size: 16px;
     font-weight: normal;
@@ -68,6 +69,7 @@ $font: Inter, san-serif;
     margin-bottom: 34px;
 
     .productColor {
+      cursor: pointer;
       width: 26px;
       height: 26px;
       border-radius: 50%;
@@ -91,6 +93,7 @@ $font: Inter, san-serif;
     margin-bottom: 22px;
 
     span {
+      cursor: pointer;
       width: 48px;
       height: 48px;
       border-radius: 4px;
@@ -116,9 +119,11 @@ $font: Inter, san-serif;
   .product_count_content {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 22px;
 
-    span{
+    span {
+      cursor: pointer;
       width: 48px;
       height: 48px;
       border-radius: 4px;
@@ -214,7 +219,7 @@ $font: Inter, san-serif;
 }
 
 
-.product_aboutIcon{
+.product_aboutIcon {
   font-size: 24px;
   font-weight: 600;
 }

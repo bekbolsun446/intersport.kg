@@ -1,7 +1,6 @@
 .basket_product {
   display: flex;
   justify-content: space-between;
-  overflow: hidden;
   padding: 32px 0 32px 0;
   border-bottom: 1px solid #989595;
 }
@@ -59,6 +58,8 @@
   margin: 0 0 13px 0;
 }
 .basket_product .product_content .basket_product_about .basket_product_about_color .basket_product_about_colors span {
+  border: 0.3px solid #c4c2c2;
+  cursor: pointer;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -77,6 +78,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+}
+.basket_product .basket_products_price_content .basket_productPrice {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #E21D23;
+  margin: 0 10px 0 0;
 }
 .basket_product .basket_products_price_content .basket_products_btns {
   display: flex;

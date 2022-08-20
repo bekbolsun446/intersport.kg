@@ -1,0 +1,19 @@
+.countActive {
+  background: #1A1458;
+  color: white;
+}
+
+.colorActive {
+  position: relative;
+}
+.colorActive::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  top: 150%;
+  background: inherit;
+  border: 0.1px solid #d7d5d5;
+}
+
+/*# sourceMappingURL=productsAbout.css.map */

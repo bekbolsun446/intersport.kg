@@ -1,11 +1,36 @@
 .basket_product_select {
-  .basket_product_selectName {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 171%;
-    color: #1D1D1D;
-    text-transform: capitalize;
-    letter-spacing: 0;
-    padding: 0;
+  margin-right: 32px;
+  position: relative;
+  cursor: pointer;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 171%;
+  color: #1D1D1D;
+  text-transform: capitalize;
+  letter-spacing: 0;
+  padding: 8px 12px 8px 0;
+
+  section {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    width: 200px;
+    background: white;
+    box-shadow: 0 3px 5px 0 #afabab;
+    z-index: 5;
+
+    option {
+      padding: 8px 12px;
+
+      &:hover {
+        background: #ededed;
+      }
+    }
   }
 }
