@@ -1,0 +1,100 @@
+.favorites_product {
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 0 32px 0;
+  border-bottom: 1px solid #989595;
+}
+.favorites_product .favorites_product_content {
+  display: flex;
+}
+.favorites_product .favorites_product_content .favorites_product_img {
+  width: 120px;
+  height: 120px;
+}
+.favorites_product .favorites_product_content .favorites_product_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.favorites_product .favorites_product_content .favorites_product_about {
+  width: 80%;
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.favorites_product .favorites_product_content .favorites_product_about .favorites_productBrand {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 171%;
+  color: #767676;
+  margin: 0 0 8px 0;
+}
+.favorites_product .favorites_product_content .favorites_product_about .favorites_productName {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 162%;
+  color: #1D1D1D;
+  margin: 0 0 10px 0;
+}
+.favorites_product .favorites_product_content .favorites_product_about .favorites_product_price_content {
+  margin: 0 0 8px 0;
+  display: flex;
+  align-items: center;
+}
+.favorites_product .favorites_product_content .favorites_product_about .favorites_product_price_content p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  margin-left: 12px;
+  color: #1D1D1D;
+}
+.favorites_product .favorites_product_content .favorites_product_about .favorites_product_price_content p:first-child {
+  margin-left: 0;
+}
+.favorites_product .favorites_product_content .favorites_product_about .favorites_product_price_content .favorites_productOldPrice {
+  color: #E21D23;
+}
+.favorites_product .favorites_product_content .favorites_product_about .favorites_product_about_color .favorites_product_about_colors {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 0 13px 0;
+}
+.favorites_product .favorites_product_content .favorites_product_about .favorites_product_about_color .favorites_product_about_colors span {
+  border: 0.3px solid #c4c2c2;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: red;
+  margin-left: 8px;
+}
+.favorites_product .favorites_product_content .favorites_product_about .favorites_product_about_color .favorites_product_about_colors span:first-child {
+  margin-left: 0;
+}
+.favorites_product .favorites_products_btn_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.favorites_product .favorites_products_btn_content .favorites_products_btns {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .favorites_product .favorites_products_btn_content .favorites_products_btns {
+    flex-direction: column;
+  }
+}
+.favorites_product .favorites_products_btn_content .favorites_products_btns .favorites_products_btn {
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  color: black;
+}
+
+/*# sourceMappingURL=FavoritesProduct.module.css.map */

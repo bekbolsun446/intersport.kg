@@ -1,5 +1,5 @@
-.basket {
-  .basketTitle {
+.favorites {
+  .favoritesTitle {
     font-weight: 600;
     font-size: 32px;
     line-height: 39px;
@@ -8,18 +8,19 @@
     align-items: center;
     margin: 16px 0;
 
-    .basketTitleSum {
+    .favoritesTitleCount {
       font-weight: normal;
       margin-left: 16px;
     }
   }
 
-  .basket_content {
+  .favorites_content {
     display: flex;
     justify-content: space-between;
-    @media screen and (max-width: 991px){
+    @media screen and (max-width: 991px) {
       flex-direction: column;
       justify-content: flex-start;
     }
   }
+
 }

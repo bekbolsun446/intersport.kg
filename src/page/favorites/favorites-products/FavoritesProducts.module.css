@@ -1,0 +1,10 @@
+.favorites_products {
+  width: 50%;
+}
+@media screen and (max-width: 991px) {
+  .favorites_products {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=FavoritesProducts.module.css.map */

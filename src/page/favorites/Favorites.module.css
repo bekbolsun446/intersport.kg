@@ -1,4 +1,4 @@
-.basket .basketTitle {
+.favorites .favoritesTitle {
   font-weight: 600;
   font-size: 32px;
   line-height: 39px;
@@ -7,19 +7,19 @@
   align-items: center;
   margin: 16px 0;
 }
-.basket .basketTitle .basketTitleSum {
+.favorites .favoritesTitle .favoritesTitleCount {
   font-weight: normal;
   margin-left: 16px;
 }
-.basket .basket_content {
+.favorites .favorites_content {
   display: flex;
   justify-content: space-between;
 }
 @media screen and (max-width: 991px) {
-  .basket .basket_content {
+  .favorites .favorites_content {
     flex-direction: column;
     justify-content: flex-start;
   }
 }
 
-/*# sourceMappingURL=Basket.module.css.map */
+/*# sourceMappingURL=Favorites.module.css.map */

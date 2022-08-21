@@ -29,6 +29,16 @@ const Provider = () => {
     }, [basket])
     //----------------BASKET PRODUCTS  END---------------
 
+    //---------FAVORITE PRODUCTS---------------
+
+    const localeFavorites = localStorage.getItem('favorites')
+    const localedFavorites = JSON.parse(localeFavorites)
+    const [favorites, setFavorites] = useState(localedFavorites ? localedFavorites : [])
+    useEffect(() => {
+        localStorage.setItem('favorites', JSON.stringify(favorites))
+    }, [favorites])
+
+    //---------FAVORITE PRODUCTS END---------------
     const contextValue = {
         categories: categories,
         products: products,
@@ -36,7 +46,8 @@ const Provider = () => {
         isLoaded: {isLoaded, setIsLoaded},
         vacancies: vacancies,
         basket: {basket, setBasket},
-        allProductsCount: allProductsCount
+        allProductsCount: allProductsCount,
+        favorites: {favorites, setFavorites}
     }
 
     return (

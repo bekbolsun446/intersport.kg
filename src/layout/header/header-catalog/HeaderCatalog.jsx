@@ -37,7 +37,7 @@ const HeaderCatalog = (props) => {
                 }
 
             </div>
-            <Link to="#" className={classes.header_menuLink}>
+            <Link to="/favorites" className={classes.header_menuLink}>
                 <HeartOutlined className={classes.headerIcons}/>
             </Link>
             <Link to="/basket" className={classes.header_menuLink}>

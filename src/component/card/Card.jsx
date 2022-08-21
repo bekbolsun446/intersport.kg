@@ -1,15 +1,52 @@
-import React from 'react';
+import React, {useContext, useState} from 'react';
 import classes from "./Card.module.scss";
 import {Link} from "react-router-dom";
 import {FaRegHeart} from 'react-icons/fa'
 import {BsFillHeartFill} from 'react-icons/bs'
+import {MyContext} from "../../provider/Provider";
 
 
 const Card = (props) => {
     const {product} = props
     const name = product.name.length > 21 ? `${product.name.slice(0, 21)} ...` : product.name
-
     let colors = product.colors;
+    const context = useContext(MyContext);
+
+
+    //Favorites
+    const {favorites, setFavorites} = context.favorites
+    const [isFavorite, setIsFavorite] = useState(favorites.some(fProduct => fProduct.id == product.id))
+    const addToFavorites = (e) => {
+        e.preventDefault();
+        if (isFavorite == false) {
+            setFavorites([
+                ...favorites,
+                {
+                    ...product,
+                    isFavorite: true
+                }
+            ])
+            setIsFavorite(true)
+        }
+        if (isFavorite == true) {
+            let indexFavorite;
+            for (let i = 0; i < favorites.length; i++) {
+                if (product.id == favorites[i].id) {
+                    indexFavorite = i
+                }
+            }
+            let prevFavorites = favorites.slice(0, indexFavorite)
+            let nextFavorites = favorites.slice(indexFavorite + 1)
+            setFavorites([
+                ...prevFavorites,
+                ...nextFavorites
+            ])
+            setIsFavorite(false)
+        }
+    }
+    // Favorites
+
+
     return (
         <div className={classes.card}>
             <div className={classes.card_img_content}>
@@ -18,10 +55,11 @@ const Card = (props) => {
                     <span className={classes.cardNew}>Новинка</span>
                 }
                 <span className={classes.cardLike}>
-                    {product.isSaved ?
-                        <BsFillHeartFill className={[classes.cardLikeIcon, classes.cardSavedIcon].join(' ')}/>
+                    {isFavorite ?
+                        <BsFillHeartFill onClick={addToFavorites}
+                                         className={[classes.cardLikeIcon, classes.cardSavedIcon].join(' ')}/>
                         :
-                        <FaRegHeart className={classes.cardLikeIcon}/>
+                        <FaRegHeart onClick={addToFavorites} className={classes.cardLikeIcon}/>
                     }
                </span>
             </div>

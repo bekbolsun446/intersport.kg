@@ -65,6 +65,40 @@ const BasketProduct = (props) => {
         setBasket([...prevProducts, ...nextProducts]) //change basket (current product excluded)
     }
     //------DELETE PRODUCT FROM BASKET END-----
+
+
+    //Favorites
+    const {favorites, setFavorites} = context.favorites
+    const [isFavorite, setIsFavorite] = useState(favorites.some(product => product.id == bProduct.id))
+    const addToFavorites = () => {
+        if (isFavorite == false) {
+            setFavorites([
+                ...favorites,
+                {
+                    ...bProduct,
+                    isFavorite: true
+                }
+            ])
+            setIsFavorite(true)
+        }
+        if (isFavorite == true) {
+            let indexFavorite;
+            for (let i = 0; i < favorites.length; i++) {
+                if (bProduct.id == favorites[i].id) {
+                    indexFavorite = i
+                }
+            }
+            let prevFavorites = favorites.slice(0, indexFavorite)
+            let nextFavorites = favorites.slice(indexFavorite + 1)
+            setFavorites([
+                ...prevFavorites,
+                ...nextFavorites
+            ])
+            setIsFavorite(false)
+        }
+    }
+    // Favorites
+
     return (
         <div className={classes.basket_product}>
             <div className={classes.product_content}>
@@ -115,11 +149,13 @@ const BasketProduct = (props) => {
             <div className={classes.basket_products_price_content}>
                 <p className={classes.basket_productPrice}>{bProduct.newPrice} c</p>
                 <div className={classes.basket_products_btns}>
-                    {bProduct.isSaved ?
+                    {isFavorite ?
                         <BsFillHeartFill
+                            onClick={addToFavorites}
                             className={[classes.basket_products_btn, classes.basket_productSavedIcon].join(' ')}/>
                         :
-                        <FiHeart className={classes.basket_products_btn}/>
+
+                        <FiHeart onClick={addToFavorites} className={classes.basket_products_btn}/>
                     }
                     <p>|</p>
                     <AiOutlineDelete onClick={deleteProductFromBasket} className={classes.basket_products_btn}/>

@@ -64,7 +64,38 @@ const ProductAbout = (props) => {
 
 
         // --------------------SAVE PRODUCT---------------------------
-
+        //Favorites
+        const {favorites, setFavorites} = context.favorites
+        const [isFavorite, setIsFavorite] = useState(favorites.some(fProduct => fProduct.id == product.id))
+        const addToFavorites = (e) => {
+            e.preventDefault();
+            if (isFavorite == false) {
+                setFavorites([
+                    ...favorites,
+                    {
+                        ...product,
+                        isFavorite: true
+                    }
+                ])
+                setIsFavorite(true)
+            }
+            if (isFavorite == true) {
+                let indexFavorite;
+                for (let i = 0; i < favorites.length; i++) {
+                    if (product.id == favorites[i].id) {
+                        indexFavorite = i
+                    }
+                }
+                let prevFavorites = favorites.slice(0, indexFavorite)
+                let nextFavorites = favorites.slice(indexFavorite + 1)
+                setFavorites([
+                    ...prevFavorites,
+                    ...nextFavorites
+                ])
+                setIsFavorite(false)
+            }
+        }
+        // Favorites
 
         // --------------------SAVE PRODUCT END---------------------------
         return (
@@ -135,13 +166,15 @@ const ProductAbout = (props) => {
                         {isIncluded ? 'Добавлено' : 'ДОБАВИТЬ В КОРЗИНУ'}
                         <BsArrowRight className={classes.product_aboutIcon}/>
                     </MyButton>
-                    <MyButton className={classes.productLike}>
-                        {product.isSaved ?
+                    <MyButton
+                        onClick={addToFavorites}
+                        className={classes.productLike}>
+                        {isFavorite ?
                             'сохранено'
                             :
                             'сохранить в избранное'
                         }
-                        {product.isSaved ?
+                        {isFavorite ?
                             <AiFillHeart className={[classes.product_aboutIcon, classes.product_aboutSaved].join(' ')}/>
                             :
                             <BsHeart className={classes.product_aboutIcon}/>
