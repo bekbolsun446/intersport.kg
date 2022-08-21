@@ -1,9 +1,12 @@
 .header_mobil {
+  position: fixed;
   width: 100%;
   top: 0;
   min-height: 100vh;
   background: white;
-  z-index: 15;
+  z-index: 10;
+  transition: left .3s;
+  left: 100%;
   @media screen and (min-width: 992px) {
     display: none;
   }

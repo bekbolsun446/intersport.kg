@@ -18,6 +18,11 @@
   justify-content: end;
   align-items: center;
 }
+@media screen and (max-width: 575px) {
+  .contact_content {
+    right: 80px;
+  }
+}
 .contact_content .contact_typesItem {
   width: 60px;
   height: 60px;

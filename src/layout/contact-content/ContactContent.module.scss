@@ -17,6 +17,9 @@
   flex-direction: column;
   justify-content: end;
   align-items: center;
+  @media screen and (max-width: 575px){
+    right: 80px;
+  }
 
   .contact_typesItem {
     width: 60px;

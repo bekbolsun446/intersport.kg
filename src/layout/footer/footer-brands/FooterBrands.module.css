@@ -14,22 +14,10 @@
   justify-content: center;
   align-items: center;
   padding: 0 56px;
-  width: 80px;
-  height: 50px;
-}
-@media screen and (max-width: 767px) {
-  .footer_brands .footer_brands_content .footer_brand {
-    height: 69px;
-  }
-}
-@media screen and (max-width: 536px) {
-  .footer_brands .footer_brands_content .footer_brand {
-    height: 60px;
-  }
 }
 .footer_brands .footer_brands_content .footer_brand img {
-  width: 100%;
-  height: 100%;
+  width: 65px;
+  height: 30px;
   object-fit: cover;
 }
 

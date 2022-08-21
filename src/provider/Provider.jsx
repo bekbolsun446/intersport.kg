@@ -19,7 +19,7 @@ const Provider = () => {
     const localedBasket = JSON.parse(localeBasket)
     const [basket, setBasket] = useState(localedBasket ? localedBasket : [])
 
-    let allProductsCount = 0; // All count of basket products to show on header
+    let allProductsCount = 0;   // All count of basket products to show on header
     for (let i = 0; i < basket.length; i++) {
         let product = basket[i]
         allProductsCount += product.choose.count
@@ -39,12 +39,14 @@ const Provider = () => {
     }, [favorites])
 
     //---------FAVORITE PRODUCTS END---------------
+
+
     const contextValue = {
         categories: categories,
         products: products,
+        vacancies: vacancies,
         error: {error, setError},
         isLoaded: {isLoaded, setIsLoaded},
-        vacancies: vacancies,
         basket: {basket, setBasket},
         allProductsCount: allProductsCount,
         favorites: {favorites, setFavorites}

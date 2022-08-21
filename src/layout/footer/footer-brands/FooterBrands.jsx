@@ -12,7 +12,7 @@ const FooterBrands = (props) => {
         swipeToSlide: true,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1189,
                 settings: {
                     slidesToShow: 5,
                 }

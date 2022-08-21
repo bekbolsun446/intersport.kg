@@ -19,6 +19,7 @@ const Content = (props) => {
             </div>
             <Footer/>
             <ContactContent/>
+            <HeaderMobil/>
         </>
     );
 };
