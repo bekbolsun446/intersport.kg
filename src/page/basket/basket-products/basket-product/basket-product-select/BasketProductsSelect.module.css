@@ -27,9 +27,15 @@
 }
 .basket_product_select section option {
   padding: 8px 12px;
+  font-size: 14px;
 }
 .basket_product_select section option:hover {
   background: #ededed;
+}
+.basket_product_select section .basketValueList {
+  background: #ededed;
+  font-weight: 600;
+  font-size: 16px;
 }
 
 /*# sourceMappingURL=BasketProductsSelect.module.css.map */

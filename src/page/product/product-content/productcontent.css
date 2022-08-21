@@ -2,11 +2,12 @@
   position: absolute;
   width: 48px;
   height: 48px;
-  border: 1px solid black;
+  border: 1px solid #807e7e;
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgba(172, 173, 175, 0.4);
 }
 .product_slide_content .slick-prev {
   left: 20px !important;

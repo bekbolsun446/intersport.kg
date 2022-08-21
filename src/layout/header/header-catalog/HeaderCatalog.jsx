@@ -1,10 +1,16 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import classes from "./HeaderCatalog.module.scss";
 import {Link} from "react-router-dom";
 import {CloseOutlined, HeartOutlined, SearchOutlined, ShoppingOutlined} from "@ant-design/icons";
+import {MyContext} from "../../../provider/Provider";
 
 const HeaderCatalog = (props) => {
     const {headerLinks, isShown, searchShow, headerSearch, handleSearch} = props
+
+
+    const context = useContext(MyContext); // import context from provider
+    const allProductsCount = context.allProductsCount // count of products in basket
+
     return (
         <div className={classes.header_menu}>
             {headerLinks.map(headerLink =>
@@ -36,7 +42,7 @@ const HeaderCatalog = (props) => {
             </Link>
             <Link to="/basket" className={classes.header_menuLink}>
                 <ShoppingOutlined className={classes.headerIcons}/>
-                <sup>5</sup>
+                <sup>{allProductsCount}</sup>
             </Link>
         </div>
     );

@@ -27,10 +27,15 @@
 
     option {
       padding: 8px 12px;
-
+      font-size: 14px;
       &:hover {
         background: #ededed;
       }
+    }
+    .basketValueList{
+      background: #ededed;
+      font-weight: 600;
+      font-size: 16px;
     }
   }
 }

@@ -1,12 +1,12 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import classes from "./ProductContent.module.scss";
 import Slider from "react-slick";
 import './productcontent.scss'
 import ProductContentUseful from "./product-content-useful/ProductContentUseful";
+import {MyContext} from "../../../provider/Provider";
 
 const ProductContent = (props) => {
     const {product} = props;
-
     const useful = {
         title: 'Доставка и оплата',
         description: 'Интернет-магазин спортивной одежды предлагает широкий ассортимент мужской и женской одежды и аксессуаров для спорта. Футболки, толстовки, рубашки, спортивные костюмы и кроссовки можно купить с доставкой в любой город – курьерской службой.Срок доставки зависит от выбранного Вами региона, который Вы сможете узнать при оформлении заказа у менеджера.В момент передачи товара, покупатель получает от продавца следующие документы к товару: кассовый чек, накладная',
@@ -23,12 +23,12 @@ const ProductContent = (props) => {
     }
 
     const settings = {
-        className: classes.product_slide_content,
+        className: [classes.product_slide_content, 'product_slide_content'].join(' '),
         infinite: false,
         speed: 300,
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false
+        arrows: true
     };
     return (
         <div className={classes.product_content}>

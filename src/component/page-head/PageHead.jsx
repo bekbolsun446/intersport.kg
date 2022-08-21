@@ -11,6 +11,7 @@ const PageHead = (props) => {
                 <MdArrowBackIosNew className={classes.page_head_arrowIcon}/>
                 НАЗАД
             </Link>
+            <Link to={'/'} className={classes.page_headMainLink}>Главная /</Link>
             {prevPages && prevPages.map(page =>
                 <Link key={page.id} to={page.link} className={classes.page_headMainLink}>{page.name} /</Link>
             )}

@@ -4,17 +4,18 @@ $font: Inter, san-serif;
   margin-top: 16px;
   background: white;
   position: relative;
-  @media screen and (max-width: 991px){
+  @media screen and (max-width: 991px) {
     width: 98%;
   }
-  &:hover{
-    box-shadow:0 0 19px -15px #000000;
+
+  &:hover {
+    box-shadow: 0 0 19px -15px #000000;
   }
 
   .card_img_content {
     position: relative;
     height: 70%;
-    @media screen and (max-width: 767px){
+    @media screen and (max-width: 767px) {
       height: 50%;
     }
 
@@ -42,15 +43,26 @@ $font: Inter, san-serif;
       position: absolute;
       top: 16px;
       right: 16px;
-      z-index: 10 !important;
+      z-index: 10;
+      cursor: pointer;
+
+      .cardLikeIcon {
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      .cardSavedIcon {
+        color: red;
+      }
     }
   }
 
   .card_body {
     padding: 16px;
-    @media screen and (max-width: 575px){
+    @media screen and (max-width: 575px) {
       padding: 8px;
     }
+
     .cardBrand {
       font-weight: normal;
       font-size: 13px;
@@ -118,7 +130,7 @@ $font: Inter, san-serif;
     }
   }
 
-  .cardLink{
+  .cardLink {
     position: absolute;
     left: 0;
     right: 0;

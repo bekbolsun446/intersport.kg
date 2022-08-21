@@ -2,9 +2,10 @@ import React, {useEffect} from 'react';
 import classes from "./BasketProductsSelect.module.scss";
 import $ from 'jquery';
 import {gsap} from "gsap";
+import '../../../../product/product-about/productsAbout.scss'
 
 const BasketProductsSelect = (props) => {
-    const {id, lists, title, name, selectCount, idValue} = props
+    const {id, lists, title, selectCount, idValue} = props
 
     useEffect(() => {
         $(`.section${id}1`).mouseover(() => {
@@ -22,6 +23,7 @@ const BasketProductsSelect = (props) => {
             <section className={`section${id}`}>
                 {lists && lists.map((list, index) =>
                     <option
+                        className={idValue === index + 1 ? classes.basketValueList : ''}
                         onClick={() => selectCount(title == 'Размер' ? 'size' : 'count', index + 1)}
                         key={list}
                     >{list}</option>

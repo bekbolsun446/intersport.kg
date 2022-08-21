@@ -8,23 +8,36 @@ import {MyContext} from "../../provider/Provider";
 
 const Basket = (props) => {
     const {} = props;
+
+    // GET CONTEXT FROM PROVIDER
     const context = useContext(MyContext)
     const {basket, setBasket} = context.basket
-    const prevPages = [{
-        id: 1,
-        link: '/',
-        name: 'Главная'
-    }]
+    // GET CONTEXT FROM PROVIDER END
+
+    //BASKET ASIDE DATA
+    let allSum = 0;                       // give a variable of sum
+    let allProductsCount = 0;             // give a variable of count
+    let allSale = 0;                           // give a variable of sale
+    for (let i = 0; i < basket.length; i++) {  // into basket by cycle
+        let product = basket[i]                    // get a product
+        allSum += (product.newPrice * product.choose.count)               // add to sum product's price*count
+        allProductsCount += product.choose.count                  // add to count product's count
+        if (product.sale) {
+            allSale += ((product.oldPrice - product.newPrice) * product.choose.count)   //add to saleSum products sale * count
+        }
+    }
+    //BASKET ASIDE DATA  END
+
     return (
         <div className={classes.basket}>
-            <PageHead currentPage={'Мой заказ'} prevPages={prevPages}/>
+            <PageHead currentPage={'Мой заказ'}/>
             <h2 className={classes.basketTitle}>
                 Мой заказ |
-                <span className={classes.basketTitleSum}>Итого: 11990</span>
+                <span className={classes.basketTitleSum}>Итого: {allSum}</span>
             </h2>
             <div className={classes.basket_content}>
                 <BasketProducts basket={basket}/>
-                <BasketAside/>
+                <BasketAside allSum={allSum} allProductsCount={allProductsCount} allSale={allSale}/>
             </div>
         </div>
     );

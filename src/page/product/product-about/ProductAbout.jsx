@@ -2,47 +2,71 @@ import React, {useContext, useState} from 'react';
 import classes from "./ProductAbout.module.scss";
 import MyButton from "../../../component/UI/my_button/MyButton";
 import {BsArrowRight, BsHeart} from 'react-icons/bs';
+import {AiFillHeart} from 'react-icons/ai'
 import './productsAbout.scss'
 import {MyContext} from "../../../provider/Provider";
 
+
 const ProductAbout = (props) => {
         const {product} = props
-        const context = useContext(MyContext);
-        const {basket, setBasket} = context.basket
-        const [choose, setChoose] = useState({
-            count: 1,
-            size: 1,
-            color: 1
-        })
 
+        // Showing every count to choose
         const count = [];
         for (let i = 1; i < product.count + 1; i++) {
             count.push(i)
         }
 
-        function selectCount(name, id) {
+        // -------PRODUCTS CHOOSING ABILITY----------------
+        // Choosing product we need //
+        const context = useContext(MyContext);  // import context
+        const {basket, setBasket} = context.basket  // get actual items from context
+        const [choose, setChoose] = useState({ // choosing ability with state
+            count: 1,
+            size: 1,
+            color: 1
+        })
+        const colorName = product.colors[choose.color - 1].colorName    // changing  colorName while customer choosing
+        const selectCount = (name, id) => {
             setChoose({
                 ...choose,
                 [name]: id
             })
-        }
+        }   // changing state while choosing
+        // Choosing product we need End
 
-        const [isIncluded, setIsIncluded] = useState(false)
+        //Check if product exists in basket
+        const isExist = (element) => {
+            return element.id === product.id
+        };    // function that check existing
+        const [isIncluded, setIsIncluded] = useState(basket.some(isExist)) // Give variable as boolean
+        //Check if product exists in basket  End
 
-        function addBasket(e) {
+        // Add to basket or delete from basket Function
+        const addBasket = (e, id) => {
             e.preventDefault();
-            setBasket([
-                ...basket,
-                {
-                    ...product,
-                    choose
-                }])
-            setIsIncluded(true)
-            console.log(basket)
+            // Add to basket
+            if (isIncluded === false) {
+                setBasket([
+                    ...basket,
+                    {
+                        ...product,
+                        choose
+                    }])
+                setIsIncluded(true)
+            } else if (isIncluded === true) {   // Delete from basket
+                const filteredBasket = basket.filter(bProducts => bProducts.id !== product.id)
+                setBasket([...filteredBasket])
+                setIsIncluded(false)
+            }
         }
+        // Add to basket or delete from basket Function End
+        // -------PRODUCTS CHOOSING ABILITY END ----------------
 
-        const colorName = product.colors[choose.color - 1].colorName
 
+        // --------------------SAVE PRODUCT---------------------------
+
+
+        // --------------------SAVE PRODUCT END---------------------------
         return (
             <div className={classes.product_about}>
                 {product.brand && <p className={classes.productBrand}>{product.brand}</p>}
@@ -73,18 +97,23 @@ const ProductAbout = (props) => {
                         </div>
                     </>
                 }
-                <p className={classes.product_sizeTitle}>Выберите размер</p>
-                <div className={classes.product_size_content}>
-                    {product.sizes.map((size, index) =>
-                        <span
-                            key={index}
-                            className={index + 1 == choose.size ? 'countActive' : ''}
-                            onClick={() => selectCount('size', index + 1)}
-                        >
-                        {size}</span>
-                    )}
 
-                </div>
+                {product.sizes.length > 0 &&
+                    <>
+                        <p className={classes.product_sizeTitle}>Выберите размер</p>
+                        <div className={classes.product_size_content}>
+                            {product.sizes.map((size, index) =>
+                                <span
+                                    key={index}
+                                    className={index + 1 == choose.size ? 'countActive' : ''}
+                                    onClick={() => selectCount('size', index + 1)}
+                                >
+                                        {size}
+                                    </span>
+                            )}
+                        </div>
+                    </>
+                }
                 <p className={classes.product_countTitle}>Укажите количество</p>
                 <div className={classes.product_count_content}>
                     {count.map((count, index) =>
@@ -101,28 +130,41 @@ const ProductAbout = (props) => {
                     <MyButton
                         style={{"textTransform": "uppercase"}}
                         className={classes.product_to_bag}
-                        onClick={addBasket}
+                        onClick={(e) => addBasket(e, product.id)}
                     >
-                        ДОБАВИТЬ В КОРЗИНУ
+                        {isIncluded ? 'Добавлено' : 'ДОБАВИТЬ В КОРЗИНУ'}
                         <BsArrowRight className={classes.product_aboutIcon}/>
                     </MyButton>
-                    <button className={classes.productLike}>
-                        <BsHeart className={classes.product_aboutIcon}/>
-                    </button>
+                    <MyButton className={classes.productLike}>
+                        {product.isSaved ?
+                            'сохранено'
+                            :
+                            'сохранить в избранное'
+                        }
+                        {product.isSaved ?
+                            <AiFillHeart className={[classes.product_aboutIcon, classes.product_aboutSaved].join(' ')}/>
+                            :
+                            <BsHeart className={classes.product_aboutIcon}/>
+                        }
+                    </MyButton>
                 </div>
-                <p className={classes.product_article}>
-                    Артикул:
-                    <span>{product.article}</span>
-                </p>
-                <div className={classes.product_location_content}>
-                    <p className={classes.product_locationTitle}>Доступно в магазинах:</p>
-                    {product.shop.map((shop, index) =>
-                        <p className={classes.product_location} key={index}>
-                            {shop.name} :
-                            <span>{shop.shopCount}</span>
-                        </p>
-                    )}
-                </div>
+                {product.article &&
+                    <p className={classes.product_article}>
+                        Артикул:
+                        <span>{product.article}</span>
+                    </p>
+                }
+                {product.shop.length > 0 &&
+                    <div className={classes.product_location_content}>
+                        <p className={classes.product_locationTitle}>Доступно в магазинах:</p>
+                        {product.shop.map((shop, index) =>
+                            <p className={classes.product_location} key={index}>
+                                {shop.name} :
+                                <span>{shop.shopCount}</span>
+                            </p>
+                        )}
+                    </div>
+                }
             </div>
         );
     }

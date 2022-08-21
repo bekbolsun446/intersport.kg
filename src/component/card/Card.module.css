@@ -42,7 +42,15 @@
   position: absolute;
   top: 16px;
   right: 16px;
-  z-index: 10 !important;
+  z-index: 10;
+  cursor: pointer;
+}
+.card .card_img_content .cardLike .cardLikeIcon {
+  font-size: 24px;
+  font-weight: 600;
+}
+.card .card_img_content .cardLike .cardSavedIcon {
+  color: red;
 }
 .card .card_body {
   padding: 16px;

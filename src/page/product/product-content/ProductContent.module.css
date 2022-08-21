@@ -12,9 +12,14 @@
   height: 75vh;
   overflow-y: hidden;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-height: 700px) {
   .product_content .product_hero {
     height: 50vh;
+  }
+}
+@media screen and (max-width: 991px) {
+  .product_content .product_hero {
+    height: 60vh;
     padding: 0;
   }
 }

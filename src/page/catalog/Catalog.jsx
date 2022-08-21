@@ -12,16 +12,9 @@ const Catalog = () => {
     const [context, setContext] = useState(useContext(MyContext))
     const products = context.products;
 
-    const prevPages = [
-        {
-            id: 1,
-            link:'/',
-            name:'Главная'
-        }
-    ]
     return (
         <div className={classes.catalog}>
-            <PageHead currentPage={'Каталог'} prevPages={prevPages}/>
+            <PageHead currentPage={'Каталог'}/>
             <CatalogFilter/>
             <CatalogContent products={products}/>
         </div>

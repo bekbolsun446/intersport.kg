@@ -118,5 +118,8 @@
     margin-top: 24px;
   }
 }
+.basket_product .basket_products_price_content .basket_products_btns .basket_productSavedIcon {
+  color: red;
+}
 
 /*# sourceMappingURL=BasketProduct.module.css.map */

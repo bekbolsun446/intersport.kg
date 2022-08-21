@@ -10,8 +10,11 @@ $font: Inter, san-serif;
     justify-content: space-between;
     height: 75vh;
     overflow-y: hidden;
-    @media screen and (max-width: 991px) {
+    @media screen and (max-height: 700px){
       height: 50vh;
+    }
+    @media screen and (max-width: 991px) {
+      height: 60vh;
       padding: 0;
     }
 

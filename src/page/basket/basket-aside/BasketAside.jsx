@@ -3,21 +3,22 @@ import classes from "./BasketAside.module.scss";
 import MyButton from "../../../component/UI/my_button/MyButton";
 
 const BasketAside = (props) => {
-    const {} = props;
+    const {allSum, allSale, allProductsCount} = props;
+
     return (
         <div className={classes.basket_aside}>
             <p className={classes.basket_asideTitle}>Итог заказа</p>
             <p className={classes.basket_asideCount}>
                 Товаров:
-                <span>7</span>
+                <span>{allProductsCount}</span>
             </p>
             <p className={classes.basket_asideSum}>
                 Сумма:
-                <span>54830 c</span>
+                <span>{allSum} c</span>
             </p>
             <p className={classes.basket_asideSale}>
                 Скидка:
-                <span>-0 с</span>
+                <span>- {allSale} с</span>
             </p>
             <p className={classes.basket_asideDelivery}>
                 Доставка:
@@ -25,7 +26,7 @@ const BasketAside = (props) => {
             </p>
             <p className={classes.basket_asideAllSum}>
                 Итого:
-                <span>54830 с</span>
+                <span>{allSum} с</span>
             </p>
             <MyButton>
                 ОФОРМИТЬ ЗАКАЗ

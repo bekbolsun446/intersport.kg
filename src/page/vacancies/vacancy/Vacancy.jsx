@@ -14,11 +14,6 @@ const Vacancy = (props) => {
 
     const prevPages = [
         {
-            id: 1,
-            name: 'Главная',
-            link: '/'
-        },
-        {
             id: 2,
             name: 'Вакансии',
             link: '/vacancies'

@@ -12,6 +12,7 @@ import {MyContext} from "./provider/Provider";
 import Loading from "./component/loading/Loading";
 import CatalogF from "./page/catalog-f/CatalogF";
 import Basket from "./page/basket/Basket";
+import Favorites from "./page/favorites/Favorites";
 
 function App() {
     const context = useContext(MyContext)
@@ -37,6 +38,7 @@ function App() {
                             <Route path='vacancies' element={<Vacancies/>}/>
                             <Route path={`vacancies/:name`} element={<Vacancy/>}/>
                             <Route path={'basket'} element={<Basket/>}/>
+                            <Route path={'favorites'} element={<Favorites/>}/>
                         </Route>
                         <Route path='*' element={<NotFoundPage/>}/>
                     </Routes>

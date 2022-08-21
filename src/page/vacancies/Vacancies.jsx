@@ -8,16 +8,9 @@ import PageHead from "../../component/page-head/PageHead";
 
 const Vacancies = () => {
 
-    const prevPages=[
-        {
-            id:1,
-            name:'Главная',
-            link:'/'
-        }
-    ]
     return (
         <div>
-            <PageHead currentPage={'Вакансии'} prevPages={prevPages}/>
+            <PageHead currentPage={'Вакансии'}/>
             <p className={classes.vacancies_head_}>Карьера | Вакансии</p>
             <h1 className={classes.vacanciesTitle}>НАЧНИ КАРЬЕРУ В INTER SPORT!</h1>
             <div className={classes.vacancies}>

@@ -27,11 +27,6 @@ const Catalog = () => {
 
     const prevPages = [
         {
-            id: 1,
-            link: '/',
-            name: 'Главная'
-        },
-        {
             id: 2,
             link: '/catalog',
             name: 'Каталог'
