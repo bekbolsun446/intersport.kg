@@ -576,6 +576,7 @@ export const data = {
     categories: {
         men: {
             id: 1,
+            name: 'МУЖЧИНАМ',
             img: 'https://intersport.kg/media/category_banner/banner1_1_1.jpeg',
             imgLink: '/catalog/men',
             bigLink: [
@@ -650,7 +651,8 @@ export const data = {
             ]
         },
         women: {
-            id: 1,
+            id: 2,
+            name: 'ЖЕНЩИНАМ',
             img: 'https://intersport.kg/media/category_banner/puma_banner_1.jpeg',
             imgLink: '/catalog/women',
             bigLink: [
@@ -725,7 +727,8 @@ export const data = {
             ]
         },
         children: {
-            id: 1,
+            id: 3,
+            name: 'ДЕТЯМ',
             img: 'https://intersport.kg/media/category_banner/banner1_1_1.jpeg',
             imgLink: '/catalog/children',
             bigLink: [
@@ -799,5 +802,26 @@ export const data = {
                 }
             ]
         }
-    }
+    },
+    headerWarn: [
+        {
+            id: 1,
+            name: 'Доставка и оплата',
+            link: `catalog`
+        }, {
+            id: 2,
+            name: 'Обмен и возврат',
+            link: 'product'
+        },
+        {
+            id: 3,
+            name: 'Полезное',
+            link: '/'
+        },
+        {
+            id: 4,
+            name: 'Вакансии',
+            link: 'vacancies'
+        }
+    ]
 };

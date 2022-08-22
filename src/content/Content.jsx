@@ -6,6 +6,7 @@ import HeaderWarn from "../layout/headerWarn/HeaderWarn";
 import ContactContent from "../layout/contact-content/ContactContent";
 import classes from "./Content.module.scss";
 import HeaderMobil from "../layout/header-mobil/HeaderMobil";
+import MobileMenu from "../layout/mobile-menu/MobileMenu";
 
 
 const Content = (props) => {
@@ -20,6 +21,7 @@ const Content = (props) => {
             <Footer/>
             <ContactContent/>
             <HeaderMobil/>
+            <MobileMenu/>
         </>
     );
 };

@@ -1,6 +1,8 @@
 import React, {useState, createContext, useEffect} from 'react';
 import App from "../App";
 import * as data from '../data/data'
+import $ from "jquery";
+import {gsap} from "gsap";
 
 export const MyContext = createContext();
 
@@ -12,6 +14,7 @@ const Provider = () => {
     const vacancies = data.data.vacancies
     const products = data.data.products;
     const categories = data.data.categories;
+    const headerWarn = data.data.headerWarn
     //---------------GET DATA END----------
 
     //----------------BASKET PRODUCTS ---------------
@@ -40,6 +43,31 @@ const Provider = () => {
 
     //---------FAVORITE PRODUCTS END---------------
 
+    //-----------MOBILE HEADER SHOW ,HIDE ---------
+
+    const [isShownHeader, setIsShownHeader] = useState(false);
+
+    useEffect(() => {
+        if (isShownHeader) {
+            $('body').css('overflow', 'hidden')
+        } else if (!isShownHeader) {
+            $('body').css('overflow', 'auto')
+        }
+    })
+
+    const toggleMobileHeader = () => {
+        if (!isShownHeader) {
+            gsap.to('.header_mobile', {left: 0, duration: .1});
+            setIsShownHeader(true);
+            gsap.to('.category_content', {height: 0, duration: .2})
+            gsap.to('.subcategory_content', {height: 0, duration: .2});
+        } else {
+            gsap.to('.header_mobile', {left: '-100%', duration: .1})
+            setIsShownHeader(false)
+        }
+    }
+
+    //-----------MOBILE HEADER SHOW ,HIDE ---------
 
     const contextValue = {
         categories: categories,
@@ -49,7 +77,12 @@ const Provider = () => {
         isLoaded: {isLoaded, setIsLoaded},
         basket: {basket, setBasket},
         allProductsCount: allProductsCount,
-        favorites: {favorites, setFavorites}
+        favorites: {favorites, setFavorites},
+        headerWarn: headerWarn,
+        mobileHeader: {
+            isShownHeader: isShownHeader,
+            toggleMobileHeader: toggleMobileHeader
+        }
     }
 
     return (

@@ -13,23 +13,24 @@ const Header = (props) => {
 
     const products = context.products
 
+
     const [headerLinks, setHeaderLink] = useState([
         {
             id: 1,
             name: 'БРЕНДЫ',
-            link: 'catalog',
+            link: '/brands',
             style: {}
         },
         {
             id: 2,
             name: 'НОВИНКИ',
-            link: 'catalog',
+            link: '/catalog/new',
             style: {}
         },
         {
             id: 3,
             name: 'СКИДКИ%',
-            link: 'catalog',
+            link: '/catalog/sale',
             style: {
                 color: 'red'
             }
@@ -40,6 +41,7 @@ const Header = (props) => {
         search: false
     })
     const [headerSearch, setHeaderSearch] = useState('')
+
     let searchList = products.filter(product => product.name.toLowerCase().includes(headerSearch.toLowerCase()));
     useEffect(() => {
         searchList = products.filter(product => product.name.toLowerCase().includes(headerSearch.toLowerCase()))
@@ -69,7 +71,7 @@ const Header = (props) => {
                         </Link>
                         <HeaderCatalog headerLinks={headerLinks} isShown={isShown} searchShow={searchShow}
                                        headerSearch={headerSearch} handleSearch={handleSearch}/>
-                        <Link to={''} className={classes.headerLikeLink}><HeartOutlined
+                        <Link to={'/favorites'} className={classes.headerLikeLink}><HeartOutlined
                             className={classes.headerIcons}/></Link>
                     </div>
                 </div>

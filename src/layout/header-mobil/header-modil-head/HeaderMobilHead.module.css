@@ -1,0 +1,22 @@
+.headerMobilHead {
+  padding: 16px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 3;
+}
+.headerMobilHead .headerMobilHeadLogo {
+  width: 180px;
+  height: 31px;
+  object-fit: cover;
+}
+.headerMobilHead .headerMobilHeadFavoritesLink {
+  color: black;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=HeaderMobilHead.module.css.map */

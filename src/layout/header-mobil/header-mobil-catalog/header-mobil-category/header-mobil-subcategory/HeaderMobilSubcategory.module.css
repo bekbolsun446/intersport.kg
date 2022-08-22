@@ -1,0 +1,46 @@
+.header_mobil_subcategory {
+  position: relative;
+}
+.header_mobil_subcategory .header_mobil_subcategoryHover {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 17px;
+  color: #595858;
+  text-transform: capitalize;
+  padding: 18px 0 18px 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  border-bottom: 2px solid #E0EEFF;
+}
+.header_mobil_subcategory .header_mobil_subcategoryHover .header_mobil_subcategoryIcon {
+  font-size: 20px;
+}
+.header_mobil_subcategory .header_mobil_subcategory_content {
+  padding: 0;
+  height: 0;
+  overflow-y: hidden;
+}
+.header_mobil_subcategory .header_mobil_subcategory_content .header_mobil_subcategory_Item {
+  list-style: none;
+  border-bottom: 2px solid #E0EEFF;
+}
+.header_mobil_subcategory .header_mobil_subcategory_content .header_mobil_subcategory_Item .header_mobil_subcategoryLink {
+  padding: 19px 16px;
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #262626;
+  width: 100%;
+  display: block;
+}
+.header_mobil_subcategory .header_mobil_subcategory_content .header_mobil_subcategory_Item .header_mobil_subcategoryAllLink {
+  color: #004EB2;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=HeaderMobilSubcategory.module.css.map */
