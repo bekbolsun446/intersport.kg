@@ -50,7 +50,7 @@ const HeaderDropMenuContent = (props) => {
                 id={'menCatalog'}
                 className={headerClass.men}
             >
-                <HeaderMenu id='men' headermenu={headerMenus.men}/>
+                <HeaderMenu id='men'  headermenu={headerMenus.men}/>
             </div>
             <div
                 id={'womenCatalog'}

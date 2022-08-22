@@ -19,7 +19,7 @@ const HeaderMobil = (props) => {
                 <HeaderMobilHead toggleMobileHeader={toggleMobileHeader}/>
                 <HeaderMobilItem
                     onClick={toggleMobileHeader}
-                    link={'/catalog/new'}
+                    link={'/catalog/type=stars'}
                     className={classes.header_mobilNew}
                 >
                     <AiOutlineStar/>
@@ -27,9 +27,9 @@ const HeaderMobil = (props) => {
                 </HeaderMobilItem>
                 <HeaderMobilCatalog/>
                 <HeaderMobilItem onClick={toggleMobileHeader} link={'/brands'}>бренды</HeaderMobilItem>
-                <HeaderMobilItem onClick={toggleMobileHeader} link={'/catalog/new'}>новинки</HeaderMobilItem>
+                <HeaderMobilItem onClick={toggleMobileHeader} link={'/catalog/type=новинки'}>новинки</HeaderMobilItem>
                 <HeaderMobilItem onClick={toggleMobileHeader} className={classes.redColor}
-                                 link={'/catalog/sale'}>скидки%</HeaderMobilItem>
+                                 link={'/catalog/type=скидки'}>скидки%</HeaderMobilItem>
                 {headerWarn && headerWarn.map(headerWarnItem =>
                     <HeaderMobilItem
                         key={headerWarnItem.id}

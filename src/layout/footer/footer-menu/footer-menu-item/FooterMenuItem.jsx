@@ -73,18 +73,19 @@ const FooterMenuItem = (props) => {
     })
 
     return (
-        <div className={[classes.footer_menu_items].join(' ')} key={footerMenu.id}>
-            <p
-                className={[classes.footer_menuTitle, footerMenu.dropClass].join(' ')}
-            >
+        <div
+            className={[classes.footer_menu_items].join(' ')}
+            key={footerMenu.id}
+        >
+            <p className={[classes.footer_menuTitle, footerMenu.dropClass].join(' ')}>
                 {footerMenu.title}
                 <FiPlus className={classes.footer_menu_itemPlus}/>
             </p>
             <div
-                className={[classes.footer_menu_link_content, footerMenu.dropClass + 'Catalog'].join(' ')
-                }>
+                className={[classes.footer_menu_link_content, footerMenu.dropClass + 'Catalog'].join(' ')}
+            >
                 {footerMenu.menus.map(footerMenuItem =>
-                    <Link to={footerMenuItem.link} className={classes.footer_menuItem}
+                    <Link to={footerMenuItem.link.toLowerCase()} className={classes.footer_menuItem}
                           key={footerMenuItem.id}>{footerMenuItem.name}</Link>
                 )
                 }

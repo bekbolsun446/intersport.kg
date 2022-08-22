@@ -5,7 +5,7 @@ import {gsap} from "gsap";
 import {Link} from "react-router-dom";
 
 const HeaderMobilSubcategory = (props) => {
-    const {subCategory, toggleMobileHeader} = props;
+    const {subCategory, toggleMobileHeader, category} = props;
     const id = `${subCategory.id}Sub`
     const [isShow, setIsShow] = useState(false)
 
@@ -43,7 +43,7 @@ const HeaderMobilSubcategory = (props) => {
                     >
                         <Link
                             onClick={toggleMobileHeader}
-                            to={`/catalog/${link.name}`}
+                            to={`/catalog/category=${category.name},typename=${link.name}`.toLowerCase()}
                             className={classes.header_mobil_subcategoryLink}
                         >
                             {link.name}
@@ -53,7 +53,7 @@ const HeaderMobilSubcategory = (props) => {
                 <li className={classes.header_mobil_subcategory_Item}>
                     <Link
                         onClick={toggleMobileHeader}
-                        to={`/catalog/${subCategory.title}`}
+                        to={`/catalog/category=${category.name},subcategory=${subCategory.title}`.toLowerCase()}
                         className={[classes.header_mobil_subcategoryLink, classes.header_mobil_subcategoryAllLink].join(' ')}
                     >
                         Смотреть все

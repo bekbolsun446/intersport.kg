@@ -13,7 +13,6 @@ const HeaderMobilCatalog = (props) => {
             <HeaderMobilCatalogDrop category={categories.men}/>
             <HeaderMobilCatalogDrop category={categories.women}/>
             <HeaderMobilCatalogDrop category={categories.children}/>
-
         </div>
     );
 };

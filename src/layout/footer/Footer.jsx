@@ -60,55 +60,79 @@ const Footer = () => {
     const [footerMenus, setFooterMenus] = useState([
         {
             id: 1,
-            dropClass:'footerCatalog',
+            dropClass: 'footerCatalog',
             title: 'Каталог',
-            menus: [{id: 1, name: 'Мужчинам', link: '#'}, {id: 2, name: 'Женщинам', link: '#'}, {
-                id: 3,
-                name: 'Детям',
-                link: '#'
-            }, {id: 4, name: 'Бренды', link: '#'}, {id: 5, name: 'Новинки', link: '#'}, {
-                id: 6,
-                name: 'Скидки',
-                link: '#'
-            }
+            menus: [
+                {id: 1, name: 'Мужчинам', link: '/catalog/category=Мужчинам'},
+                {id: 2, name: 'Женщинам', link: '/catalog/category=Женщинам'},
+                {
+                    id: 3,
+                    name: 'Детям',
+                    link: '/catalog/category=Детям'
+                }, {id: 4, name: 'Бренды', link: '/brands'}, {id: 5, name: 'Новинки', link: '/catalog/type=Новинки'}, {
+                    id: 6,
+                    name: 'Скидки',
+                    link: '/catalog/type=Скидки'
+                }
             ]
         },
         {
             id: 2,
-            dropClass:'footerTypeOfSport',
+            dropClass: 'footerTypeOfSport',
             title: 'Виды спорта',
-            menus: [{id: 1, name: 'Теннис', link: '#'}, {id: 2, name: 'Хайкинг и треккинг', link: '#'}, {
-                id: 3,
-                name: 'Тренинг',
-                link: '#'
-            }, {id: 4, name: 'Баскетбол', link: '#'}, {id: 5, name: 'Бег', link: '#'},
-                {id: 6, name: 'Гольф', link: '#'}, {id: 7, name: 'Lifestyle', link: '#'}, {
+            menus: [
+                {id: 1, name: 'Теннис', link: '/catalog/sport=Теннис'},
+                {
+                    id: 2,
+                    name: 'Хайкинг и треккинг',
+                    link: '/catalog/sport=Хайкинг и треккинг'
+                }, {
+                    id: 3,
+                    name: 'Тренинг',
+                    link: '/catalog/sport=Тренинг'
+                }, {id: 4, name: 'Баскетбол', link: '/catalog/sport=Баскетбол'}, {
+                    id: 5,
+                    name: 'Бег',
+                    link: '/catalog/sport=Бег'
+                },
+                {id: 6, name: 'Гольф', link: '/catalog/sport=Гольф'}, {
+                    id: 7,
+                    name: 'Lifestyle',
+                    link: '/catalog/sport=Lifestyle'
+                }, {
                     id: 8,
                     name: 'Аксессуары',
-                    link: '#'
-                }, {id: 9, name: 'Плавание', link: '#'}, {id: 10, name: 'Автоспорт', link: '#'}
+                    link: '/catalog/sport=Аксессуары'
+                }, {id: 9, name: 'Плавание', link: '/catalog/sport=Плавание'}, {
+                    id: 10,
+                    name: 'Автоспорт',
+                    link: '/catalog/sport=Автоспорт'
+                }
             ]
         },
         {
             id: 3,
-            dropClass:'footerForClient',
+            dropClass: 'footerForClient',
             title: 'Покупателю',
-            menus: [{id: 1, name: 'Доставка и оплата', link: '#'}, {id: 2, name: 'Обмен и возврат', link: '#'}, {
+            menus: [{id: 1, name: 'Доставка и оплата', link: 'Доставка и оплата'}, {
+                id: 2,
+                name: 'Обмен и возврат',
+                link: 'Обмен и возврат'
+            }, {
                 id: 3,
                 name: 'Полезное',
-                link: '#'
+                link: 'Полезное'
             }
             ]
         },
         {
             id: 4,
-            dropClass:'footerAboutCompany',
+            dropClass: 'footerAboutCompany',
             title: 'О компании',
-            menus: [{id: 1, name: 'Контакты', link: '#'}, {id: 2, name: 'О компании', link: '#'}
+            menus: [{id: 1, name: 'Контакты', link: 'contact'}, {id: 2, name: 'О компании', link: 'aboutUs'}
             ]
         }
     ]);
-
 
     const [payingType, setPayingType] = useState([
         "https://intersport.kg/static/new_static/img/svg/payments/visa.svg",

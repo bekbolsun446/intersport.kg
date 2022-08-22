@@ -194,7 +194,8 @@ export const data = {
             isNew: true,
             isStar: false,
             isPopular: true,
-            isSaved: false
+            isSaved: false,
+            typeOfSport: 'Lifestyle'
         },
         {
             id: 2,
@@ -232,7 +233,8 @@ export const data = {
             isPopular: true,
             category: 'ЖЕНЩИНАМ',
             subCategory: 'Одежда',
-            isSaved: false
+            isSaved: false,
+            typeOfSport: 'Lifestyle'
 
         },
         {
@@ -277,7 +279,8 @@ export const data = {
             description: 'Современный стиль и комфорт. Куртка Nike M NK RPL WR WINDRNNER GX JKT - это идеальная ветро- и водоотталкивающая куртка. Вентиляционное отверстие на спине и компактный дизайн помогут вам преодолеть мили. Дизайн и графика отражают культуру бега в Японии. Преимущества Ультралегкий стиль Часть коллекции Wild Run Обладает водоотталкивающими свойствами Прозрачные слои Застежка-молния во всю длину Регулируемый капюшон на шнурке Сетка спереди Стиль V в стиле Windrunner спереди Вентиляционные детали на спине обеспечивают охлаждение Имеет светоотражающие элементы в темноте логотип-галочка Nike Характеристики Бренд: Nike Возрастная категория: подростки, взрослые Пол: мужской Материал: 100% полиэстер Цвет: серый Артикул: DD5391-084',
             category: 'МУЖЧИНАМ',
             subCategory: 'Одежда',
-            isSaved: false
+            isSaved: false,
+            typeOfSport: 'Lifestyle'
         },
         {
             id: 4,
@@ -320,7 +323,8 @@ export const data = {
             isPopular: true,
             category: 'Детям',
             subCategory: 'Одежда',
-            isSaved: false
+            isSaved: false,
+            typeOfSport: 'Lifestyle'
         },
         {
             id: 5,
@@ -364,12 +368,13 @@ export const data = {
                     shopCount: 1
                 }
             ],
-            isNew: false,
+            isNew: true,
             isStar: true,
             isPopular: true,
             category: 'ДЕТЯМ',
             subCategory: 'Одежда',
-            isSaved: false
+            isSaved: false,
+            typeOfSport: 'Lifestyle'
         },
         {
             id: 6,
@@ -417,7 +422,8 @@ export const data = {
             description: 'Благодаря яркому дизайну и маневренности функциональные кроссовки Disperse XT Women\'s Training Shoes для начинающих спортсменов разбавят ежедневную рутину. Промежуточная подошва из ЭВА дополнена гибкими канавками в передней части: они отвечают за поддержку быстрых движений. Шаг становится мягким, но отзывчивым. То, что нужно для тех, кто много тренируется. Детали Стиль: Спортивный Вид спорта: Тренинг Характеристики Материал верха: 65% текстиль, 35% полиуретан Материал подошвы: 90% ЭВА, 10% резина (зонирование – для сцепления); промежуточная подошва из ЭВА; CMEVA – для легкости Женские кроссовки Заниженный силуэт Усиленная средняя часть – для поддержки стопы Мягкий текстильный язычок Гибкие канавки в передней части промежуточной подошвы отвечают за поддержку быстрых движений во время тренировки На шнуровке Фирменные полоски PUMA Formstrip сбоку Логотип PUMA No. 1 на язычке Логотип PUMA Cat на подошве',
             category: 'МУЖЧИНАМ',
             subCategory: 'Обувь',
-            isSaved: false
+            isSaved: false,
+            typeOfSport: 'Lifestyle'
         },
         {
             id: 7,
@@ -464,7 +470,8 @@ export const data = {
             isPopular: true,
             category: 'МУЖЧИНАМ',
             subCategory: 'Одежда',
-            isSaved: false
+            isSaved: false,
+            typeOfSport: 'Lifestyle'
 
         },
         {
@@ -519,7 +526,8 @@ export const data = {
             description: 'Ваш малыш может не оценить все удивительные технологии и элементы дизайна этих кроссовок Flyer Flex, но вы оцените. Основанные на успешной платформе Flyer Runner, они имеют смелый новый силуэт с гибкими канавками, проходящими по всей длине инструмента. Между тем, верхняя часть имеет культовую полоску PUMA Formstrip с принтом, а также накладки на пятку и проушины. Ваш малыш может быть самым стильным и состоятельным ребенком в округе. ОСОБЕННОСТИ И ПРЕИМУЩЕСТВА CMEVA: материал EVA, полученный компрессионным формованием PUMA, для легкости. ПОДРОБНОСТИ Низкий ботинок Инструмент отличается смелым новым силуэтом с гибкими канавками по всей длине Верхняя часть украшена логотипом PUMA Formstrip с печатным контуром межподошва из ЭВА Резиновое покрытие в области пятки и носка обеспечивает долговечность подошвы и сцепление Подошва Grippy EVA обеспечивает сцепление в любой ситуации Яркий логотип PUMA на пятке Логотип PUMA Cat на язычке PUMA Kids’ style: рекомендуется для маленьких детей от 4 до 8 лет.',
             category: 'ЖЕНЩИНАМ',
             subCategory: 'Обувь',
-            isSaved: false
+            isSaved: false,
+            typeOfSport: 'Бег'
         },
         {
             id: 9,
@@ -568,7 +576,8 @@ export const data = {
             description: 'ПРОЧНЫЙ БАСКЕТБОЛЬНЫЙ МЯЧ С МУЛЬТЯШНОЙ ГРАФИКОЙ. Принесите немного радости вашей игре!. Этот баскетбольный мяч Adidas изготовлен из прочной резины, поэтому он идеально подходит для или асфальта. Улыбающийся рисунок Lil Stripe на передней панели гарантирует, что все ваши игры будут веселыми. О МОДЕЛИ 100% резина, полученная методом литья под давлением Баскетбол Lil Stripe Бутиловый пузырь Lil Stripe графика',
             category: 'ДЕТЯМ',
             subCategory: 'Аксессуары',
-            isSaved: false
+            isSaved: false,
+            typeOfSport: 'Баскетбол'
 
         },
 
@@ -578,17 +587,17 @@ export const data = {
             id: 1,
             name: 'МУЖЧИНАМ',
             img: 'https://intersport.kg/media/category_banner/banner1_1_1.jpeg',
-            imgLink: '/catalog/men',
+            imgLink: 'men',
             bigLink: [
                 {
                     id: '1',
                     name: 'НОВИНКИ',
-                    link: '/catalog/new'
+                    link: 'new'
                 },
                 {
                     id: '2',
                     name: 'СО СКИДКОЙ',
-                    link: '/catalog/sale'
+                    link: 'sale'
                 }
             ],
             typeLink: [
@@ -654,17 +663,17 @@ export const data = {
             id: 2,
             name: 'ЖЕНЩИНАМ',
             img: 'https://intersport.kg/media/category_banner/puma_banner_1.jpeg',
-            imgLink: '/catalog/women',
+            imgLink: 'women',
             bigLink: [
                 {
                     id: '1',
                     name: 'НОВИНКИ',
-                    link: '/catalog/new'
+                    link: '/catalog/type=new'
                 },
                 {
                     id: '2',
                     name: 'СО СКИДКОЙ',
-                    link: '/catalog/sale'
+                    link: '/catalog/type=sale'
                 }
             ],
             typeLink: [
@@ -730,17 +739,17 @@ export const data = {
             id: 3,
             name: 'ДЕТЯМ',
             img: 'https://intersport.kg/media/category_banner/banner1_1_1.jpeg',
-            imgLink: '/catalog/children',
+            imgLink: 'children',
             bigLink: [
                 {
                     id: '1',
                     name: 'НОВИНКИ',
-                    link: '/catalog/new'
+                    link: '/catalog/type=new'
                 },
                 {
                     id: '2',
                     name: 'СО СКИДКОЙ',
-                    link: '/catalog/sale'
+                    link: '/catalog/type=sale'
                 }
             ],
             typeLink: [

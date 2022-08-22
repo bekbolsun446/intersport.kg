@@ -7,7 +7,7 @@ const MainHead = (props) => {
     return (
         <div className={classes.main_head}>
             <h2 className={classes.main_headTitle}>{title}</h2>
-            <LinkTo link={`/${link}`} linkTitle={linkTitle}/>
+            <LinkTo link={`/${link}`.toLowerCase()} linkTitle={linkTitle}/>
         </div>
     );
 };

@@ -11,8 +11,9 @@ const HeaderMenu = (props) => {
             <div className={classes.header_drop_img}>
                 <div className={classes.header_drop_img_content}>
                     <img src={headermenu.img}/>
-                    <Link className={classes.header_drop_imgLink} to={headermenu.imgLink}>
-                        Мужское
+                    <Link className={classes.header_drop_imgLink}
+                          to={`catalog/category=${headermenu.name}`.toLowerCase()}>
+                        {headermenu.name}
                         <HiOutlineArrowNarrowRight className={classes.header_drop_imgIcon}/>
                     </Link>
                 </div>
@@ -22,7 +23,8 @@ const HeaderMenu = (props) => {
                     <div className={classes.header_drop_content_item}>
                         {headermenu.bigLink.map(links =>
                             <Link
-                                to={links.link} key={links.id}
+                                to={`/catalog/category=${headermenu.name},type=${links.name}`.toLowerCase()}
+                                key={links.id}
                                 className={classes.header_drop_link}>{links.name}
                             </Link>
                         )
@@ -33,13 +35,14 @@ const HeaderMenu = (props) => {
                             <p className={classes.header_drop_itemTitle}>{headerMenu.title}</p>
                             {headerMenu.links.map(headerLinks =>
                                 <Link
-                                    to={`/catalog/${headerLinks.name}`} key={headerLinks.id}
+                                    to={`/catalog/category=${headermenu.name},typename=${headerLinks.name}`.toLowerCase()}
+                                    key={headerLinks.id}
                                     className={classes.header_drop_typeLinks}>{headerLinks.name}
                                 </Link>
                             )
                             }
                             <Link
-                                to={`/catalog/${headerMenu.title}`}
+                                to={`/catalog/category=${headermenu.name},subCategory=${headerMenu.title}`.toLowerCase()}
                                 className={classes.header_drop_lastLink}>Смотреть все</Link>
                         </div>
                     )

@@ -45,7 +45,7 @@ const HeaderMobilCategory = (props) => {
             <ul className={[classes.header_mobil_category_content, 'category_content', `category_content${id}`].join(' ')}>
                 {category.typeLink && category.typeLink.map(subCategory =>
                     <li key={subCategory.id} className={classes.header_mobil_category_Item}>
-                        <HeaderMobilSubcategory toggleMobileHeader={toggleMobileHeader}  subCategory={subCategory}/>
+                        <HeaderMobilSubcategory category={category} toggleMobileHeader={toggleMobileHeader} subCategory={subCategory}/>
                     </li>
                 )}
                 <div className={classes.header_mobil_category_img}>
@@ -55,7 +55,7 @@ const HeaderMobilCategory = (props) => {
                     />
                     <Link
                         onClick={toggleMobileHeader}
-                        to={category.imgLink}
+                        to={`/catalog/category=${category.name}`.toLowerCase()}
                         className={classes.header_mobil_category_imgLink}
                     >
                         {category.name}

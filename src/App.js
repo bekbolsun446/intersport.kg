@@ -33,7 +33,7 @@ function App() {
                         <Route path='/' element={<Content/>}>
                             <Route index element={<Main/>}/>
                             <Route path='catalog' element={<Catalog/>}/>
-                            <Route path='catalog/:type' element={<CatalogF/>}/>
+                            <Route path='catalog/:filter' element={<CatalogF/>}/>
                             <Route path={`products/:name`} element={<Product/>}/>
                             <Route path='vacancies' element={<Vacancies/>}/>
                             <Route path={`vacancies/:name`} element={<Vacancy/>}/>

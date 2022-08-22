@@ -1,12 +1,9 @@
-.catalog_content {
-  display: flex;
-  column-gap: 16px;
-  flex-wrap: wrap;
-}
 
-.catalogFNotFound {
-  font-size: 50px;
-  margin: 24px 0;
-  font-weight: 600;
-  color: #1a1458;
+.catalog_f {
+  .catalogFNotFound {
+    font-size: 50px;
+    margin: 24px 0;
+    font-weight: 600;
+    color: #1a1458;
+  }
 }
