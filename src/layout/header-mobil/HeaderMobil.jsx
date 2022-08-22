@@ -19,7 +19,7 @@ const HeaderMobil = (props) => {
                 <HeaderMobilHead toggleMobileHeader={toggleMobileHeader}/>
                 <HeaderMobilItem
                     onClick={toggleMobileHeader}
-                    link={'/catalog/type=stars'}
+                    link={'/catalog/type=ЗВЕЗДЫ'.toLowerCase()}
                     className={classes.header_mobilNew}
                 >
                     <AiOutlineStar/>

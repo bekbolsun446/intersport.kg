@@ -15,7 +15,8 @@ const HeaderDropMenuCatalog = (props) => {
         <>
             <div>
                 <div className={classes.header_menu}>
-                    <Link to='#' style={{color: 'red'}} className={classes.header_menuItem}>
+                    <Link to={'/catalog/type=ЗВЕЗДЫ'.toLowerCase()} style={{color: 'red'}}
+                          className={classes.header_menuItem}>
                         <StarOutlined className={classes.headerIcons}/>
                         ЗВЕЗДЫ
                     </Link>
