@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useState,useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -17,6 +17,11 @@ const Main = (props) => {
     const newProducts = products.filter(product => product.isNew === true);
     const starProducts = products.filter(product => product.isStar === true)
     const popularProducts = products.filter(product => product.isPopular === true)
+
+    useEffect(() => {
+        // 👇️ scroll to top on page load
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+    }, []);
 
     return (
         <div className={classes.main}>

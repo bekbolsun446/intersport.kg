@@ -1,9 +1,14 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import classes from "./Favorites.module.scss";
 import PageHead from "../../component/page-head/PageHead";
 import FavoritesProducts from "./favorites-products/FavoritesProducts";
 
 const Favorites = () => {
+
+    useEffect(() => {
+        // 👇️ scroll to top on page load
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+    }, []);
 
     return (
         <div className={classes.favorites}>

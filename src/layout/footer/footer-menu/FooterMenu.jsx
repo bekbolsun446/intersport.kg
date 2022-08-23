@@ -14,9 +14,6 @@ const FooterMenu = (props) => {
         4: false
     })
 
-
-
-
     const socialMedia = {
         id: 1,
         title: 'Соц. сети',
@@ -28,16 +25,6 @@ const FooterMenu = (props) => {
         menus: [{id: 1, name: 'Вход', link: '#', onClick: ''}, {id: 2, name: 'Регистрация', link: '#', onClick: ''}]
     }
 
-    function toggleIsShow(id) {
-        setIsShow({
-            1: false,
-            2: false,
-            3: false,
-            4: false,
-            [id]: !isShow[id]
-        })
-    }
-
     return (
         <div className={classes.footer_menu_content}>
             <div className={classes.footer_menu}>
@@ -46,8 +33,6 @@ const FooterMenu = (props) => {
                     footerMenu.id <= 5 ?
                         <FooterMenuItem
                             key={footerMenu.id}
-                            isShow={isShow}
-                            toggleIsShow={toggleIsShow}
                             footerMenu={footerMenu}/>
                         :
                         ''
@@ -57,7 +42,6 @@ const FooterMenu = (props) => {
                 <FooterMenuProfile footerMenu={socialMedia} className={classes.footer_menuSocial}/>
             </div>
             <FooterMenuDifItem className={classes.footer_menuSocialMedia} footerMenu={profile}/>
-
         </div>
     );
 };

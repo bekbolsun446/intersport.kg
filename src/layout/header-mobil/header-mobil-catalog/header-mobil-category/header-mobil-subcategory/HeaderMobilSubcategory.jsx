@@ -3,21 +3,25 @@ import classes from "./HeaderMobilSubcategory.module.scss";
 import {AiOutlineMinus, AiOutlinePlus} from "react-icons/ai";
 import {gsap} from "gsap";
 import {Link} from "react-router-dom";
+import {MdOutlineArrowForwardIos} from "react-icons/md";
+import $ from 'jquery'
 
 const HeaderMobilSubcategory = (props) => {
     const {subCategory, toggleMobileHeader, category} = props;
     const id = `${subCategory.id}Sub`
-    const [isShow, setIsShow] = useState(false)
 
+    let height;
 
     const showDropCategory = () => {
-        if (!isShow) {
+        height = $(`.subcategory_content${id}`).height()
+        if (!height) {
             gsap.to('.subcategory_content', {height: 0, duration: .2})
             gsap.to(`.subcategory_content${id}`, {height: 'auto', duration: .2})
-            setIsShow(true)
+            gsap.to(`.header_mobil_subcategoryIcon`, {rotation: 0, duration: .2})
+            gsap.to(`.header_mobil_subcategoryIcon${id}`, {rotation: 90, duration: .2})
         } else {
             gsap.to(`.subcategory_content${id}`, {height: 0, duration: .2})
-            setIsShow(false)
+            gsap.to(`.header_mobil_subcategoryIcon${id}`, {rotation: 0, duration: .2})
         }
     }
 
@@ -29,11 +33,9 @@ const HeaderMobilSubcategory = (props) => {
              onClick={showDropCategory}
          >
                {subCategory.title}
-             {isShow ?
-                 <AiOutlineMinus className={classes.header_mobil_subcategoryIcon}/>
-                 :
-                 <AiOutlinePlus className={classes.header_mobil_subcategoryIcon}/>
-             }
+             <MdOutlineArrowForwardIos
+                 className={[classes.header_mobil_subcategoryIcon, 'header_mobil_subcategoryIcon', `header_mobil_subcategoryIcon${id}`].join(' ')}
+             />
             </span>
             <ul className={[classes.header_mobil_subcategory_content, 'subcategory_content', `subcategory_content${id}`].join(' ')}>
                 {subCategory.links && subCategory.links.map(link =>

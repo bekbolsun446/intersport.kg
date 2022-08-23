@@ -1,6 +1,6 @@
 import React, {useRef, useState} from 'react';
 import classes from "./VacancyFrom.module.scss";
-import InputUI from "./input-ui/InputUI";
+import InputUI from "../../../component/UI/input-ui/InputUI";
 import MyButton from "../../../component/UI/my_button/MyButton";
 import {BsFillFileEarmarkFill} from 'react-icons/bs'
 import $ from 'jquery'

@@ -3,7 +3,6 @@ import './global.scss'
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Content from "./content/Content";
 import Main from "./page/main/Main";
-import Catalog from "./page/catalog/Catalog";
 import NotFoundPage from "./page/not-found/NotFoundPage";
 import Product from "./page/product/Product";
 import Vacancies from "./page/vacancies/Vacancies";
@@ -33,7 +32,6 @@ function App() {
                     <Routes>
                         <Route path='/' element={<Content/>}>
                             <Route index element={<Main/>}/>
-                            <Route path='catalog' element={<Catalog/>}/>
                             <Route path='catalog/:filter' element={<CatalogF/>}/>
                             <Route path={`products/:name`} element={<Product/>}/>
                             <Route path='vacancies' element={<Vacancies/>}/>

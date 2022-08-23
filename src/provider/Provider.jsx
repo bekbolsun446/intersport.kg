@@ -63,6 +63,8 @@ const Provider = () => {
             gsap.to('.subcategory_content', {height: 0, duration: .2});
         } else {
             gsap.to('.header_mobile', {left: '-100%', duration: .1})
+            gsap.to(`.headerMenuArrow`, {rotation: 0, duration: .2})
+            gsap.to(`.header_mobil_subcategoryIcon`, {rotation: 0, duration: .2})
             setIsShownHeader(false)
         }
     }

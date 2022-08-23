@@ -7,6 +7,8 @@ import ContactContent from "../layout/contact-content/ContactContent";
 import classes from "./Content.module.scss";
 import HeaderMobil from "../layout/header-mobil/HeaderMobil";
 import MobileMenu from "../layout/mobile-menu/MobileMenu";
+import Login from "../component/register/login/Login";
+import Register from "../component/register/Register";
 
 
 const Content = (props) => {
@@ -22,6 +24,7 @@ const Content = (props) => {
             <ContactContent/>
             <HeaderMobil/>
             <MobileMenu/>
+            <Register/>
         </>
     );
 };

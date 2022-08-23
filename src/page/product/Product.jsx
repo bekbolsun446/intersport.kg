@@ -20,10 +20,16 @@ const Product = (props) => {
     const {error, setError} = context.error;
     const {isLoaded, setIsLoaded} = context.isLoaded
 
+
+    useEffect(() => {
+        // 👇️ scroll to top on page load
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+    }, []);
+
     const prevPages = [
         {
             id: 2,
-            link: '/catalog',
+            link: '/catalog/type=all',
             name: 'Каталог'
         }
     ]

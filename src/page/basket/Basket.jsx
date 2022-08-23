@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext,useEffect} from 'react';
 import classes from "./Basket.module.scss";
 import PageHead from "../../component/page-head/PageHead";
 import MyButton from "../../component/UI/my_button/MyButton";
@@ -28,6 +28,10 @@ const Basket = (props) => {
     }
     //BASKET ASIDE DATA  END
 
+    useEffect(() => {
+        // 👇️ scroll to top on page load
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+    }, []);
     return (
         <div className={classes.basket}>
             <PageHead currentPage={'Мой заказ'}/>

@@ -1,13 +1,15 @@
-import React from 'react';
-import MyButton from "../../component/UI/my_button/MyButton";
+import React,{useEffect} from 'react';
 import classes from "./Vacancies.module.scss";
-import {Link} from "react-router-dom";
 import VacanciesHero from "./vacancies-sections/vacancies-hero/VacanciesHero";
 import VacanciesAside from "./vacancies-sections/vacancies-aside/VacanciesAside";
 import PageHead from "../../component/page-head/PageHead";
 
 const Vacancies = () => {
 
+    useEffect(() => {
+        // 👇️ scroll to top on page load
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+    }, []);
     return (
         <div>
             <PageHead currentPage={'Вакансии'}/>

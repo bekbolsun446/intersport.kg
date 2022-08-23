@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import classes from "./Vacancy.module.scss";
 import {MyContext} from "../../../provider/Provider";
 import VacancyOthers from "./vacancy-others/VacancyOthers";
@@ -11,6 +11,11 @@ const Vacancy = (props) => {
     const context = useContext(MyContext)
     const vacancies = context.vacancies;
     const vacancy = vacancies.filter(vacancy => vacancy.name == name)[0]
+
+    useEffect(() => {
+        // 👇️ scroll to top on page load
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+    }, [name]);
 
     const prevPages = [
         {

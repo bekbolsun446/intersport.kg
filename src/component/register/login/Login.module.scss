@@ -1,0 +1,35 @@
+.login {
+  width: 500px;
+
+  .loginTitle {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    color: #1A1458;
+    margin: 0 0 35px 0;
+    max-width: 265px;
+  }
+
+  .showPassword {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .loginBtn {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+  }
+
+  .signUpBtn {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background: none;
+    color: #1A1458;
+    text-transform: uppercase;
+  }
+}
