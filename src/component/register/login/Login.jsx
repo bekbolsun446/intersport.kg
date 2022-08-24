@@ -3,7 +3,8 @@ import classes from "./Login.module.scss";
 import InputUI from "../../UI/input-ui/InputUI";
 import MyButton from "../../UI/my_button/MyButton";
 
-const Login = () => {
+const Login = (props) => {
+    const {toggleShowSignUp} = props;
     const [login, setLogin] = useState({
         userName: '',
         password: ''
@@ -52,7 +53,10 @@ const Login = () => {
             <MyButton className={classes.loginBtn}>
                 ВОЙТИ
             </MyButton>
-            <MyButton className={classes.signUpBtn}>
+            <MyButton
+                className={classes.signUpBtn}
+                onClick={toggleShowSignUp}
+            >
                 ЗАРЕГИСТРИРОВАТЬся
             </MyButton>
         </div>

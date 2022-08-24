@@ -6,7 +6,6 @@ import {MyContext} from "../../../provider/Provider";
 
 const HeaderCatalog = (props) => {
     const {headerLinks, isShown, searchShow, headerSearch, handleSearch} = props
-
     const context = useContext(MyContext); // import context from provider
     const allProductsCount = context.allProductsCount // count of products in basket
 

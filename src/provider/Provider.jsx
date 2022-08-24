@@ -15,6 +15,7 @@ const Provider = () => {
     const products = data.data.products;
     const categories = data.data.categories;
     const headerWarn = data.data.headerWarn
+
     //---------------GET DATA END----------
 
     //----------------BASKET PRODUCTS ---------------
@@ -68,8 +69,34 @@ const Provider = () => {
             setIsShownHeader(false)
         }
     }
+    //-----------MOBILE HEADER SHOW ,HIDE  END---------
 
-    //-----------MOBILE HEADER SHOW ,HIDE ---------
+    //-------------REGISTER FUNCTIONS -----------------
+    const [showLogin, setShowLogin] = useState(false)   //----------login
+    const [showSignUp, setShowSignUp] = useState(false) //----------sign up
+    const localeInterUser = localStorage.getItem('interUser')
+    const localedInterUser = JSON.parse(localeInterUser)
+    const [interUser, setInterUser] = useState(localedInterUser ? localedInterUser : {})  // ------ Authorization user
+
+    const localeInterUsers = localStorage.getItem('interUsers')
+    const localedInterUsers = JSON.parse(localeInterUsers)
+    const [interUsers, setInterUsers] = useState(localedInterUsers ? localedInterUsers : [])  // ------ Authorization users
+
+
+    useEffect(() => {
+        localStorage.setItem('interUser', JSON.stringify(interUser));
+        localStorage.setItem('interUsers', JSON.stringify(interUsers));
+    }, [interUser])
+
+    const toggleShowLogin = () => {  // toggle log in
+        setShowSignUp(false)
+        setShowLogin(!showLogin)
+    }
+    const toggleShowSignUp = () => { // toggle sign up
+        setShowLogin(false)
+        setShowSignUp(!showSignUp)
+    }
+    //-------------REGISTER FUNCTIONS END-----------------
 
     const contextValue = {
         categories: categories,
@@ -84,6 +111,14 @@ const Provider = () => {
         mobileHeader: {
             isShownHeader: isShownHeader,
             toggleMobileHeader: toggleMobileHeader
+        },
+        register: {
+            login: {showLogin, setShowLogin},
+            signUp: {showSignUp, setShowSignUp},
+            user: {interUser, setInterUser},
+            users: {interUsers, setInterUsers},
+            toggleShowSignUp,
+            toggleShowLogin
         }
     }
 

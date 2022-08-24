@@ -9,6 +9,7 @@ const HeaderWarn = (props) => {
     const {className} = props;
     const context = useContext(MyContext);
     const headerWarn = context.headerWarn;
+    const toggleShowLogin = context.register.toggleShowLogin
 
     return (
         <div className={className}>
@@ -21,7 +22,13 @@ const HeaderWarn = (props) => {
                         )}
                     </div>
                     <div className={classes.warn_menu}>
-                        <span draggable={false} className={classes.warn_menuItem}>Профиль</span>
+                        <span
+                            draggable={false}
+                            className={classes.warn_menuItem}
+                            onClick={toggleShowLogin}
+                        >
+                            Профиль
+                        </span>
                     </div>
                 </div>
             </div>

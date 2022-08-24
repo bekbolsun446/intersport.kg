@@ -22,7 +22,7 @@ const FooterMenu = (props) => {
     const profile = {
         id: 1,
         title: 'Профиль',
-        menus: [{id: 1, name: 'Вход', link: '#', onClick: ''}, {id: 2, name: 'Регистрация', link: '#', onClick: ''}]
+        menus: [{id: 1, name: 'Вход', link: '', onClick: ''}, {id: 2, name: 'Регистрация', link: '', onClick: ''}]
     }
 
     return (

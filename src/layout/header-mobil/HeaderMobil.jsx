@@ -13,6 +13,8 @@ const HeaderMobil = (props) => {
     const headerWarn = context.headerWarn;
     const toggleMobileHeader = context.mobileHeader.toggleMobileHeader
 
+    const toggleShowLogin = context.register.toggleShowLogin
+
     return (
         <div className={[classes.header_mobil, 'header_mobile'].join(' ')}>
             <div className="container">
@@ -39,7 +41,7 @@ const HeaderMobil = (props) => {
                         {headerWarnItem.name}
                     </HeaderMobilItem>
                 )}
-                <HeaderMobilItem link={''}>Профиль</HeaderMobilItem>
+                <HeaderMobilItem onClick={toggleShowLogin} link={''}>Профиль</HeaderMobilItem>
             </div>
         </div>
     );
