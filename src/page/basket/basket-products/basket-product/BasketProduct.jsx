@@ -12,6 +12,10 @@ const BasketProduct = (props) => {
 
     //GET CONTEXT (DATA) FROM  PROVIDER
     const context = useContext(MyContext);  // import context
+    const interUser = context.register.user.interUser
+    const toggleSignForSave = context.register.toggleSignForSave
+
+
     const {basket, setBasket} = context.basket; //get basket ,setBasket to change it
     //GET CONTEXT (DATA) FROM  PROVIDER
 
@@ -66,12 +70,14 @@ const BasketProduct = (props) => {
     }
     //------DELETE PRODUCT FROM BASKET END-----
 
-
     //Favorites
     const {favorites, setFavorites} = context.favorites
     const [isFavorite, setIsFavorite] = useState(favorites.some(product => product.id == bProduct.id))
     const addToFavorites = () => {
         if (isFavorite == false) {
+            if (!interUser.isLogin) {
+                return toggleSignForSave()
+            }
             setFavorites([
                 ...favorites,
                 {

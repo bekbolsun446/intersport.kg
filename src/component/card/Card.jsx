@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 import {FaRegHeart} from 'react-icons/fa'
 import {BsFillHeartFill} from 'react-icons/bs'
 import {MyContext} from "../../provider/Provider";
+import register from "../register/Register";
 
 
 const Card = (props) => {
@@ -11,14 +12,18 @@ const Card = (props) => {
     const name = product.name.length > 21 ? `${product.name.slice(0, 21)} ...` : product.name
     let colors = product.colors;
     const context = useContext(MyContext);
-
+    const interUser = context.register.user.interUser
+    const toggleSignForSave = context.register.toggleSignForSave
 
     //Favorites
-    const {favorites, setFavorites} = context.favorites
+    const {favorites, setFavorites} = context.favorites;
     const [isFavorite, setIsFavorite] = useState(favorites.some(fProduct => fProduct.id == product.id))
     const addToFavorites = (e) => {
         e.preventDefault();
         if (isFavorite == false) {
+            if (!interUser.isLogin) {
+                return toggleSignForSave()
+            }
             setFavorites([
                 ...favorites,
                 {

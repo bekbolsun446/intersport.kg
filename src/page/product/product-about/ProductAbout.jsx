@@ -25,6 +25,10 @@ const ProductAbout = (props) => {
             size: 1,
             color: 1
         })
+
+        const interUser = context.register.user.interUser // user
+        const toggleSignForSave = context.register.toggleSignForSave //save or not function
+
         const colorName = product.colors[choose.color - 1].colorName    // changing  colorName while customer choosing
         const selectCount = (name, id) => {
             setChoose({
@@ -70,6 +74,9 @@ const ProductAbout = (props) => {
         const addToFavorites = (e) => {
             e.preventDefault();
             if (isFavorite == false) {
+                if (!interUser.isLogin) {
+                    return toggleSignForSave()
+                }
                 setFavorites([
                     ...favorites,
                     {

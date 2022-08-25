@@ -32,20 +32,17 @@ const SignUp = (props) => {
         }
 
         const submitSignUp = (e) => {
-            // e.preventDefault();
-            // let newUser = {...signUp, isLogin: true}
-            // if (interUser.userName==''){
-            //     setInterUser(newUser)
-            //     setInterUsers([...interUsers, newUser])
-            //     setSignUp({
-            //         name: '',
-            //         tel: '',
-            //         userName: '',
-            //         email: '',
-            //         password: ''
-            //     })
-            //     setTimeout(toggleShowSignUp, 1000)
-            // }
+            e.preventDefault();
+            let newUser = {...signUp, isLogin: true};
+            setInterUser(newUser)
+            setSignUp({
+                name: '',
+                tel: '',
+                userName: '',
+                email: '',
+                password: ''
+            })
+            setTimeout(toggleShowSignUp, 1000)
         }
 
         return (

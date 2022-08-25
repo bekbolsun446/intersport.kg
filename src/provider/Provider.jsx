@@ -81,7 +81,10 @@ const Provider = () => {
     const localeInterUsers = localStorage.getItem('interUsers')
     const localedInterUsers = JSON.parse(localeInterUsers)
     const [interUsers, setInterUsers] = useState(localedInterUsers ? localedInterUsers : [])  // ------ Authorization users
-
+    const [signForSave, setSignForSave] = useState(false) // sign for save products
+    const toggleSignForSave = () => {
+        setSignForSave(!signForSave)
+    }
 
     useEffect(() => {
         localStorage.setItem('interUser', JSON.stringify(interUser));
@@ -117,8 +120,10 @@ const Provider = () => {
             signUp: {showSignUp, setShowSignUp},
             user: {interUser, setInterUser},
             users: {interUsers, setInterUsers},
+            signForSave: {signForSave, setSignForSave},
             toggleShowSignUp,
-            toggleShowLogin
+            toggleShowLogin,
+            toggleSignForSave
         }
     }
 

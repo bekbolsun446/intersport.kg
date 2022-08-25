@@ -1,3 +1,19 @@
 .register {
+  .signForSave {
+    width: 500px;
 
+    .signForSaveTitle {
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 39px;
+      color: #1A1458;
+      //margin: 0 0 35px 0;
+      max-width: 265px;
+    }
+
+    .signForSaveBtn {
+      width: 100%;
+      margin-top: 36px;
+    }
+  }
 }

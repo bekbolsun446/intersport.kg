@@ -1,10 +1,13 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState,useContext} from 'react';
 import classes from "./Login.module.scss";
 import InputUI from "../../UI/input-ui/InputUI";
 import MyButton from "../../UI/my_button/MyButton";
+import {MyContext} from "../../../provider/Provider";
 
 const Login = (props) => {
-    const {toggleShowSignUp} = props;
+    const {toggleShowSignUp, toggleShowLogin} = props;
+    const context = useContext(MyContext)
+    const {interUser, setInterUser} = context.register.user
     const [login, setLogin] = useState({
         userName: '',
         password: ''
@@ -26,8 +29,28 @@ const Login = (props) => {
     const toggleShowPassword = () => {
         setShowPassword(!showPassword)
     }
+
+
+    const submitLogin = (e) => {
+        e.preventDefault();
+        if (interUser.userName == login.userName && interUser.password == login.password) {
+            setInterUser({
+                ...interUser,
+                isLogin: true
+            })
+            setLogin({
+                userName: '',
+                password: ''
+            })
+            setTimeout(toggleShowLogin, 1000)
+            console.log('Logged')
+        } else {
+            alert('Wrong userName or password')
+        }
+
+    }
     return (
-        <div className={classes.login}>
+        <form onSubmit={submitLogin} className={classes.login}>
             <h1 className={classes.loginTitle}>Вход</h1>
             <InputUI
                 placeholder={'Username...'}
@@ -59,7 +82,7 @@ const Login = (props) => {
             >
                 ЗАРЕГИСТРИРОВАТЬся
             </MyButton>
-        </div>
+        </form>
 
     );
 };
