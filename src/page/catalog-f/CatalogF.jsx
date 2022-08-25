@@ -25,6 +25,11 @@ const Catalog = () => {
                 let [type, typeValue] = second.split('=');
                 products = context.products.filter(product => product.category.toLowerCase() == categoryValue.toLowerCase())
                 if (type == 'subcategory') {
+                    if (category == 'brand') {
+                        products = context.products.filter(product => product.brand.toLowerCase().includes(categoryValue));
+                        products = products.filter(product => product.subCategory.toLowerCase() == typeValue)
+                        return setFilteredProducts(products)
+                    }
                     products = products.filter(product => product.subCategory.toLowerCase() == typeValue)
                 } else if (type == 'typename') {
                     products = products.filter(product => product.name.toLowerCase().includes(typeValue))
@@ -51,6 +56,8 @@ const Catalog = () => {
                     products = context.products.filter(product => product.typeOfSport.toLowerCase() == second)
                 } else if (second == 'all') {
                     products = context.products
+                } else if (first == 'brand') {
+                    products = context.products.filter(product => product.brand.toLowerCase().includes(second))
                 }
                 return setFilteredProducts(products && products)
             }

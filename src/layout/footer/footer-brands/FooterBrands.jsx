@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from "./FooterBrands.module.scss";
 import Slider from "react-slick";
+import {Link} from "react-router-dom";
 
 const FooterBrands = (props) => {
     const {brands} = props;
@@ -21,21 +22,21 @@ const FooterBrands = (props) => {
                 breakpoint: 991,
                 settings: {
                     slidesToShow: 3,
-                    arrows:false
+                    arrows: false
                 }
             },
             {
                 breakpoint: 767,
                 settings: {
                     slidesToShow: 2,
-                    arrows:false
+                    arrows: false
                 }
             },
             {
                 breakpoint: 576,
                 settings: {
                     slidesToShow: 2,
-                    arrows:false
+                    arrows: false
                 }
             }
         ]
@@ -46,9 +47,9 @@ const FooterBrands = (props) => {
             <div className={classes.footer_brands_content}>
                 <Slider {...settings}>
                     {brands.map((brand) =>
-                        <a href={brand.link} key={brand.id} className={classes.footer_brand}>
+                        <Link to={`/catalog/brand=${brand.name}`.toLocaleLowerCase()} key={brand.id} className={classes.footer_brand}>
                             <img src={brand.img} alt=""/>
-                        </a>
+                        </Link>
                     )}
                 </Slider>
             </div>

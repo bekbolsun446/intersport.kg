@@ -12,8 +12,20 @@ const HeaderCatalog = (props) => {
     return (
         <div className={classes.header_menu}>
             {headerLinks.map(headerLink =>
-                <Link to={headerLink.link} key={headerLink.id} style={headerLink.style}
-                      className={classes.header_menuLink}>{headerLink.name}</Link>
+                <Link
+                    to={headerLink.name == 'НОВИНКИ'
+                        ?
+                        `/catalog/type=${headerLink.name}`.toLocaleLowerCase()
+                        : headerLink.name == 'СКИДКИ%' ?
+                            `/catalog/type=СКИДКИ`.toLocaleLowerCase()
+                            :
+                            headerLink.link}
+                    key={headerLink.id}
+                    style={headerLink.style}
+                    className={classes.header_menuLink}
+                >
+                    {headerLink.name}
+                </Link>
             )}
             <div className={classes.header_menuLink}>
                 {isShown.search

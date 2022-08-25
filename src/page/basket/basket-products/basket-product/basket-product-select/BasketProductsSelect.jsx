@@ -9,11 +9,11 @@ const BasketProductsSelect = (props) => {
 
     useEffect(() => {
         $(`.section${id}1`).mouseover(() => {
-            gsap.to(`.section${id}`, {height: 'auto', duration: .3})
+            gsap.to(`.section${id}`, {height: 'auto', duration: .5})
             // $(`.section${id}`).css('height', 'auto')
         })
         $(`.section${id}1`).mouseleave(() => {
-            gsap.to(`.section${id}`, {height: 0, duration: .3})
+            gsap.to(`.section${id}`, {height: 0, duration: .5})
             // $(`.section${id}`).css('height', '0px')
         })
     })

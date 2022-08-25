@@ -16,43 +16,43 @@ const Footer = () => {
         {
             id: 1,
             img: 'https://intersport.kg/media/brand_images/adidas-65x30_oBQXKrF.png',
-            link: '#'
+            name: 'Adidas'
 
         },
         {
             id: 2,
             img: 'https://intersport.kg/media/brand_images/nike-65x30_lIbNBz5.png',
-            link: '#'
+            name: 'Nike'
 
         },
         {
             id: 3,
             img: 'https://intersport.kg/media/brand_images/EA7_VSIH0Ys.png',
-            link: '#'
+            name: 'EA7'
 
         },
         {
             id: 4,
             img: 'https://intersport.kg/media/brand_images/boss-65x30_51mAKC9.png',
-            link: '#'
+            name: 'Boss'
 
         },
         {
             id: 5,
             img: 'https://intersport.kg/media/brand_images/puma-65x30.png',
-            link: '#'
+            name: 'Puma'
 
         },
         {
             id: 6,
             img: 'https://intersport.kg/media/brand_images/reebok-65x30.png',
-            link: '#'
+            name: 'Reebok'
 
         },
         {
             id: 7,
             img: 'https://intersport.kg/media/brand_images/under-armour-65x30.png',
-            link: '#'
+            name: 'Under Armour'
 
         },
     ]);
