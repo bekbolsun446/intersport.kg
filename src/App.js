@@ -13,6 +13,7 @@ import CatalogF from "./page/catalog-f/CatalogF";
 import Basket from "./page/basket/Basket";
 import Favorites from "./page/favorites/Favorites";
 import Useful from "./page/useful/Useful";
+import Brands from "./page/brands/Brands";
 
 function App() {
     const context = useContext(MyContext)
@@ -39,6 +40,7 @@ function App() {
                             <Route path={'basket'} element={<Basket/>}/>
                             <Route path={'favorites'} element={<Favorites/>}/>
                             <Route path={'useful'} element={<Useful/>}/>
+                            <Route path={'brands'} element={<Brands/>}/>
                         </Route>
                         <Route path='*' element={<NotFoundPage/>}/>
                     </Routes>

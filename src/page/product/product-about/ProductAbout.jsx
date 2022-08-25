@@ -135,7 +135,6 @@ const ProductAbout = (props) => {
                         </div>
                     </>
                 }
-
                 {product.sizes.length > 0 &&
                     <>
                         <p className={classes.product_sizeTitle}>Выберите размер</p>
