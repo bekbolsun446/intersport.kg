@@ -1,9 +1,7 @@
-import React, {useState, useContext} from 'react';
+import React, {useContext} from 'react';
 import classes from "./Headerwarn.module.scss";
-import {Link, NavLink} from "react-router-dom";
-import product from "../../page/product/Product";
+import {Link} from "react-router-dom";
 import {MyContext} from "../../provider/Provider";
-
 
 const HeaderWarn = (props) => {
     const {className} = props;
@@ -17,8 +15,8 @@ const HeaderWarn = (props) => {
                 <div className={classes.header_warn}>
                     <div className={classes.warn_menu}>
                         {headerWarn && headerWarn.map(warn =>
-                            <NavLink to={warn.link.toLocaleLowerCase()} key={warn.id}
-                                     className={classes.warn_menuItem}>{warn.name}</NavLink>
+                            <Link to={warn.link.toLocaleLowerCase()} key={warn.id}
+                                  className={classes.warn_menuItem}>{warn.name}</Link>
                         )}
                     </div>
                     <div className={classes.warn_menu}>

@@ -1,10 +1,16 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import classes from "./MainHero.module.scss";
 import MyButton from "../../../component/UI/my_button/MyButton";
 import Slider from "react-slick";
+import {MyContext} from "../../../provider/Provider";
+import {Link} from "react-router-dom";
 
 const MainHero = (props) => {
     const {} = props
+    const context = useContext(MyContext)
+    const importantNews = context.importantNews
+
+
     const settings = {
         className: 'main_hero_slider',
         dots: true,
@@ -13,16 +19,15 @@ const MainHero = (props) => {
         slidesToShow: 1,
         slidesToScroll: 1
     };
+
     return (
         <Slider {...settings}>
-            <div className={classes.main_hero}>
-                <img src="https://intersport.kg/media/slider_images/%D0%98%D0%A11.jpg" alt=""/>
-                <MyButton children='Catalog'/>
-            </div>
-            <div className={classes.main_hero}>
-                <img src="https://intersport.kg/media/slider_images/%D0%98%D0%A1kid_J8l5XpP_1.jpeg" alt=""/>
-                <MyButton children='Catalog'/>
-            </div>
+            {importantNews && importantNews.map(important =>
+                <div key={important.id} className={classes.main_hero}>
+                    <img src={important.img} alt={important.name}/>
+                    <Link to={important.link.toLocaleLowerCase()} children='Catalog'/>
+                </div>
+            )}
         </Slider>
     );
 };

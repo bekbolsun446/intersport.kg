@@ -15,7 +15,8 @@ const Provider = () => {
     const products = data.data.products;
     const categories = data.data.categories;
     const headerWarn = data.data.headerWarn;
-    const useful = data.data.useful
+    const useful = data.data.useful;
+    const importantNews=data.data.importantNews
 
     //---------------GET DATA END----------
 
@@ -126,7 +127,8 @@ const Provider = () => {
             toggleShowLogin,
             toggleSignForSave
         },
-        useful: useful
+        useful: useful,
+        importantNews: importantNews
     }
 
     return (

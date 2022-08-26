@@ -838,7 +838,7 @@ export const data = {
             id: 1,
             name: 'Доставка и оплата',
             time: '',
-            img:'http://cityclimate.kg/wp-content/uploads/2020/05/dostavka.jpg',
+            img: 'http://cityclimate.kg/wp-content/uploads/2020/05/dostavka.jpg',
             descriptions: [
                 {
                     id: 1,
@@ -902,7 +902,7 @@ export const data = {
             id: 3,
             name: 'Символы на ярлыках одежды, что они значат?',
             time: '29 Октябрь 2021',
-            img:'https://intersport.kg/media/%D0%AF%D1%80%D0%BB%D1%8B%D0%BA-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%B5%D0%B6%D0%B4%D0%B5.png',
+            img: 'https://intersport.kg/media/%D0%AF%D1%80%D0%BB%D1%8B%D0%BA-%D0%BD%D0%B0-%D0%BE%D0%B4%D0%B5%D0%B6%D0%B4%D0%B5.png',
             descriptions: [
                 {
                     id: 1,
@@ -1139,6 +1139,20 @@ export const data = {
                     body: 'Вопреки устоявшемуся стереотипу, они тоже должны быть выполнены не из натуральных материалов вроде 100%-го хлопка, а из специализированных гигроскопичных материалов.'
                 }
             ]
+        }
+    ],
+    importantNews: [
+        {
+            id: 1,
+            link: '/catalog/type=СКИДКИ',
+            name: 'Sale',
+            img: 'https://intersport.kg/media/slider_images/%D0%98%D0%A11.jpg'
+        },
+        {
+            id: 2,
+            link: '/catalog/category=ДЕТЯМ',
+            name: 'Children',
+            img: 'https://intersport.kg/media/slider_images/%D0%98%D0%A1kid_J8l5XpP_1.jpeg'
         }
     ]
 };
