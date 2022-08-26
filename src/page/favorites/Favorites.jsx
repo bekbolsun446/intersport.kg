@@ -12,7 +12,7 @@ const Favorites = () => {
 
     return (
         <div className={classes.favorites}>
-            <PageHead currentPage={'Favorites'}/>
+            <PageHead currentPage={'Избранные модели'}/>
             <h2 className={classes.favoritesTitle}>
                 Избранные модели |
                 <span className={classes.favoritesTitleCount}></span>

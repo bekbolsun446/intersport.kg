@@ -3,7 +3,7 @@ import classes from "./BasketAside.module.scss";
 import MyButton from "../../../component/UI/my_button/MyButton";
 
 const BasketAside = (props) => {
-    const {allSum, allSale, allProductsCount} = props;
+    const {allSum, allSale, allProductsCount, allSumWithoutSale} = props;
 
     return (
         <div className={classes.basket_aside}>
@@ -14,7 +14,7 @@ const BasketAside = (props) => {
             </p>
             <p className={classes.basket_asideSum}>
                 Сумма:
-                <span>{allSum} c</span>
+                <span>{allSumWithoutSale} c</span>
             </p>
             <p className={classes.basket_asideSale}>
                 Скидка:

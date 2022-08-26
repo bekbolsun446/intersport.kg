@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from "./PageHead.module.scss";
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import {MdArrowBackIosNew} from "react-icons/md";
 
 const PageHead = (props) => {
@@ -8,10 +8,10 @@ const PageHead = (props) => {
     return (
         <div className={classes.page_head}>
             <div className={classes.page_head_link_content}>
-                <Link to={'..'} className={classes.page_headBackLink}>
+                <NavLink to={'..'} className={classes.page_headBackLink}>
                     <MdArrowBackIosNew className={classes.page_head_arrowIcon}/>
                     НАЗАД
-                </Link>
+                </NavLink>
                 <Link to={'/'} className={classes.page_headMainLink}>Главная /</Link>
                 {prevPages && prevPages.map(page =>
                     <Link key={page.id} to={page.link} className={classes.page_headMainLink}>{page.name} /</Link>

@@ -19,6 +19,7 @@
   color: black;
   text-transform: uppercase;
   cursor: pointer;
+  margin: 0;
 }
 .header_menu .header_menuItem:hover {
   color: #004eb1;

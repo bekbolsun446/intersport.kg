@@ -1,4 +1,4 @@
-import React, {useContext,useEffect} from 'react';
+import React, {useContext, useEffect} from 'react';
 import classes from "./Basket.module.scss";
 import PageHead from "../../component/page-head/PageHead";
 import MyButton from "../../component/UI/my_button/MyButton";
@@ -18,9 +18,11 @@ const Basket = (props) => {
     let allSum = 0;                       // give a variable of sum
     let allProductsCount = 0;             // give a variable of count
     let allSale = 0;                           // give a variable of sale
+    let allSumWithoutSale = 0
     for (let i = 0; i < basket.length; i++) {  // into basket by cycle
         let product = basket[i]                    // get a product
         allSum += (product.newPrice * product.choose.count)               // add to sum product's price*count
+        allSumWithoutSale += product.oldPrice ? (product.oldPrice * product.choose.count) : (product.newPrice * product.choose.count)
         allProductsCount += product.choose.count                  // add to count product's count
         if (product.sale) {
             allSale += ((product.oldPrice - product.newPrice) * product.choose.count)   //add to saleSum products sale * count
@@ -41,7 +43,12 @@ const Basket = (props) => {
             </h2>
             <div className={classes.basket_content}>
                 <BasketProducts basket={basket}/>
-                <BasketAside allSum={allSum} allProductsCount={allProductsCount} allSale={allSale}/>
+                <BasketAside
+                    allSumWithoutSale={allSumWithoutSale}
+                    allSum={allSum}
+                    allProductsCount={allProductsCount}
+                    allSale={allSale}
+                />
             </div>
         </div>
     );
