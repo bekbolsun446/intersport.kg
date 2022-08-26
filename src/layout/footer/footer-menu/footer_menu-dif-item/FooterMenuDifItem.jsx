@@ -9,6 +9,16 @@ const FooterMenuDifItem = (props) => {
     const context = useContext(MyContext)
     const toggleShowLogin = context.register.toggleShowLogin
     const toggleShowSignup = context.register.toggleShowSignUp
+
+
+    const toggleRegisterFooter = (name) => {
+        if (name == 'Вход') {
+            return toggleShowLogin()
+        } else if (name == 'Регистрация') {
+            return toggleShowSignup()
+        }
+        return
+    }
     return (
         <div className={[classes.footer_menu_items, className].join(' ')} key={footerMenu.id}>
             <p className={classes.footer_menuTitle}>
@@ -18,23 +28,27 @@ const FooterMenuDifItem = (props) => {
                 [classes.footer_menu_link_content].join(' ')
             }>
                 {footerMenu.menus.map(footerMenuItem =>
-                    <Link
-                        to={footerMenuItem.link}
-                        className={classes.footer_menuItem}
-                        key={footerMenuItem.id}
-                        onClick={footerMenuItem.name == 'Вход'
-                            ?
-                            toggleShowLogin
-                            :
-                            footerMenuItem.name == 'Регистрация'
-                                ?
-                                toggleShowSignup
-                                : ''
-                        }
-                    >
-                        {footerMenuItem.name}
-                    </Link>
-                )
+                    footerMenuItem.name == 'Instagram'
+                    ||
+                    footerMenuItem.name == 'Facebook'
+                        ?
+                        <a
+                            target={'_blank'}
+                            href={footerMenuItem.link}
+                            className={classes.footer_menuItem}
+                            key={footerMenuItem.id}
+                            onClick={() => toggleRegisterFooter(footerMenuItem.name)}
+                        >
+                            {footerMenuItem.name}
+                        </a>
+                        :
+                        <p
+                            className={classes.footer_menuItem}
+                            key={footerMenuItem.id}
+                            onClick={() => toggleRegisterFooter(footerMenuItem.name)}
+                        >
+                            {footerMenuItem.name}
+                        </p>)
                 }
             </div>
         </div>

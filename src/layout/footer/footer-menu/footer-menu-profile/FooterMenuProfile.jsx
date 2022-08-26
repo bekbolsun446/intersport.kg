@@ -1,13 +1,43 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import classes from "./FooterMenuProfile.module.scss";
-import {Link} from "react-router-dom";
+import {MyContext} from "../../../../provider/Provider";
 
 const FooterMenuProfile = (props) => {
-    const {footerMenu,className} = props
+    const {footerMenu, className} = props
+
+    const context = useContext(MyContext)
+    const toggleShowLogin = context.register.toggleShowLogin
+    const toggleShowSignup = context.register.toggleShowSignUp
+    const toggleRegisterFooter = (name) => {
+        if (name == 'Вход') {
+            return toggleShowLogin()
+        } else if (name == 'Регистрация') {
+            return toggleShowSignup()
+        }
+        return
+    }
+
     return (
-        <div className={[classes.footerMenuProfile,className].join(' ')}>
+        <div className={[classes.footerMenuProfile, className].join(' ')}>
             {footerMenu.menus.map(menu =>
-                <Link onClick={menu.onClick} key={menu.id} to={menu.link}>{menu.name}</Link>
+                menu.name == 'Instagram'
+                ||
+                menu.name == 'Facebook'
+                    ?
+                    <a
+                        key={menu.id}
+                        href={menu.link}
+                        target={'_blank'}
+                    >
+                        {menu.name}
+                    </a>
+                    :
+                    <p
+                        onClick={() => toggleRegisterFooter(menu.name)}
+                        key={menu.id}
+                    >
+                        {menu.name}
+                    </p>
             )}
         </div>
     );

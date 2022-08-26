@@ -29,15 +29,22 @@ const ContactContent = (props) => {
             <div className={classes.contact_content}>{
                 show &&
                 <div className={classes.contact_types}>
-                    <Link to={''} className={[classes.whatsapp, classes.contact_typesItem].join(' ')}>
+                    <a
+                        target={'_blank'}
+                        href={'https://api.whatsapp.com/send/?phone=996559312090&text&type=phone_number&app_absent=0'}
+                        className={[classes.whatsapp, classes.contact_typesItem].join(' ')}
+                        onClick={toggleContactShow}
+                    >
                         <BsWhatsapp className={classes.contact_contentIcon}/>
-                    </Link>
-                    <Link to={''} className={[classes.instagram, classes.contact_typesItem].join(' ')}>
+                    </a>
+                    <a
+                        onClick={toggleContactShow}
+                        target={'_blank'}
+                        href={'https://www.instagram.com/intersport.kg/'}
+                        className={[classes.instagram, classes.contact_typesItem].join(' ')}
+                    >
                         <GrInstagram className={classes.contact_contentIcon}/>
-                    </Link>
-                    <Link to={''} className={[classes.sms, classes.contact_typesItem].join(' ')}>
-                        <TiMessages className={classes.contact_contentIcon}/>
-                    </Link>
+                    </a>
                 </div>
             }
                 <div className={classes.contact_open_close}>

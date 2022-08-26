@@ -19,5 +19,14 @@
   color: white;
   text-decoration: none;
 }
+.footerMenuProfile p {
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: Inter, san-serif;
+  color: white;
+  text-decoration: none;
+}
 
 /*# sourceMappingURL=FooterMenuProfile.module.css.map */

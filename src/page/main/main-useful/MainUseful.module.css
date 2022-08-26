@@ -47,6 +47,7 @@ p {
   font-size: 13px;
   line-height: 138%;
   color: #808080;
+  min-height: 24px;
 }
 .main_useful .main_useful_item .main_useful_itemLink {
   position: absolute;

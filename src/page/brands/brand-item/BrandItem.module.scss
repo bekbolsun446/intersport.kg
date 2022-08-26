@@ -13,35 +13,7 @@
 
   .brand_item_content {
     display: flex;
+    flex-wrap: wrap;
     column-gap: 24px;
-
-    .brand_item_subcategory {
-      width: 200px;
-      margin-top: 32px;
-
-      img {
-        width: 100%;
-        height: 150px;
-        object-fit: cover;
-      }
-
-      .brand_item_subcategoryName {
-        padding: 20px 20px 20px 10px;
-        background: #ffffff;
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 22px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        color: #1d1d1d;
-      }
-    }
-  }
-
-  .brand_itemIcon {
-    font-size: 24px;
-    font-weight: 600;
-    color: black;
   }
 }

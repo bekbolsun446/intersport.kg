@@ -1,40 +1,60 @@
 .page_head {
   padding: 50px 0;
+  border-bottom: 1px solid #e5e5e5;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  border-bottom: 1px solid #e5e5e5;
 
-  .page_headBackLink {
+  .page_head_link_content {
     display: flex;
     align-items: center;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 17px;
-    color: #262626;
-    border-right: 2px solid black;
-    text-transform: uppercase;
-    padding: 0 8px;
+    flex-wrap: wrap;
 
-    .page_head_arrowIcon {
-      margin-right: 8px;
+    .page_headBackLink {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 17px;
+      color: #262626;
+      border-right: 2px solid black;
+      text-transform: uppercase;
+      padding: 0 8px;
+
+      .page_head_arrowIcon {
+        margin-right: 8px;
+      }
+    }
+
+    .page_headMainLink {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+      color: #262626;
+      padding: 0 8px;
+    }
+
+    .page_headCurrentLink {
+      text-transform: capitalize;
+      font-weight: 800;
+      font-size: 14px;
+      line-height: 17px;
+      color: #262626;
+      text-decoration: underline !important;
     }
   }
 
-  .page_headMainLink {
-    font-weight: normal;
+  .page_headToCatalog {
+    font-weight: 500;
     font-size: 14px;
-    line-height: 17px;
-    color: #262626;
-    padding: 0 8px;
-  }
-
-  .page_headCurrentLink {
-    text-transform: capitalize;
-    font-weight: 800;
-    font-size: 14px;
-    line-height: 17px;
-    color: #262626;
-    text-decoration: underline !important;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #FCFCFC;
+    background: #1A1458;
+    border: 1px solid #1A1458;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 16px 35px;
   }
 }

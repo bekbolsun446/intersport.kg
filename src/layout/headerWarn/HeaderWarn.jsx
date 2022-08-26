@@ -17,7 +17,7 @@ const HeaderWarn = (props) => {
                 <div className={classes.header_warn}>
                     <div className={classes.warn_menu}>
                         {headerWarn && headerWarn.map(warn =>
-                            <NavLink to={warn.link} key={warn.id}
+                            <NavLink to={warn.link.toLocaleLowerCase()} key={warn.id}
                                      className={classes.warn_menuItem}>{warn.name}</NavLink>
                         )}
                     </div>

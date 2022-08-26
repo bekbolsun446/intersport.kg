@@ -1,14 +1,15 @@
 import React, {useEffect} from 'react';
 import classes from "./HeaderSearchLists.module.scss";
-import {NavLink} from "react-router-dom";
+import {Link} from "react-router-dom";
 import {gsap} from "gsap";
 import $ from 'jquery'
 
 const HeaderSearchLists = (props) => {
-    const {searchList, isShow, headerSearch} = props
+    const {setIsShow, searchList, isShow, headerSearch} = props
 
     useEffect(() => {
         let currentHeight = $('.headerSearchContent').height()
+
         function showSearch() {
             if (!isShow.search) {
                 return gsap.fromTo('.headerSearchContent', {height: `${currentHeight}px`}, {height: 0, duration: .1})
@@ -34,7 +35,18 @@ const HeaderSearchLists = (props) => {
                 <ul className='container'>
                     {searchList.map(product =>
                         <li key={product.id}>
-                            <NavLink to={product.name}>{product.name}</NavLink>
+                            <Link
+                                to={`/products/${product.name}`}
+                                onClick={() => {
+                                    setIsShow({
+                                        ...isShow,
+                                        search:false
+                                    })
+                                    return gsap.to('.headerSearchContent', {height: 0, duration: .2})
+                                }}
+                            >
+                                {product.name}
+                            </Link>
                         </li>
                     )}
                 </ul>

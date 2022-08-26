@@ -1,0 +1,99 @@
+.useful_card {
+  width: 49%;
+  height: 600px;
+  position: relative;
+  border-radius: 4px;
+  margin-top: 24px;
+  overflow: hidden;
+  @media screen and (max-width: 1199px) {
+    height: 400px;
+  }
+  @media screen and (max-width: 991px) {
+    height: 300px;
+  }
+  @media screen and (max-width: 767px) {
+    height: 200px;
+  }
+  @media screen and (max-width: 450px) {
+    width: 100%;
+    height: 300px;
+  }
+
+
+  .useful_cardBgDark {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .3);
+    z-index: 0;
+  }
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .useful_card_body {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    @media screen and (max-width: 991px) {
+      padding: 16px;
+    }
+
+    .useful_cardName {
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 115%;
+      color: #FFFFFF;
+      margin: 0 0 20px 0;
+      @media screen and (max-width: 991px) {
+        font-size: 18px;
+      }
+      @media screen and (max-width: 767px) {
+        font-size: 14px;
+      }
+    }
+
+    .useful_cardTime {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 112%;
+      color: #FFFFFF;
+      @media screen and (max-width: 991px) {
+        font-size: 14px;
+      }
+      @media screen and (max-width: 767px) {
+        font-size: 12px;
+      }
+    }
+
+    .useful_cardIcon {
+      font-size: 70px;
+      font-weight: 700;
+      @media screen and (max-width: 991px) {
+        font-size: 40px;
+        font-weight: 600;
+      }
+      @media screen and (max-width: 767px) {
+        font-size: 32px;
+      }
+      @media screen and (max-width: 575px) {
+        font-size: 24px;
+      }
+    }
+  }
+}

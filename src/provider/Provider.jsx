@@ -11,10 +11,11 @@ const Provider = () => {
     const [error, setError] = useState(false)
 
     //---------------GET DATA ----------
-    const vacancies = data.data.vacancies
+    const vacancies = data.data.vacancies;
     const products = data.data.products;
     const categories = data.data.categories;
-    const headerWarn = data.data.headerWarn
+    const headerWarn = data.data.headerWarn;
+    const useful = data.data.useful
 
     //---------------GET DATA END----------
 
@@ -124,7 +125,8 @@ const Provider = () => {
             toggleShowSignUp,
             toggleShowLogin,
             toggleSignForSave
-        }
+        },
+        useful: useful
     }
 
     return (

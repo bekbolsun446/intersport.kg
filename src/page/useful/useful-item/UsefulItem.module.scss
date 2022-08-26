@@ -1,0 +1,27 @@
+.useful_item {
+  .useful_itemTitle {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    color: #1A1458;
+    margin: 20px 0 30px;
+    max-width: 730px;
+  }
+
+  .useful_item_content {
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 991px) {
+      justify-content: flex-start;
+      flex-direction: column;
+    }
+
+    .other_items {
+      width: 32%;
+      @media screen and (max-width: 991px) {
+        width: 100%;
+        margin-top: 24px;
+      }
+    }
+  }
+}

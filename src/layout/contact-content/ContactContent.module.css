@@ -21,12 +21,12 @@
 @media screen and (max-width: 991px) {
   .contact_content {
     bottom: 25px;
-    right: 50px;
+    right: 25px;
   }
 }
 @media screen and (max-width: 575px) {
   .contact_content {
-    right: 80px;
+    right: 25px;
   }
 }
 .contact_content .contact_typesItem {

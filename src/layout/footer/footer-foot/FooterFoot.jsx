@@ -5,7 +5,11 @@ const FooterFoot = () => {
     return (
         <div className={classes.footer_foot}>
             <span className={classes.footer_logo}>Intersport 2022</span>
-            <a href="#" className={classes.footer_foot_link}>
+            <a
+                href="https://www.instagram.com/bekbolsun_samaganov/"
+                target={'_blank'}
+                className={classes.footer_foot_link}
+            >
                 Made by
                 <span>Bekbolsun Samaganov</span>
             </a>

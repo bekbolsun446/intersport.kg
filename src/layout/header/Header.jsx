@@ -75,7 +75,13 @@ const Header = (props) => {
                             className={classes.headerIcons}/></Link>
                     </div>
                 </div>
-                <HeaderSearchLists isShow={isShown} headerSearch={headerSearch} searchList={searchList}/>
+
+                <HeaderSearchLists
+                    setIsShow={setIsShown}
+                    isShow={isShown}
+                    headerSearch={headerSearch}
+                    searchList={searchList}
+                />
             </div>
         </header>
     );

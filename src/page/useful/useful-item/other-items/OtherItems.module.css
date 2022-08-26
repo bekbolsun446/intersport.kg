@@ -1,0 +1,30 @@
+.other_items_content {
+  background: #FFFFFF;
+  padding: 24px 20px;
+}
+.other_items_content .other_items_contentTitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #1D1D1D;
+  margin: 0 0 15px 0;
+}
+.other_items_content .other_item {
+  font-size: 16px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+  color: #1D1D1D;
+  padding: 19px 0;
+  margin: 0 0 10px 0;
+  border-top: 1px solid #E5E5E5;
+  border-bottom: 1px solid #E5E5E5;
+}
+.other_items_content .other_item .other_itemsIcon {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=OtherItems.module.css.map */

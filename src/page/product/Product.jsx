@@ -24,7 +24,7 @@ const Product = (props) => {
     useEffect(() => {
         // 👇️ scroll to top on page load
         window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-    }, []);
+    }, [name]);
 
     const prevPages = [
         {
@@ -44,7 +44,6 @@ const Product = (props) => {
         return (
             <div className='product_'>
                 <PageHead currentPage={product.name} prevPages={prevPages}/>
-                <MainHead link='catalog' linkTitle='ПЕРЕЙТИ В КАТАЛОГ'/>
                 <div key={product.id} className={classes.product}>
                     <ProductContent product={product}/>
                     <ProductAbout product={product} contextBasket={basket}/>

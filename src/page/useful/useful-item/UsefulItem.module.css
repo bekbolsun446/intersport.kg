@@ -1,0 +1,29 @@
+.useful_item .useful_itemTitle {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  color: #1A1458;
+  margin: 20px 0 30px;
+  max-width: 730px;
+}
+.useful_item .useful_item_content {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 991px) {
+  .useful_item .useful_item_content {
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+}
+.useful_item .useful_item_content .other_items {
+  width: 32%;
+}
+@media screen and (max-width: 991px) {
+  .useful_item .useful_item_content .other_items {
+    width: 100%;
+    margin-top: 24px;
+  }
+}
+
+/*# sourceMappingURL=UsefulItem.module.css.map */

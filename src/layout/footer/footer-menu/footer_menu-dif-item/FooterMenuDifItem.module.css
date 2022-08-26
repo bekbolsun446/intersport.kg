@@ -50,6 +50,7 @@
   }
 }
 .footer_menu_items .footer_menu_link_content .footer_menuItem {
+  cursor: pointer;
   font-size: 14px;
   font-weight: normal;
   font-family: Inter, san-serif;

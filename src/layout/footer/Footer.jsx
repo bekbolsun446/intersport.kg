@@ -114,14 +114,14 @@ const Footer = () => {
             id: 3,
             dropClass: 'footerForClient',
             title: 'Покупателю',
-            menus: [{id: 1, name: 'Доставка и оплата', link: 'Доставка и оплата'}, {
+            menus: [{id: 1, name: 'Доставка и оплата', link: '/useful/Доставка и оплата'}, {
                 id: 2,
                 name: 'Обмен и возврат',
-                link: 'Обмен и возврат'
+                link: '/useful/Обмен и возврат'
             }, {
                 id: 3,
                 name: 'Полезное',
-                link: 'Полезное'
+                link: '/useful'
             }
             ]
         },

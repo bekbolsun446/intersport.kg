@@ -17,12 +17,18 @@ const FooterMenu = (props) => {
     const socialMedia = {
         id: 1,
         title: 'Соц. сети',
-        menus: [{id: 1, name: 'Instagram', link: '#'}, {id: 2, name: 'Facebook', link: '#'}]
+        menus: [
+            {id: 1, name: 'Instagram', link: 'https://www.instagram.com/intersport.kg'},
+            {
+                id: 2,
+                name: 'Facebook',
+                link: 'https://www.facebook.com/intersportbishkek'
+            }]
     };
     const profile = {
         id: 1,
         title: 'Профиль',
-        menus: [{id: 1, name: 'Вход', link: '', onClick: ''}, {id: 2, name: 'Регистрация', link: '', onClick: ''}]
+        menus: [{id: 1, name: 'Вход', link: '#', onClick: ''}, {id: 2, name: 'Регистрация', link: '#', onClick: ''}]
     }
 
     return (

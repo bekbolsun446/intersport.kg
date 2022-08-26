@@ -83,7 +83,7 @@ const Catalog = () => {
 
     return (
         <div className={classes.catalog_f}>
-            <CatalogHead currentPage={currentPage} prevPages={prevPages}/>
+            <CatalogHead currentPage={currentPage} prevPages={prevPages} isCatalog={true}/>
             {filteredProducts.length > 0 ?
                 <CatalogFContent products={filteredProducts}/>
                 :

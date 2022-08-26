@@ -13,7 +13,6 @@ import {MyContext} from "../../provider/Provider";
 const Main = (props) => {
     const context = useContext(MyContext)
     const products = context.products
-
     const newProducts = products.filter(product => product.isNew === true);
     const starProducts = products.filter(product => product.isStar === true)
     const popularProducts = products.filter(product => product.isPopular === true)
