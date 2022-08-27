@@ -130,6 +130,7 @@ const Provider = () => {
         headerWarn: headerWarn,
         mobileHeader: {
             isShownHeader: isShownHeader,
+            setIsShownHeader,
             toggleMobileHeader: toggleMobileHeader
         },
         register: {

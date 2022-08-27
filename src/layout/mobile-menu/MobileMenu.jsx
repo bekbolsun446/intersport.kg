@@ -7,21 +7,33 @@ import {ShoppingOutlined} from "@ant-design/icons";
 import {Link} from "react-router-dom";
 import {MyContext} from "../../provider/Provider";
 import {GrClose} from 'react-icons/gr'
+import {gsap} from "gsap";
 
 const MobileMenu = (props) => {
     const context = useContext(MyContext);
     const allProductsCount = context.allProductsCount;
     const isShowHeader = context.mobileHeader.isShownHeader;
+    const setIsShownHeader = context.mobileHeader.setIsShownHeader;
     const toggleMobileHeader = context.mobileHeader.toggleMobileHeader;
     const {showMobileSearch, setShowMobileSearch} = context.mobileSearch
 
     const toggleMobileSearch = (e) => {
         e.preventDefault();
         if (showMobileSearch == false) {
-            toggleMobileHeader();
+            gsap.to('.header_mobile', {left: '-100%', duration: .1})
+            gsap.to(`.headerMenuArrow`, {rotation: 0, duration: .2})
+            gsap.to(`.header_mobil_subcategoryIcon`, {rotation: 0, duration: .2})
+            setIsShownHeader(false)
             setShowMobileSearch(!showMobileSearch)
         }
         setShowMobileSearch(!showMobileSearch)
+    }
+
+    const closeMobileHeader = () => {
+        gsap.to('.header_mobile', {left: '-100%', duration: .1})
+        gsap.to(`.headerMenuArrow`, {rotation: 0, duration: .2})
+        gsap.to(`.header_mobil_subcategoryIcon`, {rotation: 0, duration: .2})
+        setIsShownHeader(false)
     }
 
     return (
@@ -51,7 +63,7 @@ const MobileMenu = (props) => {
                         <GiHamburgerMenu className={classes.menu_hamburgerIcon}/>
                     }
                 </div>
-                <Link to={'/basket'} className={classes.mobile_basket}>
+                <Link onClick={()=> closeMobileHeader()} to={'/basket'} className={classes.mobile_basket}>
                     <ShoppingOutlined className={classes.mobile_basketIcon}/>
                     <span>{allProductsCount}</span>
                 </Link>
