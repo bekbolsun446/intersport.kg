@@ -8,7 +8,14 @@ const HeaderWarn = (props) => {
     const context = useContext(MyContext);
     const headerWarn = context.headerWarn;
     const toggleShowLogin = context.register.toggleShowLogin
-
+    const {interUser, setInterUser} = context.register.user
+    const logOut = (e) => {
+        e.preventDefault();
+        setInterUser({
+            ...interUser,
+            isLogin: false
+        })
+    }
     return (
         <div className={className}>
             <div className="container">
@@ -20,13 +27,29 @@ const HeaderWarn = (props) => {
                         )}
                     </div>
                     <div className={classes.warn_menu}>
-                        <span
-                            draggable={false}
-                            className={classes.warn_menuItem}
-                            onClick={toggleShowLogin}
-                        >
+                        {interUser.isLogin ?
+                            <>
+                                <span
+                                    className={classes.warn_menuItem}
+                                >
+                                    {interUser.userName}
+                                </span>
+                                <span
+                                    onClick={logOut}
+                                    className={classes.warn_menuItem}
+                                >
+                                    Log out
+                                </span>
+                            </>
+                            :
+                            <span
+                                draggable={false}
+                                className={classes.warn_menuItem}
+                                onClick={toggleShowLogin}
+                            >
                             Профиль
                         </span>
+                        }
                     </div>
                 </div>
             </div>

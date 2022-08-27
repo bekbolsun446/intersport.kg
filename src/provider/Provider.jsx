@@ -16,7 +16,7 @@ const Provider = () => {
     const categories = data.data.categories;
     const headerWarn = data.data.headerWarn;
     const useful = data.data.useful;
-    const importantNews=data.data.importantNews
+    const importantNews = data.data.importantNews
 
     //---------------GET DATA END----------
 
@@ -75,6 +75,14 @@ const Provider = () => {
 
     //-------------REGISTER FUNCTIONS -----------------
     const [showLogin, setShowLogin] = useState(false)   //----------login
+    useEffect(() => {
+        if (showLogin || showSignUp) {
+            $('body').css('overflow-y', 'hidden !important')
+        }
+        if (!showLogin || !showSignUp) {
+            $('body').css('overflow-y', 'auto !important')
+        }
+    })
     const [showSignUp, setShowSignUp] = useState(false) //----------sign up
     const localeInterUser = localStorage.getItem('interUser')
     const localedInterUser = JSON.parse(localeInterUser)

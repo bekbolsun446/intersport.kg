@@ -42,7 +42,7 @@ const MainUseful = (props) => {
     return (
         <div>
             <MainHead title={'ПОЛЕЗНОЕ'} link={'useful'} linkTitle={'ЧИТАТЬ ВСЕ'}/>
-            <div className={classes.main_useful}>
+            <div className={[classes.main_useful, 'cardSlide'].join(' ')}>
                 <Slider {...settings}>
                     {useful.map(useful =>
                         <div key={useful.id} className={classes.main_useful_item}>

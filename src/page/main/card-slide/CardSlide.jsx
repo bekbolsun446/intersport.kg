@@ -43,7 +43,7 @@ const CardSlide = ({products}) => {
         ]
     };
     return (
-        <div className={classes.card_slide}>
+        <div className={[classes.card_slide,'cardSlide'].join(' ')}>
             <Slider {...settings}>
                 {products.map((card) =>
                     <Card product={card} key={card.id}/>)

@@ -35,4 +35,31 @@
   background: white;
 }
 
+.cardSlide .slick-arrow {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+  padding: 0;
+  height: 100%;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  color: whitesmoke;
+  opacity: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.cardSlide .slick-arrow:hover {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+.cardSlide .slick-next {
+  left: auto;
+  right: 0;
+}
+.cardSlide .slick-next:hover {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+}
+
 /*# sourceMappingURL=main.css.map */

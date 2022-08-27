@@ -6,6 +6,7 @@
 .catalog_content .catalog_content_item {
   width: 25%;
   height: auto;
+  margin-top: 16px;
 }
 @media screen and (max-width: 991px) {
   .catalog_content .catalog_content_item {

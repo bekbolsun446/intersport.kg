@@ -7,16 +7,18 @@ import $ from 'jquery'
 const Modal = (props) => {
     const {children, toggleShow} = props;
 
-    return (<>
-        <div className={classes.modal}>
-            <div className={classes.modal_content}>
-                <GrClose onClick={toggleShow} className={classes.modal_close}/>
-                <div className={classes.modal_body}>
-                    {children}
+    return (
+        <>
+            <div className={classes.modal}>
+                <div className={classes.modal_content}>
+                    <GrClose onClick={toggleShow} className={classes.modal_close}/>
+                    <div className={classes.modal_body}>
+                        {children}
+                    </div>
                 </div>
             </div>
-        </div>
-    </>);
+        </>
+    );
 };
 
 export default Modal;

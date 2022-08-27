@@ -64,7 +64,7 @@ const MainCategorySlide = (props) => {
     };
 
     return (
-        <div className={classes.main_slide}>
+        <div className={[classes.main_slide, 'cardSlide'].join(' ')}>
             <Slider {...settings}>
                 {mainCategories.map(category =>
                     <div className={classes.main_slide_item} key={category.id}>

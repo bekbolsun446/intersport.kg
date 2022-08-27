@@ -78,12 +78,13 @@ const SignUp = (props) => {
                 />
                 <InputUI
                     placeholder={'Password*'}
-                    type={'password'}
+                    type={showPassword ? 'text' : 'password'}
                     value={signUp.password}
                     name={'password'}
                     onChange={toggleLogin}
                 />
                 <label
+                    htmlFor={'showPassword'}
                     className={classes.showPassword}
                     onClick={toggleShowPassword}
                 >
