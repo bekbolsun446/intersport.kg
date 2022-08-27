@@ -64,6 +64,7 @@ const Provider = () => {
             setIsShownHeader(true);
             gsap.to('.category_content', {height: 0, duration: .2})
             gsap.to('.subcategory_content', {height: 0, duration: .2});
+            setShowMobileSearch(false)
         } else {
             gsap.to('.header_mobile', {left: '-100%', duration: .1})
             gsap.to(`.headerMenuArrow`, {rotation: 0, duration: .2})
@@ -72,6 +73,12 @@ const Provider = () => {
         }
     }
     //-----------MOBILE HEADER SHOW ,HIDE  END---------
+
+    //---------------MOBILE SEARCH ABILITY------------------
+
+    const [showMobileSearch, setShowMobileSearch] = useState(false)
+
+    //---------------MOBILE SEARCH ABILITY END------------------
 
     //-------------REGISTER FUNCTIONS -----------------
     const [showLogin, setShowLogin] = useState(false)   //----------login
@@ -136,7 +143,8 @@ const Provider = () => {
             toggleSignForSave
         },
         useful: useful,
-        importantNews: importantNews
+        importantNews: importantNews,
+        mobileSearch: {showMobileSearch, setShowMobileSearch}
     }
 
     return (

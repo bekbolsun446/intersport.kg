@@ -124,13 +124,6 @@ const Footer = () => {
                 link: '/useful'
             }
             ]
-        },
-        {
-            id: 4,
-            dropClass: 'footerAboutCompany',
-            title: 'О компании',
-            menus: [{id: 1, name: 'Контакты', link: 'contact'}, {id: 2, name: 'О компании', link: 'aboutUs'}
-            ]
         }
     ]);
 

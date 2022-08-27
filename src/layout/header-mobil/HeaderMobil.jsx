@@ -12,7 +12,6 @@ const HeaderMobil = (props) => {
     const context = useContext(MyContext);
     const headerWarn = context.headerWarn;
     const toggleMobileHeader = context.mobileHeader.toggleMobileHeader
-
     const toggleShowLogin = context.register.toggleShowLogin
 
     return (

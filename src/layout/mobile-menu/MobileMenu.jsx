@@ -6,20 +6,39 @@ import {CgClose} from 'react-icons/cg';
 import {ShoppingOutlined} from "@ant-design/icons";
 import {Link} from "react-router-dom";
 import {MyContext} from "../../provider/Provider";
-import {gsap} from "gsap";
-import $ from 'jquery'
+import {GrClose} from 'react-icons/gr'
 
 const MobileMenu = (props) => {
     const context = useContext(MyContext);
     const allProductsCount = context.allProductsCount;
     const isShowHeader = context.mobileHeader.isShownHeader;
     const toggleMobileHeader = context.mobileHeader.toggleMobileHeader;
+    const {showMobileSearch, setShowMobileSearch} = context.mobileSearch
+
+    const toggleMobileSearch = (e) => {
+        e.preventDefault();
+        if (showMobileSearch == false) {
+            toggleMobileHeader();
+            setShowMobileSearch(!showMobileSearch)
+        }
+        setShowMobileSearch(!showMobileSearch)
+    }
 
     return (
         <div className={classes.mobile_menu_wrapper}>
             <div className={classes.mobile_menu}>
                 <div className={classes.search_mobile}>
-                    <ImSearch className={classes.mobile_menu_searchIcon}/>
+                    {showMobileSearch ?
+                        <GrClose
+                            className={classes.mobile_menu_searchIcon}
+                            onClick={toggleMobileSearch}
+                        />
+                        :
+                        <ImSearch
+                            className={classes.mobile_menu_searchIcon}
+                            onClick={toggleMobileSearch}
+                        />
+                    }
                 </div>
                 <div
                     style={isShowHeader ? {background: '#004EB2'} : {}}

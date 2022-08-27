@@ -43,6 +43,7 @@ const Header = (props) => {
     const [headerSearch, setHeaderSearch] = useState('')
 
     let searchList = products.filter(product => product.name.toLowerCase().includes(headerSearch.toLowerCase()));
+
     useEffect(() => {
         searchList = products.filter(product => product.name.toLowerCase().includes(headerSearch.toLowerCase()))
     })
@@ -65,14 +66,28 @@ const Header = (props) => {
                 <div className="container">
                     <div className={classes.header_content}>
                         <HeaderDropMenuCatalog isShown={isShown}/>
-                        <Link to='/' className={classes.header_menu}>
-                            <img src="https://intersport.kg/static/new_static/img/png/logo.png"
-                                 className={classes.headerLogo} alt=""/>
+                        <Link
+                            to='/'
+                            className={classes.header_menu}
+                        >
+                            <img
+                                src="https://intersport.kg/static/new_static/img/png/logo.png"
+                                className={classes.headerLogo} alt=""
+                            />
                         </Link>
-                        <HeaderCatalog headerLinks={headerLinks} isShown={isShown} searchShow={searchShow}
-                                       headerSearch={headerSearch} handleSearch={handleSearch}/>
-                        <Link to={'/favorites'} className={classes.headerLikeLink}><HeartOutlined
-                            className={classes.headerIcons}/></Link>
+                        <HeaderCatalog
+                            headerLinks={headerLinks}
+                            isShown={isShown}
+                            searchShow={searchShow}
+                            headerSearch={headerSearch}
+                            handleSearch={handleSearch}
+                        />
+                        <Link
+                            to={'/favorites'}
+                            className={classes.headerLikeLink}
+                        >
+                            <HeartOutlined className={classes.headerIcons}/>
+                        </Link>
                     </div>
                 </div>
 
