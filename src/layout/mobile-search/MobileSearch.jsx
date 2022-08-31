@@ -8,6 +8,7 @@ import {Link} from "react-router-dom";
 
 const MobileSearch = () => {
     const context = useContext(MyContext)
+    const {showMobileSearch, setShowMobileSearch} = context.mobileSearch
     const products = context.products
     const [headerSearch, setHeaderSearch] = useState('')
     const [searchList, setSearchList] = useState([]);
@@ -58,8 +59,9 @@ const MobileSearch = () => {
                 {searchList.length > 0 ?
                     searchList.map(product =>
                         <Link
+                            onClick={() => setShowMobileSearch(false)}
                             key={product.id}
-                            to={`/products/`}
+                            to={`/products/${product.name}`}
                             className={classes.mobile_searchList}
                         >
                             {product.name}
