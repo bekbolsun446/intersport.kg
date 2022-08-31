@@ -24,15 +24,22 @@
     background: white;
     box-shadow: 0 3px 5px 0 #afabab;
     z-index: 5;
+    @media screen and (max-width: 575px) {
+      right: 0;
+      left: auto;
+      width: 200%;
+    }
 
     option {
       padding: 8px 12px;
       font-size: 14px;
+
       &:hover {
         background: #ededed;
       }
     }
-    .basketValueList{
+
+    .basketValueList {
       background: #ededed;
       font-weight: 600;
       font-size: 16px;

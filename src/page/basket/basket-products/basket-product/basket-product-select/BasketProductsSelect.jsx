@@ -20,7 +20,7 @@ const BasketProductsSelect = (props) => {
     return (
         <div className={[classes.basket_product_select, `section${id}1`].join(' ')}>
             <p>{title}: {lists[idValue - 1]}</p>
-            <section className={`section${id}`}>
+            <section className={[`section${id}`].join(' ')}>
                 {lists && lists.map((list, index) =>
                     <option
                         className={idValue === index + 1 ? classes.basketValueList : ''}

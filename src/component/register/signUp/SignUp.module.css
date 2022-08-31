@@ -1,6 +1,11 @@
 .signUp {
   width: 500px;
 }
+@media screen and (max-width: 520px) {
+  .signUp {
+    width: 90%;
+  }
+}
 .signUp .signUpTitle {
   font-weight: 600;
   font-size: 32px;

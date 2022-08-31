@@ -25,6 +25,13 @@
   box-shadow: 0 3px 5px 0 #afabab;
   z-index: 5;
 }
+@media screen and (max-width: 575px) {
+  .basket_product_select section {
+    right: 0;
+    left: auto;
+    width: 200%;
+  }
+}
 .basket_product_select section option {
   padding: 8px 12px;
   font-size: 14px;

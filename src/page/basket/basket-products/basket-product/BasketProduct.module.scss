@@ -3,6 +3,10 @@
   justify-content: space-between;
   padding: 32px 0 32px 0;
   border-bottom: 1px solid #989595;
+  @media screen and (max-width: 575px) {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 
   .product_content {
     display: flex;
@@ -92,6 +96,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    @media screen and (max-width: 575px) {
+      flex-direction: row;
+    }
 
     .basket_productPrice {
       font-weight: 500;
@@ -106,6 +113,9 @@
       align-items: center;
       @media screen and (max-width: 767px) {
         flex-direction: column;
+      }
+      @media screen and (max-width: 575px) {
+        flex-direction: row;
       }
 
       p {
@@ -126,6 +136,10 @@
           flex-direction: column;
           margin-left: 0;
           margin-top: 24px;
+        }
+        @media screen and (max-width: 575px) {
+          margin-left: 24px;
+          margin-top: 0;
         }
       }
 

@@ -1,5 +1,18 @@
+.register {
+  width: 100%;
+}
 .register .signForSave {
   width: 500px;
+}
+@media screen and (max-width: 520px) {
+  .register .signForSave {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .register .signForSave {
+    width: 300px;
+  }
 }
 .register .signForSave .signForSaveTitle {
   font-weight: 600;

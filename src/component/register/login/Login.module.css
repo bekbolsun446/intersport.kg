@@ -1,6 +1,11 @@
 .login {
   width: 500px;
 }
+@media screen and (max-width: 520px) {
+  .login {
+    width: 90%;
+  }
+}
 .login .loginTitle {
   font-weight: 600;
   font-size: 32px;
