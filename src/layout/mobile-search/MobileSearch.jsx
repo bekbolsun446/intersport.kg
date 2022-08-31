@@ -45,6 +45,7 @@ const MobileSearch = () => {
                     value={headerSearch}
                     type="search"
                     placeholder='Я ищу...'
+
                 />
                 <button
                     className={classes.header_searchBtn}
