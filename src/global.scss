@@ -6,6 +6,10 @@
   padding: 0;
   box-sizing: border-box;
   transform-style: inherit !important;
+  &::selection{
+    background-color: aqua !important;
+    color: black !important;
+  }
 }
 
 $font: Inter, san-serif;
