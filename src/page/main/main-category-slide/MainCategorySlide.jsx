@@ -15,22 +15,22 @@ const MainCategorySlide = (props) => {
         },
         {
             id: 2,
-            title: 'Футболки и шорты',
-            link: 'Футболка и шорта',
-            img: 'https://intersport.kg/media/WEBP/0c/2751b8/media/slider_images/DSC_1789.webp'
+            title: 'Ветровки',
+            link: 'Ветровка',
+            img: 'https://intersport.kg/media/WEBP/d0/181ef0/media/slider_images/%D0%92%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D0%BA%D0%B8.webp'
         },
         {
             id: 3,
-            title: 'Кепки',
-            link: 'Кепка',
-            img: 'https://intersport.kg/media/WEBP/83/602066/media/slider_images/DSC_1745.webp'
+            title: 'Ветровки',
+            link: 'Ветровка',
+            img: 'https://intersport.kg/media/WEBP/d0/181ef0/media/slider_images/%D0%92%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D0%BA%D0%B8.webp'
         },
         {
             id: 4,
-            title: 'Кроссовки',
-            link: 'КРОССОВКИ',
-            img: 'https://static.nike.com/a/images/t_PDP_1280_v1/78e78695-74ab-4162-b052-67f004aad13b/air-max-270-g-golf-ayakkab%C4%B1s%C4%B1-gTpCFg.jpg'
-        },
+            title: 'Ветровки',
+            link: 'Ветровка',
+            img: 'https://intersport.kg/media/WEBP/d0/181ef0/media/slider_images/%D0%92%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D0%BA%D0%B8.webp'
+        }
     ]
 
     const settings = {

@@ -6,12 +6,12 @@ const FooterFoot = () => {
         <div className={classes.footer_foot}>
             <span className={classes.footer_logo}>Intersport 2022</span>
             <a
-                href="https://www.instagram.com/bekbolsun_samaganov/"
+                href="https://www.instagram.com/aktan.asankulv/"
                 target={'_blank'}
                 className={classes.footer_foot_link}
             >
                 Made by
-                <span>Bekbolsun Samaganov</span>
+                <span>Aktan Asankulov</span>
             </a>
         </div>
     );

@@ -75,55 +75,6 @@ const Footer = () => {
                     link: '/catalog/type=Скидки'
                 }
             ]
-        },
-        {
-            id: 2,
-            dropClass: 'footerTypeOfSport',
-            title: 'Виды спорта',
-            menus: [
-                {id: 1, name: 'Теннис', link: '/catalog/sport=Теннис'},
-                {
-                    id: 2,
-                    name: 'Хайкинг и треккинг',
-                    link: '/catalog/sport=Хайкинг и треккинг'
-                }, {
-                    id: 3,
-                    name: 'Тренинг',
-                    link: '/catalog/sport=Тренинг'
-                }, {id: 4, name: 'Баскетбол', link: '/catalog/sport=Баскетбол'}, {
-                    id: 5,
-                    name: 'Бег',
-                    link: '/catalog/sport=Бег'
-                },
-                {id: 6, name: 'Гольф', link: '/catalog/sport=Гольф'}, {
-                    id: 7,
-                    name: 'Lifestyle',
-                    link: '/catalog/sport=Lifestyle'
-                }, {
-                    id: 8,
-                    name: 'Аксессуары',
-                    link: '/catalog/sport=Аксессуары'
-                }, {id: 9, name: 'Плавание', link: '/catalog/sport=Плавание'}, {
-                    id: 10,
-                    name: 'Автоспорт',
-                    link: '/catalog/sport=Автоспорт'
-                }
-            ]
-        },
-        {
-            id: 3,
-            dropClass: 'footerForClient',
-            title: 'Покупателю',
-            menus: [{id: 1, name: 'Доставка и оплата', link: '/useful/Доставка и оплата'}, {
-                id: 2,
-                name: 'Обмен и возврат',
-                link: '/useful/Обмен и возврат'
-            }, {
-                id: 3,
-                name: 'Полезное',
-                link: '/useful'
-            }
-            ]
         }
     ]);
 
